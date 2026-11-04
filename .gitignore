@@ -1,0 +1,22 @@
+# Python
+backend/.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Secrets & local data
+backend/.env
+backend/*.db
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# Evaluation output (regenerate with the scripts in eval/)
+eval/results/
+eval/style_dataset.jsonl
+eval/style_profile.txt
+
+# OS / editor
+.DS_Store
+Thumbs.db

@@ -1,0 +1,2 @@
+2:37:03 PM [vite] (client) [console.error] [vite] SyntaxError: The requested module '/src/components/Icons.tsx' does not provide an export named 'CalendarIcon'
+2:37:03 PM [vite] (client) [console.error] [vite] Failed to reload /src/App.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above)

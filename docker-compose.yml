@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: mailassist-db
+    environment:
+      POSTGRES_USER: mailassist
+      POSTGRES_PASSWORD: mailassist
+      POSTGRES_DB: mailassist
+    ports:
+      - "5433:5432"  # 5433 on the host — 5432 is used by other local projects
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:

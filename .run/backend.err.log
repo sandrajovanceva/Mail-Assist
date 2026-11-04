@@ -1,0 +1,508 @@
+INFO:     Will watch for changes in these directories: ['C:\\Users\\User\\diplomska\\backend']
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [12152] using WatchFiles
+INFO:     Started server process [3512]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+Sync failed
+Traceback (most recent call last):
+  File "C:\Users\User\diplomska\backend\app\services\gmail.py", line 132, in __init__
+    creds.refresh(Request())
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\google\auth\credentials.py", line 517, in refresh
+    self._perform_refresh_token(request)
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\google\oauth2\credentials.py", line 435, in _perform_refresh_token
+    ) = reauth.refresh_grant(
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\google\oauth2\reauth.py", line 370, in refresh_grant
+    _client._handle_error_response(response_data, retryable_error)
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\google\oauth2\_client.py", line 73, in _handle_error_response
+    raise exceptions.RefreshError(
+google.auth.exceptions.RefreshError: ('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\User\diplomska\backend\app\routers\emails.py", line 62, in _run_sync
+    provider = get_provider(db, account)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\diplomska\backend\app\services\registry.py", line 28, in get_provider
+    return provider_cls(account, db=db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\diplomska\backend\app\services\gmail.py", line 138, in __init__
+    raise ProviderError(
+app.services.provider.ProviderError: Your Gmail connection has expired — click “Connect Gmail” to reconnect. (While the app is unverified, Google expires access every 7 days.)
+WARNING:  WatchFiles detected changes in 'app\models.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3512]
+WARNING:  WatchFiles detected changes in 'app\routers\drafts.py', 'app\schemas.py', 'app\services\draft_preferences.py', 'app\services\autodraft.py'. Reloading...
+INFO:     Started server process [22708]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [22708]
+INFO:     Started server process [5024]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'tests\test_drafts.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for background tasks to complete. (CTRL+C to force quit)
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [5024]
+WARNING:  WatchFiles detected changes in 'tests\test_autodraft.py'. Reloading...
+INFO:     Started server process [652]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [652]
+INFO:     Started server process [32532]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app\routers\drafts.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [32532]
+INFO:     Started server process [8132]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app\routers\auth.py', 'app\services\gmail.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [8132]
+WARNING:  WatchFiles detected changes in 'app\routers\calendar.py', 'app\main.py'. Reloading...
+INFO:     Started server process [28208]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [28208]
+INFO:     Started server process [33468]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'tests\test_calendar.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [33468]
+INFO:     Started server process [29760]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app\main.py', 'app\routers\assistant.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [29760]
+INFO:     Started server process [29700]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'tests\test_assistant.py'. Reloading...
+assistant: ServerError on attempt 1/4, retrying in 2.0s
+INFO:     Shutting down
+INFO:     Waiting for connections to close. (CTRL+C to force quit)
+assistant: ServerError on attempt 2/4, retrying in 4.0s
+assistant: ServerError on attempt 3/4, retrying in 8.0s
+WARNING:  WatchFiles detected changes in 'app\services\llm.py', 'app\routers\assistant.py'. Reloading...
+INFO:     Started server process [19664]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [19664]
+INFO:     Started server process [26848]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+Assistant response failed
+Traceback (most recent call last):
+  File "C:\Users\User\diplomska\backend\app\services\llm.py", line 136, in _generate
+    response = get_client().models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\google\genai\models.py", line 6229, in generate_content
+    return self._generate_content(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\google\genai\models.py", line 4707, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1750, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1537, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1514, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\google\genai\errors.py", line 173, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\google\genai\errors.py", line 204, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 504 DEADLINE_EXCEEDED. {'error': {'code': 504, 'message': 'Deadline expired before operation could complete.', 'status': 'DEADLINE_EXCEEDED'}}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\User\diplomska\backend\app\routers\assistant.py", line 83, in chat
+    result = ChatAnswer.model_validate_json(llm._generate(
+                                            ^^^^^^^^^^^^^^
+  File "C:\Users\User\diplomska\backend\app\services\llm.py", line 193, in _generate
+    raise RuntimeError(f"{operation} failed: {last_exc}") from last_exc
+RuntimeError: assistant failed: 504 DEADLINE_EXCEEDED. {'error': {'code': 504, 'message': 'Deadline expired before operation could complete.', 'status': 'DEADLINE_EXCEEDED'}}
+WARNING:  WatchFiles detected changes in 'app\config.py'. Reloading...
+Assistant response failed
+Traceback (most recent call last):
+  File "C:\Users\User\diplomska\backend\app\services\llm.py", line 136, in _generate
+    response = get_client().models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\google\genai\models.py", line 6229, in generate_content
+    return self._generate_content(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\google\genai\models.py", line 4707, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1750, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1537, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1514, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\google\genai\errors.py", line 173, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\google\genai\errors.py", line 204, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 504 DEADLINE_EXCEEDED. {'error': {'code': 504, 'message': 'Deadline expired before operation could complete.', 'status': 'DEADLINE_EXCEEDED'}}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\User\diplomska\backend\app\routers\assistant.py", line 83, in chat
+    max_output_tokens=3000, response_schema=ChatAnswer, db=db, user_id=user.id,
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\diplomska\backend\app\services\llm.py", line 193, in _generate
+    raise RuntimeError(f"{operation} failed: {last_exc}") from last_exc
+RuntimeError: assistant failed: 504 DEADLINE_EXCEEDED. {'error': {'code': 504, 'message': 'Deadline expired before operation could complete.', 'status': 'DEADLINE_EXCEEDED'}}
+WARNING:  WatchFiles detected changes in 'app\routers\assistant.py'. Reloading...
+INFO:     Started server process [19936]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [19936]
+INFO:     Started server process [3288]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+Assistant response failed
+Traceback (most recent call last):
+  File "C:\Users\User\diplomska\backend\app\services\llm.py", line 136, in _generate
+    response = get_client().models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\google\genai\models.py", line 6229, in generate_content
+    return self._generate_content(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\google\genai\models.py", line 4707, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1750, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1537, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1514, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\google\genai\errors.py", line 173, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\google\genai\errors.py", line 204, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\User\diplomska\backend\app\routers\assistant.py", line 79, in chat
+    result = ChatAnswer.model_validate_json(llm._generate(
+                                            ^^^^^^^^^^^^^^
+  File "C:\Users\User\diplomska\backend\app\services\llm.py", line 193, in _generate
+    raise RuntimeError(f"{operation} failed: {last_exc}") from last_exc
+RuntimeError: assistant failed: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+WARNING:  WatchFiles detected changes in 'app\routers\assistant.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for background tasks to complete. (CTRL+C to force quit)
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3288]
+INFO:     Started server process [19648]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app\routers\assistant.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [19648]
+WARNING:  WatchFiles detected changes in 'app\services\llm.py'. Reloading...
+INFO:     Started server process [30480]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [30480]
+INFO:     Started server process [6176]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'tests\test_assistant.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for background tasks to complete. (CTRL+C to force quit)
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [6176]
+INFO:     Started server process [27880]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+Assistant stream failed
+Traceback (most recent call last):
+  File "C:\Users\User\diplomska\backend\app\routers\assistant.py", line 141, in events
+    for chunk in llm.stream_assistant(system, prompt, ChatAnswer, user_id):
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\diplomska\backend\app\services\llm.py", line 219, in stream_assistant
+    for chunk in stream:
+                 ^^^^^^
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\google\genai\models.py", line 6399, in generate_content_stream
+    yield from self._generate_content_stream(
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\google\genai\models.py", line 4815, in _generate_content_stream
+    for response in self._api_client.request_streamed(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1767, in request_streamed
+    session_response = self._request(http_request, http_options, stream=True)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1537, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\google\genai\_api_client.py", line 1514, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\google\genai\errors.py", line 173, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\google\genai\errors.py", line 204, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+WARNING:  WatchFiles detected changes in 'app\models.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [27880]
+WARNING:  WatchFiles detected changes in 'app\routers\drafts.py', 'app\routers\calendar.py', 'app\services\scheduling.py', 'app\services\autodraft.py'. Reloading...
+INFO:     Started server process [912]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [912]
+INFO:     Started server process [33300]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app\services\draft_preferences.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for background tasks to complete. (CTRL+C to force quit)
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [33300]
+WARNING:  WatchFiles detected changes in 'app\routers\drafts.py', 'tests\test_scheduling.py', 'app\services\autodraft.py'. Reloading...
+INFO:     Started server process [18104]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [18104]
+INFO:     Started server process [2356]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app\routers\assistant.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2356]
+INFO:     Started server process [31912]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app\services\assistant_tools.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [31912]
+WARNING:  WatchFiles detected changes in 'app\routers\assistant.py'. Reloading...
+INFO:     Started server process [25612]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app\routers\assistant.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [25612]
+WARNING:  WatchFiles detected changes in 'tests\test_assistant_tools.py', 'app\services\assistant_tools.py', 'tests\test_assistant.py'. Reloading...
+INFO:     Started server process [7664]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+Task was destroyed but it is pending!
+task: <Task pending name='Task-1' coro=<Server.serve() done, defined at C:\Users\User\diplomska\backend\.venv\Lib\site-packages\uvicorn\server.py:79> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+Task was destroyed but it is pending!
+task: <Task pending name='Task-3' coro=<LifespanOn.main() running at C:\Users\User\diplomska\backend\.venv\Lib\site-packages\uvicorn\lifespan\on.py:86> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\asyncio\queues.py", line 158, in get
+    await getter
+GeneratorExit
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\starlette\routing.py", line 655, in lifespan
+    await receive()
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\uvicorn\lifespan\on.py", line 137, in receive
+    return await self.receive_queue.get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\asyncio\queues.py", line 160, in get
+    getter.cancel()  # Just in case getter is not done yet.
+    ^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 799, in call_soon
+    self._check_closed()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 545, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1160, in emit
+    msg = self.format(record)
+          ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 999, in format
+    return fmt.format(record)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 706, in format
+    s = self.formatMessage(record)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\uvicorn\logging.py", line 56, in formatMessage
+    recordcopy = copy(record)
+                 ^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\copy.py", line 87, in copy
+    rv = reductor(4)
+         ^^^^^^^^^^^
+ImportError: sys.meta_path is None, Python is likely shutting down
+Call stack:
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\starlette\routing.py", line 659, in lifespan
+    await send({"type": "lifespan.shutdown.failed", "message": exc_text})
+  File "C:\Users\User\diplomska\backend\.venv\Lib\site-packages\uvicorn\lifespan\on.py", line 134, in send
+    self.logger.error(message["message"])
+Message: 'Traceback (most recent call last):\n  File "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\asyncio\\queues.py", line 158, in get\n    await getter\nGeneratorExit\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File "C:\\Users\\User\\diplomska\\backend\\.venv\\Lib\\site-packages\\starlette\\routing.py", line 655, in lifespan\n    await receive()\n  File "C:\\Users\\User\\diplomska\\backend\\.venv\\Lib\\site-packages\\uvicorn\\lifespan\\on.py", line 137, in receive\n    return await self.receive_queue.get()\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\asyncio\\queues.py", line 160, in get\n    getter.cancel()  # Just in case getter is not done yet.\n    ^^^^^^^^^^^^^^^\n  File "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\asyncio\\base_events.py", line 799, in call_soon\n    self._check_closed()\n  File "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\asyncio\\base_events.py", line 545, in _check_closed\n    raise RuntimeError(\'Event loop is closed\')\nRuntimeError: Event loop is closed\n'
+Arguments: ()
+INFO:     Started server process [25752]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app\routers\assistant.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [25752]
+INFO:     Started server process [26404]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'tests\test_assistant.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [26404]
+INFO:     Started server process [32084]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
