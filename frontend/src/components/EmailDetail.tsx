@@ -11,12 +11,14 @@ export function EmailDetail({
   onError,
   onArchive,
   assistantRevision,
+  onAssistantRevisionConsumed,
 }: {
   email: Email;
   defaultTone: string;
   onError: (msg: string) => void;
   onArchive: () => void;
-  assistantRevision?: { draftId: number; content: string } | null;
+  assistantRevision?: { emailId: number; draftId: number; content: string } | null;
+  onAssistantRevisionConsumed?: (revision: { emailId: number; draftId: number; content: string }) => void;
 }) {
   const [current, setCurrent] = useState(email);
   const [draft, setDraft] = useState<Draft | null>(null);
@@ -33,13 +35,15 @@ export function EmailDetail({
   useEffect(() => {
     if (!assistantRevision || assistantRevision === appliedRevision.current || !draft || busy) return;
     appliedRevision.current = assistantRevision;
+    onAssistantRevisionConsumed?.(assistantRevision);
+    if (assistantRevision.emailId !== email.id) return;
     if (draft.id !== assistantRevision.draftId) return;
     if (!["pending", "approved"].includes(draft.status)) {
       onError("This draft cannot be edited. Generate a new reply first.");
       return;
     }
     setDraftText(assistantRevision.content);
-  }, [assistantRevision, draft, busy, onError]);
+  }, [assistantRevision, draft, busy, onError, email.id, onAssistantRevisionConsumed]);
 
   useEffect(() => {
     mounted.current = true;

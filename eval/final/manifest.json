@@ -1,0 +1,53 @@
+{
+  "created_utc": "2026-11-10T12:19:26.203763+00:00",
+  "seed": 20261110,
+  "sources": [
+    {
+      "url": "https://spamassassin.apache.org/old/publiccorpus/20030228_spam.tar.bz2",
+      "sha256": "c08debc32413804949a866be45ef78195cec2cbafd1da744ed76cdb860589743"
+    },
+    {
+      "url": "https://spamassassin.apache.org/old/publiccorpus/20050311_spam_2.tar.bz2",
+      "sha256": "44280a0e28bf7645b2279e8e42659271ad82c6f40bf8d364dbda7f1df344a765"
+    },
+    {
+      "url": "https://spamassassin.apache.org/old/publiccorpus/20030228_easy_ham.tar.bz2",
+      "sha256": "2b7b65904bcfcc31d2b5f51946f2d261370b257402cbbd62930b46ab83367438"
+    },
+    {
+      "url": "https://spamassassin.apache.org/old/publiccorpus/20030228_easy_ham_2.tar.bz2",
+      "sha256": "b4bd3dc5ae5b40f38e99a0e41ad7d16b428b56e818e3a6ffa07330d62004dd38"
+    },
+    {
+      "url": "https://spamassassin.apache.org/old/publiccorpus/20030228_hard_ham.tar.bz2",
+      "sha256": "ce2ce67880643dbde65ea7f85bffbfe4417349c4bd80b6b0de56262ae6b0a9c9"
+    }
+  ],
+  "pool_sizes": {
+    "spam": 1543,
+    "easy_ham": 3820,
+    "hard_ham": 227
+  },
+  "count": 1000,
+  "groups": {
+    "hard_ham": 100,
+    "spam": 500,
+    "easy_ham": 400
+  },
+  "dataset_sha256": "bf824daf9ffe6b8bd7e0050388d38e8d40c36b5978e046627ee8bda0210c5147",
+  "pilot_sha256": "8e89ae3bcdd1916bddd6c356ee434d42609542f384939be1e98bb20bc63dcab1",
+  "classifier_model": "gemini-3.5-flash-lite",
+  "thinking_level": "",
+  "classifier_source_sha256": "30d8685eeb06866644ad9f3bb21242f58ca64fef9b61a71fd162fb41f1c5ed96",
+  "python": "3.12.10",
+  "labels": "Original corpus spam/ham labels; no AI labels used in the primary benchmark.",
+  "exclusions": "Empty bodies, duplicate model inputs and normalized body prefixes, including all pilot examples.",
+  "primary_endpoint": "Correct binary spam/ham predictions divided by all 1000 planned examples, including invalid outputs as incorrect. Not final until all inputs attempted.",
+  "secondary_endpoints": [
+    "Valid-output accuracy, precision, recall, F1",
+    "Failure rate",
+    "95% Wilson interval",
+    "Latency and measured tokens"
+  ],
+  "frozen_before_inference": true
+}

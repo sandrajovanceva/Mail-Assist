@@ -23,6 +23,7 @@ class FetchedEmail:
     # sender of the newest message in this thread, when the provider can say
     # cheaply; used to skip conversations the user has already answered
     last_thread_sender: str | None = None
+    reply_to: str = ""
 
 
 @dataclass
@@ -70,6 +71,10 @@ class EmailProvider(ABC):
         alone rather than making an expensive call for a hint.
         """
         return None
+
+    def reply_to_address(self, message_id: str) -> str:
+        """Optional metadata lookup for messages imported before Reply-To was stored."""
+        return ""
 
     @abstractmethod
     def send_reply(

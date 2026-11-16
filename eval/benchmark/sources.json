@@ -1,0 +1,17 @@
+{
+  "seed": 20261109,
+  "archives": [
+    {
+      "url": "https://spamassassin.apache.org/old/publiccorpus/20030228_spam.tar.bz2",
+      "sha256": "c08debc32413804949a866be45ef78195cec2cbafd1da744ed76cdb860589743"
+    },
+    {
+      "url": "https://spamassassin.apache.org/old/publiccorpus/20030228_easy_ham.tar.bz2",
+      "sha256": "2b7b65904bcfcc31d2b5f51946f2d261370b257402cbbd62930b46ab83367438"
+    },
+    {
+      "url": "https://spamassassin.apache.org/old/publiccorpus/20030228_hard_ham.tar.bz2",
+      "sha256": "ce2ce67880643dbde65ea7f85bffbfe4417349c4bd80b6b0de56262ae6b0a9c9"
+    }
+  ]
+}

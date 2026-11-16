@@ -1,0 +1,79 @@
+{
+  "source": "Synthetic examples authored by coding assistant; not real correspondence.",
+  "train": [
+    {
+      "id": "train-0",
+      "reply": "Hello Mira,\n\nThe agenda arrived. I will review it before our call.\n\nThanks,\nAlex"
+    },
+    {
+      "id": "train-1",
+      "reply": "Hello Jon,\n\nThe access request is with support. I will share their response.\n\nThanks,\nAlex"
+    },
+    {
+      "id": "train-2",
+      "reply": "Hello Lea,\n\nPlease send the updated invoice. I will check the figures.\n\nThanks,\nAlex"
+    },
+    {
+      "id": "train-3",
+      "reply": "Hello Sam,\n\nTuesday works for a short call. Please send the invitation.\n\nThanks,\nAlex"
+    },
+    {
+      "id": "train-4",
+      "reply": "Hello Nina,\n\nI need the final brief before estimating the work.\n\nThanks,\nAlex"
+    },
+    {
+      "id": "train-5",
+      "reply": "Hello Tom,\n\nThe notes are clear. I will use them for the next revision.\n\nThanks,\nAlex"
+    }
+  ],
+  "test": [
+    {
+      "id": "test-0",
+      "sender": "Ada",
+      "incoming": "Did you receive the design files?",
+      "reference": "Hello Ada,\n\nI received the design files. I will review them.\n\nThanks,\nAlex"
+    },
+    {
+      "id": "test-1",
+      "sender": "Ben",
+      "incoming": "Can you confirm the price today? The scope is not finalized.",
+      "reference": "Hello Ben,\n\nI need the final scope before confirming the price.\n\nThanks,\nAlex"
+    },
+    {
+      "id": "test-2",
+      "sender": "Cora",
+      "incoming": "Please send your delivery estimate. We have not sent the requirements yet.",
+      "reference": "Hello Cora,\n\nPlease send the requirements. I will review them before estimating delivery.\n\nThanks,\nAlex"
+    },
+    {
+      "id": "test-3",
+      "sender": "Dan",
+      "incoming": "We have prepared an updated brief. Would you like us to send it?",
+      "reference": "Hello Dan,\n\nPlease send the updated brief. I will review it.\n\nThanks,\nAlex"
+    },
+    {
+      "id": "test-4",
+      "sender": "Eva",
+      "incoming": "Do you need our invoice number to investigate this?",
+      "reference": "Hello Eva,\n\nPlease send the invoice number. I will use it to investigate.\n\nThanks,\nAlex"
+    },
+    {
+      "id": "test-5",
+      "sender": "Finn",
+      "incoming": "Can you approve these changes without seeing the revised document?",
+      "reference": "Hello Finn,\n\nPlease send the revised document. I need to review it before approving the changes.\n\nThanks,\nAlex"
+    },
+    {
+      "id": "test-6",
+      "sender": "Gia",
+      "incoming": "Do you want the meeting notes as a PDF?",
+      "reference": "Hello Gia,\n\nPlease send the meeting notes as a PDF.\n\nThanks,\nAlex"
+    },
+    {
+      "id": "test-7",
+      "sender": "Hugo",
+      "incoming": "Should I send you the error message to help troubleshoot?",
+      "reference": "Hello Hugo,\n\nPlease send the error message. I will review it to help troubleshoot.\n\nThanks,\nAlex"
+    }
+  ]
+}

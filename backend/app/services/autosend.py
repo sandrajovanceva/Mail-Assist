@@ -34,7 +34,7 @@ NEVER_AUTO_SEND = {"important"}
 
 def allowed_categories(app_settings: AppSettings) -> set[str]:
     raw = (app_settings.auto_send_categories or "").split(",")
-    return {c.strip() for c in raw if c.strip()} - NEVER_AUTO_SEND
+    return {c.strip() for c in raw if c.strip()} & {"routine"}
 
 
 def sent_today(db: Session, user_id: int) -> int:
@@ -60,7 +60,7 @@ def is_eligible(email: EmailMessage, app_settings: AppSettings | None) -> bool:
     if not email.needs_reply:
         return False
     decision = needs_reply.decide(
-        sender=email.sender,
+        sender=email.reply_to or email.sender,
         category=email.category,
         is_bulk=email.is_bulk,
         last_thread_sender=None,
@@ -77,6 +77,7 @@ def maybe_auto_send(
     email: EmailMessage,
     app_settings: AppSettings | None,
     provider: EmailProvider,
+    *, before_send=None,
 ) -> Draft | None:
     """Send an existing automatic draft if every guard passes; never generate one."""
     if email.account.user_id != user_id or email.is_archived:
@@ -118,7 +119,7 @@ def maybe_auto_send(
             log.info("Skipping auto-send for email %s: unknown thread state", email.id)
             return False
         return needs_reply.decide(
-            sender=email.sender,
+            sender=email.reply_to or email.sender,
             category=email.category,
             is_bulk=email.is_bulk,
             last_thread_sender=last_sender,
@@ -133,4 +134,6 @@ def maybe_auto_send(
     if not untouched():
         return None
 
+    if before_send:
+        before_send()
     return deliver(db, draft, provider, automatic=True)

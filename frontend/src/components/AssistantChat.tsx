@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { api, type Email } from "../api";
 import { ChatIcon } from "./Icons";
 
-type Turn = { role: "user" | "assistant"; content: string; revision?: string; draftId?: number; incomplete?: boolean; sources?: { id: number; subject: string }[] };
+type Turn = { role: "user" | "assistant"; content: string; revision?: string; draftId?: number; emailId?: number; incomplete?: boolean; sources?: { id: number; subject: string }[] };
 export function AssistantChat({ email, onCalendar, onUseRevision, onOpenEmail }: {
   email: Email | null; onCalendar: () => void;
   onUseRevision: (emailId: number, draftId: number, content: string) => void;
@@ -21,7 +21,7 @@ export function AssistantChat({ email, onCalendar, onUseRevision, onOpenEmail }:
   useEffect(() => {
     generation.current++;
     activeRequest.current?.abort();
-    setMessages([]); setInput(""); setError(""); setBusy(false);
+    setError(""); setBusy(false);
     return () => { generation.current++; activeRequest.current?.abort(); };
   }, [email?.id]);
   useEffect(() => { if (open) composer.current?.focus(); }, [open]);
@@ -43,7 +43,7 @@ export function AssistantChat({ email, onCalendar, onUseRevision, onOpenEmail }:
           if (index !== responseIndex) return message;
           if (event.type === "delta") return { ...message, content: message.content + event.text };
           if (event.type === "done") return { role: "assistant", content: event.answer,
-            revision: event.suggested_reply || undefined, draftId: event.draft_id || undefined, sources: event.sources };
+            revision: event.suggested_reply || undefined, draftId: event.draft_id || undefined, emailId: email?.id, sources: event.sources };
           return message;
         }));
       }, controller.signal);
@@ -67,8 +67,8 @@ export function AssistantChat({ email, onCalendar, onUseRevision, onOpenEmail }:
           {message.incomplete && !busy && message.content && <small>Response interrupted</small>}
           {message.revision && <div className="assistant-revision"><strong>Suggested reply</strong><pre>{message.revision}</pre>
             <p>Based on the saved draft. Replacing editor text also replaces unsaved edits. Review and save before sending.</p>
-            <button disabled={!email || busy} onClick={() => {
-              if (email && message.draftId) { onUseRevision(email.id, message.draftId, message.revision!); setOpen(false); }
+            <button disabled={!email || email.id !== message.emailId || busy} onClick={() => {
+              if (email && email.id === message.emailId && message.draftId) { onUseRevision(email.id, message.draftId, message.revision!); setOpen(false); }
             }}>Replace editor text</button>
           </div>}
         </div>)}

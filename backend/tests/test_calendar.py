@@ -75,6 +75,6 @@ def test_calendar_scope_is_opt_in(client, user_token, monkeypatch):
     from app.config import settings
     monkeypatch.setattr(settings, "google_client_id", "test-client")
     for enabled in (False, True):
-        response = client.get(f"/auth/google/login?token={user_token}&calendar={str(enabled).lower()}", follow_redirects=False)
-        scopes = parse_qs(urlparse(response.headers["location"]).query)["scope"][0].split()
+        response = client.post(f"/auth/google/login?calendar={str(enabled).lower()}", headers={"Authorization": f"Bearer {user_token}"})
+        scopes = parse_qs(urlparse(response.json()["url"]).query)["scope"][0].split()
         assert (CALENDAR_SCOPE in scopes) == enabled

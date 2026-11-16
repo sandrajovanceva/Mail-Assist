@@ -1,0 +1,101 @@
+id,reference_category,predicted_category,reference_attention,predicted_attention,reason
+spam-00095,spam,spam,False,False,This email is an unsolicited promotional advertisement for DVD copying software from an unknown sender.
+spam-00025,spam,spam,False,False,This is unsolicited junk mail advertising a debt reduction program.
+spam-00251,spam,spam,False,False,This email is an unsolicited commercial software clearance sale advertisement.
+spam-00149,spam,spam,False,False,This is an unsolicited marketing email for web conferencing software.
+spam-00317,spam,spam,False,False,This email is an unsolicited promotional message for a book and constitutes bulk marketing junk.
+spam-00071,spam,newsletter,False,False,This is a bulk marketing email promoting a software release and includes an unsubscribe link.
+spam-00218,spam,spam,False,False,This is a classic advance-fee financial scam email.
+spam-00191,spam,spam,False,False,This is an unsolicited mass marketing email offering SEO services.
+spam-00094,spam,spam,False,False,This is unsolicited adult content and clearly fits the definition of spam.
+spam-00005,spam,spam,False,False,This is unsolicited promotional junk offering weight loss and legal services.
+spam-00446,spam,spam,False,False,This is an unsolicited promotional email offering illegal satellite unlocking services.
+spam-00239,spam,newsletter,False,False,This is a promotional marketing email for a digital video recorder.
+spam-00449,spam,spam,False,False,This is unsolicited casino marketing junk with an unsubscribe link.
+spam-00049,spam,spam,False,False,The email is unsolicited promotional junk containing typical spam phrases and suspicious links.
+spam-00483,spam,spam,False,False,This email is an unsolicited promotional advertisement for a get-rich-quick scheme.
+spam-00106,spam,spam,False,False,This is an unsolicited promotional email offering instructions for illegal cable descramblers and radar jammers.
+spam-00253,spam,spam,False,False,This is an unsolicited bulk marketing email offering email list services.
+spam-00110,spam,,False,,
+spam-00500,spam,spam,False,False,This email is unsolicited junk advertising email marketing services and address lists.
+spam-00430,spam,spam,False,False,This is an unsolicited marketing email offering loans and promising savings.
+spam-00083,spam,spam,False,False,This is an unsolicited promotional email for conferencing services.
+spam-00164,spam,spam,False,False,This is an unsolicited work-from-home job offer typical of mass marketing junk and phishing attempts.
+spam-00334,spam,spam,False,False,This is an unsolicited promotional email pitching a get-rich-quick scheme.
+spam-00485,spam,spam,False,False,This is an unsolicited bulk marketing email advertising direct email services.
+spam-00432,spam,spam,False,False,This is a classic advance-fee financial scam (419 scam) offering a large sum of money in exchange for assistance.
+spam-00477,spam,newsletter,False,False,This is a marketing email offering promotional discounts and free shipping.
+spam-00155,spam,spam,False,False,This is a classic advance-fee financial scam (419 scam) offering a fake multi-million dollar transfer.
+spam-00412,spam,spam,False,False,This email is an unsolicited promotional message offering a free password and site access.
+spam-00471,spam,spam,False,False,This is an unsolicited mortgage marketing email from an unknown sender.
+spam-00190,spam,spam,False,False,This is an unsolicited promotional email offering pharmaceutical products.
+spam-00217,spam,spam,False,False,This is an unsolicited get-rich-quick sales pitch and phishing attempt.
+spam-00205,spam,spam,False,False,This is an unsolicited dating site invitation and promotional junk email.
+spam-00112,spam,spam,False,False,This email is an unsolicited stock promotion containing typical financial junk mail patterns.
+spam-00297,spam,spam,False,False,This email is an unsolicited promotional advertisement for DVD burning software from an unknown sender.
+spam-00215,spam,spam,False,False,This is an unsolicited marketing email offering mortgage refinancing and loans from an unknown sender.
+spam-00441,spam,spam,False,False,This is unsolicited financial promotional junk mail.
+spam-00359,spam,spam,False,False,This is a classic advance-fee financial scam or phishing email.
+spam-00397,spam,spam,False,False,This is unsolicited promotional junk offering to sell email lists.
+spam-00498,spam,newsletter,False,False,This is a promotional marketing email with discount offers and gift announcements from a store.
+spam-00045,spam,spam,False,False,This is unsolicited junk mail containing multiple advertisement links and an opt-out option.
+spam-00097,spam,spam,False,False,This is an unsolicited marketing email offering herbal supplements.
+spam-00357,spam,spam,False,False,This email is an unsolicited promotional advertisement for software download.
+spam-00130,spam,spam,False,False,This is an unsolicited prize notification and phishing attempt.
+spam-00082,spam,spam,False,False,This is a classic advance-fee financial scam email.
+spam-00291,spam,newsletter,False,False,This is a marketing email sent to insurance professionals regarding diabetes case studies.
+spam-00433,spam,spam,False,False,This is an unsolicited marketing email offering weight-loss products.
+spam-00233,spam,spam,False,False,This email is an unsolicited stock pump-and-dump scheme.
+spam-00069,spam,spam,False,False,This is unsolicited adult content promotional junk email.
+spam-00153,spam,spam,False,False,This is an unsolicited get-rich-quick scheme email.
+spam-00163,spam,spam,False,False,This email is an unsolicited promotional message offering guaranteed signups and work-from-home schemes.
+easy_ham-00753,routine,routine,False,False,This is a casual conversational email continuation that does not require urgent action.
+easy_ham-00195,routine,newsletter,False,False,This is a mailing list discussion about secondhand books and is not personally addressed.
+easy_ham-02007,newsletter,newsletter,False,False,This is an automated RSS feed post containing blog updates.
+easy_ham-01189,important,newsletter,True,False,"This is a mailing list discussion about RPM packages and GStreamer, which does not require direct personal action."
+easy_ham-00566,routine,spam,False,False,This is unsolicited political commentary and link sharing from an unknown sender.
+easy_ham-01738,routine,routine,False,False,This is a technical mailing list discussion about spam filtering that does not require urgent personal action.
+easy_ham-01522,routine,newsletter,False,False,This is an automated bug tracker notification email from a development mailing list.
+easy_ham-00747,routine,routine,False,False,This is a casual conversational email discussing a shared article about archaeology.
+easy_ham-00034,routine,newsletter,False,False,This is a mailing list discussion thread rather than a personal message requiring action.
+easy_ham-01908,newsletter,newsletter,False,False,This is an automated RSS feed update and public speaking reminder.
+easy_ham-00391,routine,routine,False,False,This is a simple technical question sent to a mailing list that requires a basic reply.
+easy_ham-00841,routine,routine,False,False,This is a casual personal correspondence discussing news.
+easy_ham-02020,newsletter,newsletter,False,False,This is an automated RSS feed update containing link headlines.
+easy_ham-00876,newsletter,newsletter,False,False,This is an informational mailing list forward discussing event URLs.
+easy_ham-01527,important,newsletter,True,False,This is an automated bug tracking notification from a mailing list.
+easy_ham-00661,routine,spam,False,False,This is an unsolicited mailing list message containing casual internet chatter and inappropriate humor.
+easy_ham-01305,routine,newsletter,False,False,This is a mailing list discussion message regarding software interoperability.
+easy_ham-01240,routine,newsletter,False,False,This is a mailing list discussion message regarding technical support.
+easy_ham-00662,routine,routine,False,False,"This is a casual, informative email sharing personal experiences with an online service and requires no urgent action or complex reply."
+easy_ham-01518,routine,newsletter,False,False,This is a mailing list discussion about software release updates.
+easy_ham-01736,important,routine,True,False,This is a technical mailing list discussion about spam handling that does not require urgent personal action.
+easy_ham-01639,important,important,True,True,This is a direct technical discussion from a core developer regarding project collaboration and data sharing.
+easy_ham-00892,routine,routine,False,False,This is a casual conversational email discussing network theory and articles.
+easy_ham-02372,newsletter,newsletter,False,False,This is an RSS feed update containing a blog post and link.
+easy_ham-01718,routine,routine,False,False,This is a technical development update sharing testing results for a mailing list.
+easy_ham-00356,routine,routine,False,False,This is a personal anecdote sharing a coincidental event with no required action.
+easy_ham-00769,routine,routine,False,False,This is a casual philosophical and political discussion thread among peers requiring no urgent action.
+easy_ham-00757,routine,routine,False,False,This is a casual conversational email continuation that requires no immediate action.
+easy_ham-01038,routine,newsletter,False,False,This is a mailing list discussion about software packaging and bugs.
+easy_ham-00652,routine,newsletter,False,False,This is an archival mailing list discussion with no personal action required.
+easy_ham-02328,newsletter,newsletter,False,False,This is an automated RSS feed update containing a technical article excerpt.
+easy_ham-01861,newsletter,newsletter,False,False,This is an automated RSS feed entry containing blog updates and web syndication news.
+easy_ham-00545,routine,routine,False,False,"This is a casual, conversational email exchange between acquaintances."
+easy_ham-01217,important,newsletter,True,False,This is a discussion post from a mailing list.
+easy_ham-01297,routine,newsletter,False,False,This is a technical discussion from a mailing list regarding MP3 support and plugins.
+easy_ham-01461,routine,newsletter,False,False,This is a technical discussion from a mailing list.
+easy_ham-01959,newsletter,newsletter,False,False,This is an automated RSS feed update containing a blog link.
+easy_ham-00731,routine,spam,False,False,The email appears to be unsolicited junk or off-topic conversational bickering.
+easy_ham-01889,newsletter,newsletter,False,False,This is an automated RSS feed post containing blog updates and humor.
+easy_ham-00574,routine,routine,False,False,"This is a casual, lighthearted reply to an ongoing conversation requiring no urgent action."
+hard_ham-00048,newsletter,newsletter,False,False,This is an automated stock market and technology news update email.
+hard_ham-00013,newsletter,newsletter,False,False,This is a weekly software download dispatch newsletter from CNET.
+hard_ham-00126,newsletter,newsletter,False,False,"This email is an informational e-zine containing Windows XP tips, patches, and articles."
+hard_ham-00075,newsletter,newsletter,False,False,This is an automated promotional newsletter containing product recommendations and ads.
+hard_ham-00159,newsletter,newsletter,False,False,This is a marketing email promoting a financial subscription service.
+hard_ham-00036,newsletter,newsletter,False,False,"This is a bulk informational newsletter containing articles, product picks, and tech updates."
+hard_ham-00109,newsletter,newsletter,False,False,This email is a bulk update regarding a publishing schedule change from a newsletter subscription.
+hard_ham-00096,newsletter,newsletter,False,False,This is a promotional tech hardware newsletter from CNET containing product reviews and articles.
+hard_ham-00047,newsletter,newsletter,False,False,This is a bulk subscription newsletter containing tech news and advertisements.
+hard_ham-00003,important,important,True,True,This email concerns domain expiration and requires manual renewal to prevent loss of property.

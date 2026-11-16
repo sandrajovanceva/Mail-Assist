@@ -37,7 +37,7 @@ export function CalendarPage({ onChoose }: { onChoose?: (instructions: string) =
   return <section className="calendar-page glass">
     <div className="calendar-heading"><div><span className="calendar-eyebrow">GOOGLE CALENDAR</span>
       <h2>Find a time</h2></div>
-      <a className="calendar-connect" href={api.calendarLoginUrl()}>{connection?.connected ? "Reconnect" : "Connect Calendar"}</a>
+      <button className="calendar-connect" onClick={() => api.connectGoogle(true).catch(error => setError(error.message))}>{connection?.connected ? "Reconnect" : "Connect Calendar"}</button>
     </div>
     {connection && <p className="calendar-connection">{connection.connected ? `Connected · ${connection.email}` : "Connect Calendar to allow read-only availability checks."}</p>}
     {error && <p className="calendar-error" role="alert">{error}</p>}

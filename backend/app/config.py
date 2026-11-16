@@ -35,6 +35,8 @@ class Settings(BaseSettings):
     # concurrency low and retry with backoff rather than failing the whole sync.
     sync_max_emails: int = 20
     sync_concurrency: int = 4
+    classification_max_attempts: int = 3  # logical attempts, including initial import
+    classification_retry_minutes: int = 15  # exponential cooldown between attempts
     llm_max_retries: int = 4
     llm_retry_base_delay: float = 2.0  # seconds; doubled each attempt
     llm_timeout_seconds: int = 90  # per request; drafting long mail is slow

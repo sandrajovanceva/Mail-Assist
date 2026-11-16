@@ -180,6 +180,7 @@ async function allPages<T>(path: string, params: Record<string, unknown> = {}): 
 }
 
 export const api = {
+  emailCounts: () => request<Record<string, number>>("/emails/counts"),
   chatStream: async (body: { email_id: number | null; message: string; history: { role: "user" | "assistant"; content: string }[] }, onEvent: (event: ChatEvent) => void, signal: AbortSignal) => {
     const version = sessionVersion;
     const controller = new AbortController();
@@ -197,11 +198,15 @@ export const api = {
   },
   chat: (body: { email_id: number | null; message: string; history: { role: "user" | "assistant"; content: string }[] }) =>
     request<{ answer: string; suggested_reply: string | null; draft_id: number | null }>("/assistant/chat", { method: "POST", body: JSON.stringify(body) }),
-  calendarLoginUrl: () => `${API}/auth/google/login?token=${auth.token()}&calendar=true`,
+  connectGoogle: async (calendar = false) => {
+    const { url } = await request<{ url: string }>(`/auth/google/login?calendar=${calendar}`, {
+      method: "POST", credentials: "include",
+    });
+    window.location.assign(url);
+  },
   calendarStatus: () => request<{ connected: boolean; email: string | null; preferences?: { days: number; timezone: string; work_start: string; work_end: string; duration_minutes: number; weekdays: number[] } }>("/calendar/status"),
   availability: (body: { start_date: string; days: number; timezone: string; work_start: string; work_end: string; duration_minutes: number; weekdays: number[] }) =>
     request<{ slots: { start: string; end: string }[]; timezone: string; email: string; checked_at: string }>("/calendar/availability", { method: "POST", body: JSON.stringify(body) }),
-  googleLoginUrl: () => `${API}/auth/google/login?token=${auth.token()}`,
 
   register: (email: string, password: string, name: string) =>
     request<{ token: string; user: User }>("/auth/register", {

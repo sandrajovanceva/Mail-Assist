@@ -1,0 +1,502 @@
+{
+  "spam-00095": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00025": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00251": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00149": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00317": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00071": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00218": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00191": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00094": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00005": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00446": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00239": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00449": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00049": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00483": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00106": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00253": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00110": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00500": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00430": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00083": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00164": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00334": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00485": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00432": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00477": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00155": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00412": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00471": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00190": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00217": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00205": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00112": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00297": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00215": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00441": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00359": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00397": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00498": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00045": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00097": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00357": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00130": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00082": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00291": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00433": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00233": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00069": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00153": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "spam-00163": {
+    "category": "spam",
+    "needs_attention": false,
+    "rationale": "Preserved original corpus spam label; junk does not require a personal reply."
+  },
+  "easy_ham-00753": {
+    "category": "routine",
+    "needs_attention": false,
+    "rationale": "Ordinary discussion, acknowledgement, or technical information; no substantive personal decision required."
+  },
+  "easy_ham-00195": {
+    "category": "routine",
+    "needs_attention": false,
+    "rationale": "Ordinary discussion, acknowledgement, or technical information; no substantive personal decision required."
+  },
+  "easy_ham-02007": {
+    "category": "newsletter",
+    "needs_attention": false,
+    "rationale": "Broadcast news, syndicated update, event announcement, or subscribed marketing; no individual response requested."
+  },
+  "easy_ham-01189": {
+    "category": "important",
+    "needs_attention": true,
+    "rationale": "Requests repository access and technical investigation before a release."
+  },
+  "easy_ham-00566": {
+    "category": "routine",
+    "needs_attention": false,
+    "rationale": "Ordinary discussion, acknowledgement, or technical information; no substantive personal decision required."
+  },
+  "easy_ham-01738": {
+    "category": "routine",
+    "needs_attention": false,
+    "rationale": "Ordinary discussion, acknowledgement, or technical information; no substantive personal decision required."
+  },
+  "easy_ham-01522": {
+    "category": "routine",
+    "needs_attention": false,
+    "rationale": "Ordinary discussion, acknowledgement, or technical information; no substantive personal decision required."
+  },
+  "easy_ham-00747": {
+    "category": "routine",
+    "needs_attention": false,
+    "rationale": "Ordinary discussion, acknowledgement, or technical information; no substantive personal decision required."
+  },
+  "easy_ham-00034": {
+    "category": "routine",
+    "needs_attention": false,
+    "rationale": "Ordinary discussion, acknowledgement, or technical information; no substantive personal decision required."
+  },
+  "easy_ham-01908": {
+    "category": "newsletter",
+    "needs_attention": false,
+    "rationale": "Broadcast news, syndicated update, event announcement, or subscribed marketing; no individual response requested."
+  },
+  "easy_ham-00391": {
+    "category": "routine",
+    "needs_attention": false,
+    "rationale": "Ordinary discussion, acknowledgement, or technical information; no substantive personal decision required."
+  },
+  "easy_ham-00841": {
+    "category": "routine",
+    "needs_attention": false,
+    "rationale": "Ordinary discussion, acknowledgement, or technical information; no substantive personal decision required."
+  },
+  "easy_ham-02020": {
+    "category": "newsletter",
+    "needs_attention": false,
+    "rationale": "Broadcast news, syndicated update, event announcement, or subscribed marketing; no individual response requested."
+  },
+  "easy_ham-00876": {
+    "category": "newsletter",
+    "needs_attention": false,
+    "rationale": "Broadcast news, syndicated update, event announcement, or subscribed marketing; no individual response requested."
+  },
+  "easy_ham-01527": {
+    "category": "important",
+    "needs_attention": true,
+    "rationale": "Bug report asks the assigned maintainer to change a trust-related default."
+  },
+  "easy_ham-00661": {
+    "category": "routine",
+    "needs_attention": false,
+    "rationale": "Ordinary discussion, acknowledgement, or technical information; no substantive personal decision required."
+  },
+  "easy_ham-01305": {
+    "category": "routine",
+    "needs_attention": false,
+    "rationale": "Ordinary discussion, acknowledgement, or technical information; no substantive personal decision required."
+  },
+  "easy_ham-01240": {
+    "category": "routine",
+    "needs_attention": false,
+    "rationale": "Ordinary discussion, acknowledgement, or technical information; no substantive personal decision required."
+  },
+  "easy_ham-00662": {
+    "category": "routine",
+    "needs_attention": false,
+    "rationale": "Ordinary discussion, acknowledgement, or technical information; no substantive personal decision required."
+  },
+  "easy_ham-01518": {
+    "category": "routine",
+    "needs_attention": false,
+    "rationale": "Ordinary discussion, acknowledgement, or technical information; no substantive personal decision required."
+  },
+  "easy_ham-01736": {
+    "category": "important",
+    "needs_attention": true,
+    "rationale": "Asks for a technical decision about training data and contributing code."
+  },
+  "easy_ham-01639": {
+    "category": "important",
+    "needs_attention": true,
+    "rationale": "Requests publishing training artifacts for other developers."
+  },
+  "easy_ham-00892": {
+    "category": "routine",
+    "needs_attention": false,
+    "rationale": "Ordinary discussion, acknowledgement, or technical information; no substantive personal decision required."
+  },
+  "easy_ham-02372": {
+    "category": "newsletter",
+    "needs_attention": false,
+    "rationale": "Broadcast news, syndicated update, event announcement, or subscribed marketing; no individual response requested."
+  },
+  "easy_ham-01718": {
+    "category": "routine",
+    "needs_attention": false,
+    "rationale": "Ordinary discussion, acknowledgement, or technical information; no substantive personal decision required."
+  },
+  "easy_ham-00356": {
+    "category": "routine",
+    "needs_attention": false,
+    "rationale": "Ordinary discussion, acknowledgement, or technical information; no substantive personal decision required."
+  },
+  "easy_ham-00769": {
+    "category": "routine",
+    "needs_attention": false,
+    "rationale": "Ordinary discussion, acknowledgement, or technical information; no substantive personal decision required."
+  },
+  "easy_ham-00757": {
+    "category": "routine",
+    "needs_attention": false,
+    "rationale": "Ordinary discussion, acknowledgement, or technical information; no substantive personal decision required."
+  },
+  "easy_ham-01038": {
+    "category": "routine",
+    "needs_attention": false,
+    "rationale": "Ordinary discussion, acknowledgement, or technical information; no substantive personal decision required."
+  },
+  "easy_ham-00652": {
+    "category": "routine",
+    "needs_attention": false,
+    "rationale": "Ordinary discussion, acknowledgement, or technical information; no substantive personal decision required."
+  },
+  "easy_ham-02328": {
+    "category": "newsletter",
+    "needs_attention": false,
+    "rationale": "Broadcast news, syndicated update, event announcement, or subscribed marketing; no individual response requested."
+  },
+  "easy_ham-01861": {
+    "category": "newsletter",
+    "needs_attention": false,
+    "rationale": "Broadcast news, syndicated update, event announcement, or subscribed marketing; no individual response requested."
+  },
+  "easy_ham-00545": {
+    "category": "routine",
+    "needs_attention": false,
+    "rationale": "Ordinary discussion, acknowledgement, or technical information; no substantive personal decision required."
+  },
+  "easy_ham-01217": {
+    "category": "important",
+    "needs_attention": true,
+    "rationale": "Requests troubleshooting of an upgrade failure."
+  },
+  "easy_ham-01297": {
+    "category": "routine",
+    "needs_attention": false,
+    "rationale": "Ordinary discussion, acknowledgement, or technical information; no substantive personal decision required."
+  },
+  "easy_ham-01461": {
+    "category": "routine",
+    "needs_attention": false,
+    "rationale": "Ordinary discussion, acknowledgement, or technical information; no substantive personal decision required."
+  },
+  "easy_ham-01959": {
+    "category": "newsletter",
+    "needs_attention": false,
+    "rationale": "Broadcast news, syndicated update, event announcement, or subscribed marketing; no individual response requested."
+  },
+  "easy_ham-00731": {
+    "category": "routine",
+    "needs_attention": false,
+    "rationale": "Ordinary discussion, acknowledgement, or technical information; no substantive personal decision required."
+  },
+  "easy_ham-01889": {
+    "category": "newsletter",
+    "needs_attention": false,
+    "rationale": "Broadcast news, syndicated update, event announcement, or subscribed marketing; no individual response requested."
+  },
+  "easy_ham-00574": {
+    "category": "routine",
+    "needs_attention": false,
+    "rationale": "Ordinary discussion, acknowledgement, or technical information; no substantive personal decision required."
+  },
+  "hard_ham-00048": {
+    "category": "newsletter",
+    "needs_attention": false,
+    "rationale": "Broadcast news, syndicated update, event announcement, or subscribed marketing; no individual response requested."
+  },
+  "hard_ham-00013": {
+    "category": "newsletter",
+    "needs_attention": false,
+    "rationale": "Broadcast news, syndicated update, event announcement, or subscribed marketing; no individual response requested."
+  },
+  "hard_ham-00126": {
+    "category": "newsletter",
+    "needs_attention": false,
+    "rationale": "Broadcast news, syndicated update, event announcement, or subscribed marketing; no individual response requested."
+  },
+  "hard_ham-00075": {
+    "category": "newsletter",
+    "needs_attention": false,
+    "rationale": "Broadcast news, syndicated update, event announcement, or subscribed marketing; no individual response requested."
+  },
+  "hard_ham-00159": {
+    "category": "newsletter",
+    "needs_attention": false,
+    "rationale": "Broadcast news, syndicated update, event announcement, or subscribed marketing; no individual response requested."
+  },
+  "hard_ham-00036": {
+    "category": "newsletter",
+    "needs_attention": false,
+    "rationale": "Broadcast news, syndicated update, event announcement, or subscribed marketing; no individual response requested."
+  },
+  "hard_ham-00109": {
+    "category": "newsletter",
+    "needs_attention": false,
+    "rationale": "Broadcast news, syndicated update, event announcement, or subscribed marketing; no individual response requested."
+  },
+  "hard_ham-00096": {
+    "category": "newsletter",
+    "needs_attention": false,
+    "rationale": "Broadcast news, syndicated update, event announcement, or subscribed marketing; no individual response requested."
+  },
+  "hard_ham-00047": {
+    "category": "newsletter",
+    "needs_attention": false,
+    "rationale": "Broadcast news, syndicated update, event announcement, or subscribed marketing; no individual response requested."
+  },
+  "hard_ham-00003": {
+    "category": "important",
+    "needs_attention": true,
+    "rationale": "Domain expiration requires the owner to decide whether to renew."
+  }
+}

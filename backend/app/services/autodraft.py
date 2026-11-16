@@ -26,6 +26,7 @@ def draft_for(
     user_id: int,
     email: EmailMessage,
     app_settings: AppSettings | None,
+    *, before_store=None,
 ) -> Draft | None:
     """Generate and store a pending draft. Returns None if one already exists."""
     existing = db.query(Draft).filter_by(email_id=email.id).first()
@@ -41,6 +42,11 @@ def draft_for(
         email, tone, app_settings, knowledge, extra_instructions=calendar, db=db, user_id=user_id
     )
 
+    if before_store:
+        before_store()
+    # Another writer may have created a draft while the model was answering.
+    if db.query(Draft).filter_by(email_id=email.id).first():
+        return None
     draft = Draft(
         email_id=email.id,
         content=content,

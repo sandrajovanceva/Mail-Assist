@@ -11,6 +11,17 @@ import base64
 from app.services.gmail import _decode_body, html_to_text
 
 
+def test_gmail_import_preserves_from_and_reply_to_separately():
+    from app.services.gmail import GmailProvider
+    provider = GmailProvider.__new__(GmailProvider)
+    email = provider._to_email({'id':'contact','payload':{'headers':[
+        {'name':'From','value':'Form <noreply@forms.example>'},
+        {'name':'Reply-To','value':'Customer <customer@example.com>'},
+    ]}})
+    assert email.sender == 'Form <noreply@forms.example>'
+    assert email.reply_to == 'Customer <customer@example.com>'
+
+
 def encode(text: str) -> str:
     return base64.urlsafe_b64encode(text.encode()).decode()
 

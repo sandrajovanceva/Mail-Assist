@@ -3,7 +3,7 @@ import os
 import secrets
 from urllib.parse import quote
 
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Request, Response
 from fastapi.responses import RedirectResponse
 from google_auth_oauthlib.flow import Flow
 from googleapiclient.discovery import build
@@ -17,7 +17,6 @@ from ..security import (
     create_oauth_state,
     create_token,
     decode_oauth_state,
-    decode_token,
     get_current_user,
     hash_password,
     verify_password,
@@ -86,12 +85,14 @@ def _flow(calendar: bool = False) -> Flow:
     )
 
 
-@router.get("/google/login")
-def google_login(token: str, calendar: bool = False):
-    """Browser navigation can't carry an Authorization header, so the frontend
-    passes the session token as a query param; we tuck it into OAuth `state`
-    to know which user the mailbox belongs to when Google redirects back."""
-    user_id = decode_token(token)  # reject invalid sessions before bouncing to Google
+OAUTH_COOKIE = "mailassist_oauth_state"
+OAUTH_COOKIE_PATH = "/auth/google"
+
+
+@router.post("/google/login")
+def google_login(response: Response, calendar: bool = False, user: User = Depends(get_current_user)):
+    """Initiate only from an authenticated request, never a shareable login URL."""
+    user_id = user.id
 
     flow = _flow(calendar)
     # Generate the PKCE verifier ourselves rather than letting the library
@@ -100,25 +101,44 @@ def google_login(token: str, calendar: bool = False):
     flow.autogenerate_code_verifier = False
     flow.code_verifier = secrets.token_urlsafe(64)  # 86 chars, within PKCE's 43-128
 
+    oauth_state = create_oauth_state(user_id, flow.code_verifier)
     auth_url, _ = flow.authorization_url(
         access_type="offline",  # needed to get a refresh_token
         prompt="consent",
         include_granted_scopes="true",
-        state=create_oauth_state(user_id, flow.code_verifier),
+        state=oauth_state,
     )
-    return RedirectResponse(auth_url)
+    response.set_cookie(
+        OAUTH_COOKIE, oauth_state,
+        max_age=600, httponly=True, samesite="lax", path=OAUTH_COOKIE_PATH,
+        secure=settings.google_redirect_uri.startswith("https://"),
+    )
+    return {"url": auth_url}
+
+
+def _clear_oauth_cookie(response):
+    response.delete_cookie(OAUTH_COOKIE, path=OAUTH_COOKIE_PATH,
+                           secure=settings.google_redirect_uri.startswith("https://"),
+                           httponly=True, samesite="lax")
+    return response
 
 
 @router.get("/google/callback")
-def google_callback(code: str, state: str, db: Session = Depends(get_db)):
+def google_callback(request: Request, code: str | None = None, state: str = "", error: str | None = None, db: Session = Depends(get_db)):
+    browser_state = request.cookies.get(OAUTH_COOKIE, "")
+    if not browser_state or not secrets.compare_digest(browser_state.encode(), state.encode()):
+        raise HTTPException(400, "This connection was not started in this browser. Try connecting again.")
     user_id, code_verifier = decode_oauth_state(state)
+    if error or not code:
+        message = "Google connection cancelled. You can try connecting again." if error == "access_denied" else "Google connection did not complete. Please try again."
+        return _clear_oauth_cookie(RedirectResponse(f"{settings.frontend_url}?auth_error={quote(message)}"))
     flow = _flow(calendar=True)
     flow.code_verifier = code_verifier
     try:
         flow.fetch_token(code=code)
     except Exception as exc:  # noqa: BLE001 - show the user something useful
         log.warning("Google token exchange failed: %s", exc)
-        return RedirectResponse(f"{settings.frontend_url}?auth_error={quote(str(exc)[:200])}")
+        return _clear_oauth_cookie(RedirectResponse(f"{settings.frontend_url}?auth_error={quote(str(exc)[:200])}"))
     creds = flow.credentials
 
     oauth2 = build("oauth2", "v2", credentials=creds)
@@ -148,7 +168,7 @@ def google_callback(code: str, state: str, db: Session = Depends(get_db)):
         db.add(account)
     db.commit()
 
-    return RedirectResponse(f"{settings.frontend_url}?connected={email_address}")
+    return _clear_oauth_cookie(RedirectResponse(f"{settings.frontend_url}?connected={quote(email_address)}"))
 
 
 @router.get("/accounts", response_model=list[AccountOut])

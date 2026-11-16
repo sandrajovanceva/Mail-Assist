@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { api, type AppSettings, type DraftEdit, type KnowledgeItem } from "../api";
 
 const KINDS = ["template", "fact"];
-const AUTO_SEND_CATEGORIES = ["routine", "newsletter"];
+const AUTO_SEND_CATEGORIES = ["routine"];
 
 type Tab = "voice" | "automation" | "knowledge";
 const TABS: { key: Tab; label: string; blurb: string }[] = [

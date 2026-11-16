@@ -44,7 +44,7 @@ function editor(api, componentName = 'EmailDetail') {
   const module = { exports: {} };
   vm.runInNewContext(code, {
     exports: module.exports, module,
-    window: new EventTarget(),
+    window: new EventTarget(), AbortController,
     require: name => name === 'react' ? hooks : name === '../api' ? { api }
       : name === './Icons' ? { ArchiveIcon: () => null }
       : name === './DraftPreferences' ? { DraftPreferences: () => null }
@@ -86,6 +86,63 @@ function find(node, predicate) {
 const email = { id: 1, subject: 'Meeting', sender: 'Alex', body_text: 'Tuesday?', received_at: '2026-10-20', summary: '' };
 const draft = { id: 9, email_id: 1, content: 'Original reply', original_content: 'Original reply', status: 'pending' };
 const props = { email, defaultTone: 'professional', onError: () => {}, onArchive: () => {} };
+
+test('opening a chat source preserves conversation and cannot apply another emails revision', async () => {
+  const component = editor({ chatStream: async (_body,onEvent) => onEvent({ type:'done',answer:'Read the linked message',
+    suggested_reply:'Old email reply',draft_id:9,sources:[{id:2,subject:'Linked email'}] }) },'AssistantChat');
+  let selected = email;
+  let uses = 0;
+  const chatProps = () => ({email:selected,onCalendar:()=>{},onUseRevision:()=>{uses++;},onOpenEmail:id=>{selected={...email,id};}});
+  let tree = component.render(chatProps());
+  find(tree,n=>n.type==='button' && n.props['aria-label']==='Ask MailAssist').props.onClick();
+  tree = component.render(chatProps());
+  await find(tree,n=>n.type==='button' && n.props.children==='What needs my attention?').props.onClick();
+  tree = component.render(chatProps());
+  find(tree,n=>n.type==='button' && String(n.props.children).includes('Linked email')).props.onClick();
+  tree = component.render(chatProps());
+  find(tree,n=>n.type==='button' && n.props['aria-label']==='Ask MailAssist').props.onClick();
+  tree = component.render(chatProps());
+  assert.ok(find(tree,n=>n.type==='p' && Array.isArray(n.props.children) && n.props.children[0]==='Read the linked message'));
+  const replace = find(tree,n=>n.type==='button' && n.props.children==='Replace editor text');
+  assert.equal(replace.props.disabled,true);
+  replace.props.onClick();
+  assert.equal(uses,0);
+  component.dispose();
+});
+
+test('a consumed chat suggestion cannot overwrite later saved edits after reopening and sending', async () => {
+  let stored = { ...draft };
+  let revision = { emailId: email.id, draftId: draft.id, content: 'Chat suggestion' };
+  let sent;
+  const api = {
+    draftsFor: async () => [stored],
+    updateDraft: async (_id, patch) => { stored = { ...stored, ...patch }; return stored; },
+    sendDraft: async () => { sent = stored.content; return { ...stored, status: 'sent' }; },
+  };
+  const currentProps = () => ({ ...props, assistantRevision: revision,
+    onAssistantRevisionConsumed: applied => { if (revision === applied) revision = null; } });
+  let component = editor(api);
+  component.render(currentProps());
+  await flush();
+  component.render(currentProps());
+  let tree = component.render(currentProps());
+  assert.equal(revision, null);
+  assert.ok(find(tree, n => n.type === 'textarea' && n.props.value === 'Chat suggestion'));
+  find(tree, n => n.type === 'textarea' && n.props.value === 'Chat suggestion').props.onChange({ target: { value: 'My final edits' } });
+  tree = component.render(currentProps());
+  const save = find(tree, n => n.type === 'button' && String(n.props.children).includes('Save'));
+  await save.props.onClick();
+  component.dispose();
+  component = editor(api);
+  component.render(currentProps());
+  await flush();
+  tree = component.render(currentProps());
+  assert.ok(find(tree, n => n.type === 'textarea' && n.props.value === 'My final edits'));
+  const send = find(tree, n => n.type === 'button' && String(n.props.children).includes('Send'));
+  await send.props.onClick();
+  assert.equal(sent, 'My final edits');
+  component.dispose();
+});
 
 test('calendar passes selected checked times to drafting and clears stale results on changes', async () => {
   const picked = [];

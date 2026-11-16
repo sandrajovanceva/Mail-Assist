@@ -16,6 +16,11 @@ def deliver(db, draft, provider, *, automatic=False):
         raise HTTPException(400, "Cannot send an empty reply")
     if db.query(Draft.id).filter(Draft.email_id == draft.email_id, Draft.status == "sent").first():
         raise HTTPException(409, "This email has already been answered")
+    email = draft.email
+    # Old imported rows have no saved header. Resolve it before claiming a send,
+    # so a failed metadata lookup does not create an uncertain delivery.
+    reply_to = email.reply_to or provider.reply_to_address(email.provider_message_id)
+    destination = parseaddr(reply_to)[1] or parseaddr(email.sender)[1] or email.sender.strip()
     claimed = db.execute(update(EmailMessage).where(
         EmailMessage.id == draft.email_id, EmailMessage.send_claimed.is_(False)
     ).values(send_claimed=True)).rowcount
@@ -33,7 +38,7 @@ def deliver(db, draft, provider, *, automatic=False):
     email = draft.email
     try:
         sent_id = provider.send_reply(
-            to=parseaddr(email.sender)[1] or email.sender.strip(), subject=email.subject,
+            to=destination, subject=email.subject,
             body=draft.content, thread_id=email.thread_id,
             in_reply_to=email.message_id_header,
         )

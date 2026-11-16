@@ -255,3 +255,16 @@ def test_deleting_an_example_stops_it_being_learned(client, auth, email, stub_dr
 
     assert client.delete(f"/draft-edits/{edit_id}", headers=auth).status_code == 200
     assert client.get("/draft-edits", headers=auth).json() == []
+
+
+@pytest.mark.parametrize('stored,lookup', [('Contact <customer@example.com>', ''), ('', 'Customer <customer@example.com>')])
+def test_send_honors_reply_to_including_old_imports(client, auth, db, email, fake_provider, stored, lookup, monkeypatch):
+    from app.models import Draft
+    email.reply_to = stored
+    email.sender = 'Contact form <noreply@forms.example>'
+    draft = Draft(email_id=email.id,content='My reply',original_content='My reply')
+    db.add(draft);db.commit()
+    monkeypatch.setattr(fake_provider,'reply_to_address',lambda message_id:lookup)
+    response = client.post(f'/drafts/{draft.id}/send',headers=auth)
+    assert response.status_code == 200
+    assert fake_provider.sent[0]['to'] == 'customer@example.com'

@@ -33,6 +33,15 @@ def test_important_cannot_be_added_to_auto_send(client, auth):
     assert "important" in response.json()["detail"].lower()
 
 
+def test_newsletter_auto_send_is_not_offered_and_legacy_setting_is_cleaned(client, auth, db, user_token):
+    from app.models import AppSettings
+    from app.security import decode_token
+    db.add(AppSettings(user_id=decode_token(user_token),auto_send_categories='routine,newsletter'))
+    db.commit()
+    assert client.get('/settings',headers=auth).json()['auto_send_categories'] == 'routine'
+    assert client.put('/settings',headers=auth,json=payload(auto_send_categories='newsletter')).status_code == 400
+
+
 def test_unknown_tone_is_rejected(client, auth):
     assert client.put("/settings", headers=auth, json=payload(default_tone="sassy")).status_code == 400
 

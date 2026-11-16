@@ -1,0 +1,7 @@
+* **Greetings:** Always "Hello [Name]," on a separate line.
+* **Sign-offs:** Always "Thanks," followed by "Alex" on a new line.
+* **Formality:** Professional, neutral, and matter-of-fact.
+* **Sentence Length and Structure:** Short, direct, declarative sentences. Typically 2–3 sentences per email. Frequent use of future tense ("I will...").
+* **Warmth/Directness:** Highly direct and concise; gets straight to the point with minimal pleasantries.
+* **Emoji and Punctuation Habits:** Standard punctuation only (periods, commas); zero emojis.
+* **Language:** Simple, clear, business English.

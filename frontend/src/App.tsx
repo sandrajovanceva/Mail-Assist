@@ -88,7 +88,8 @@ function App() {
   const [emails, setEmails] = useState<Email[]>([]);
   const [counts, setCounts] = useState<Record<string, number>>({});
   const [selectedId, setSelectedId] = useState<number | null>(null);
-  const [assistantRevision, setAssistantRevision] = useState<{ draftId: number; content: string } | null>(null);
+  const [assistantRevision, setAssistantRevision] = useState<{ emailId: number; draftId: number; content: string } | null>(null);
+  useEffect(() => { setAssistantRevision(null); }, [selectedId]);
   const [filter, setFilter] = useState<Filter>({ kind: "all" });
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState("newest");
@@ -140,15 +141,9 @@ function App() {
       .catch((e) => onError(e.message));
     // the sidebar counts always describe the whole mailbox, not the current filter
     api
-      .emails({})
-      .then((all) => {
-        if (owner !== session.current) return;
-        const next: Record<string, number> = { all: all.length, attention: 0, reply: 0 };
-        for (const e of all) {
-          next[e.category] = (next[e.category] ?? 0) + 1;
-          if (e.needs_attention) next.attention += 1;
-          if (e.needs_reply) next.reply += 1;
-        }
+      .emailCounts()
+      .then((next) => {
+        if (owner !== session.current || requestId !== refreshRequest.current) return;
         setCounts(next);
       })
       .catch(() => {});
@@ -265,14 +260,21 @@ function App() {
    */
   useEffect(() => {
     if (!user) return;
-    const connected = new URLSearchParams(window.location.search).get("connected");
+    const params = new URLSearchParams(window.location.search);
+    const authError = params.get("auth_error");
+    if (authError) {
+      window.history.replaceState({}, "", window.location.pathname);
+      onError(authError);
+      return;
+    }
+    const connected = params.get("connected");
     if (!connected) return;
     window.history.replaceState({}, "", window.location.pathname);
     setFirstRun(true);
     setNotice(`Connected ${connected}`);
     setTimeout(() => setNotice(""), 5000);
     sync();
-  }, [user, sync]);
+  }, [user, sync, onError]);
 
   /**
    * Check for new mail on a timer so the inbox stays current without the user
@@ -462,14 +464,12 @@ function App() {
           // Always keep a way back to Google: the refresh token expires every
           // 7 days while the app is unverified, and without this the only cure
           // for a dead connection would be editing the database.
-          <a className="account" href={api.googleLoginUrl()} title="Reconnect this mailbox">
+          <button className="account" onClick={() => api.connectGoogle().catch(error => onError(error.message))} title="Reconnect this mailbox">
             {account.email_address}
             <span className="reconnect">Reconnect</span>
-          </a>
+          </button>
         ) : (
-          <a href={api.googleLoginUrl()}>
-            <button className="primary">Connect Gmail</button>
-          </a>
+          <button className="primary" onClick={() => api.connectGoogle().catch(error => onError(error.message))}>Connect Gmail</button>
         )}
         {syncedAgo && !syncing && <span className="synced-ago mono">{syncedAgo}</span>}
         <button onClick={() => sync()} disabled={syncing || !account}>
@@ -659,6 +659,7 @@ function App() {
                   email={selected}
                   defaultTone={defaultTone}
                   assistantRevision={assistantRevision}
+                  onAssistantRevisionConsumed={revision => setAssistantRevision(current => current === revision ? null : current)}
                   onError={onError}
                   onArchive={() => archive(selected)}
                 />
@@ -681,7 +682,7 @@ function App() {
           }).catch(error => onError(error.message));
         }}
         onUseRevision={(emailId, draftId, content) => {
-          if (emailId === selectedId) setAssistantRevision({ draftId, content });
+          if (emailId === selectedId) setAssistantRevision({ emailId, draftId, content });
         }} />
     </div>
   );

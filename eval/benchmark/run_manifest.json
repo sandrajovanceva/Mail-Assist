@@ -1,0 +1,16 @@
+{
+  "generated_utc": "2026-11-09T14:37:09.006772+00:00",
+  "python": "3.12.10",
+  "classifier": "gemini-3.5-flash-lite",
+  "classifier_thinking_level": "",
+  "drafter": "gemini-3.8-flash",
+  "drafter_thinking_level": "",
+  "label_distribution": {
+    "spam": 50,
+    "routine": 26,
+    "newsletter": 18,
+    "important": 6
+  },
+  "attention_positive": 6,
+  "billing_status": "Free tier, reported by user; not verified through account API"
+}

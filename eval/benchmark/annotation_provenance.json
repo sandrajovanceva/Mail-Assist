@@ -1,0 +1,19 @@
+{
+  "annotator": "OpenAI coding assistant (AI-assisted, not human verified)",
+  "method": "Subject/body inspection and explicit rubric before classifier predictions; original spam/ham labels preserved.",
+  "rubric": {
+    "important": "Substantive reply, investigation, decision, or owner action required.",
+    "routine": "Ordinary correspondence/discussion or information needing at most a simple reply.",
+    "newsletter": "Broadcast news, bulk updates or subscribed marketing.",
+    "spam": "Original corpus spam label.",
+    "needs_attention": "Substantive personal action or decision; assessed at original receipt, not at evaluation date."
+  },
+  "limitations": [
+    "Recipient role and subscription context are incompletely known.",
+    "Four-category and attention labels are subjective AI annotations.",
+    "Mailing-list questions interpreted from an involved recipient perspective.",
+    "Routine includes discussion requiring no reply because the application has no separate informational class."
+  ],
+  "dataset_sha256": "8e89ae3bcdd1916bddd6c356ee434d42609542f384939be1e98bb20bc63dcab1",
+  "annotations_sha256": "294b20a131b809296fbdcbd6db20ed10907cba5bec8cd690b1009204a49d3ea8"
+}

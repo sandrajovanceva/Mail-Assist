@@ -22,6 +22,10 @@ def _settings_row(db: Session, user: User) -> AppSettings:
         db.add(row)
         db.commit()
         db.refresh(row)
+    supported = ",".join(sorted({c.strip() for c in row.auto_send_categories.split(",")} & {"routine"}))
+    if row.auto_send_categories != supported:
+        row.auto_send_categories = supported
+        db.commit()
     return row
 
 
@@ -45,6 +49,8 @@ def update_settings(
             400,
             "Important mail can never be auto-sent — it always needs your approval.",
         )
+    if requested - {"routine"}:
+        raise HTTPException(400, "Only routine mail is eligible for automatic replies.")
 
     row = _settings_row(db, user)
     if row.signature != body.signature:

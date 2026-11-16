@@ -21,6 +21,35 @@ const compiled = ts.transpileModule(source, {
 }).outputText.replace('"./chatStream"', JSON.stringify(streamUrl));
 const { api, auth } = await import(`data:text/javascript;base64,${Buffer.from(compiled).toString('base64')}`);
 
+test('sidebar counts use one small aggregate request', async () => {
+  auth.setToken('counts');
+  let calls = 0;
+  globalThis.fetch = async url => {
+    calls++;
+    assert.equal(new URL(url).pathname,'/emails/counts');
+    return {ok:true,json:async()=>({all:10000,routine:5000,attention:2,reply:4})};
+  };
+  assert.equal((await api.emailCounts()).all,10000);
+  assert.equal(calls,1);
+});
+
+test('Google connection starts with bearer POST and browser cookies, without token in URL', async () => {
+  auth.setToken('private-session');
+  let target;
+  window.location.assign = url => { target = url; };
+  globalThis.fetch = async (url, options) => {
+    assert.equal(new URL(url).pathname, '/auth/google/login');
+    assert.equal(new URL(url).searchParams.get('calendar'), 'true');
+    assert.equal(new URL(url).searchParams.has('token'), false);
+    assert.equal(options.method, 'POST');
+    assert.equal(options.credentials, 'include');
+    assert.equal(options.headers.Authorization, 'Bearer private-session');
+    return { ok: true, json: async () => ({ url: 'https://accounts.google.com/authorize' }) };
+  };
+  await api.connectGoogle(true);
+  assert.equal(target, 'https://accounts.google.com/authorize');
+});
+
 test('email and draft loading follows all pages', async () => {
   auth.setToken('first');
   for (const endpoint of ['emails', 'drafts']) {

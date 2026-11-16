@@ -1,0 +1,1001 @@
+id,group,reference_spam,status,predicted_category,predicted_attention,reason
+be129b34934ff6bbf07f,hard_ham,False,ok,newsletter,False,This is an automated stock market and tech news update from CNET.
+b65663bdb2e7a1820212,spam,True,ok,newsletter,False,This is an unsolicited promotional marketing email for PC repair services.
+5348da576caed26d8e39,easy_ham,False,ok,routine,False,This is a technical discussion from a mailing list that requires no action.
+ec0d9f8d3c0a2b664b0b,spam,True,ok,spam,False,This is an unsolicited marketing email offering credit card merchant services.
+3277cd1ba2a50a153b18,easy_ham,False,ok,newsletter,False,This is a technical mailing list discussion about scripting.
+ead64ac39c0edc8cf29e,spam,True,ok,spam,False,This is an unsolicited get-rich-quick scheme offering money without working.
+379f4ce38ecd050a1af2,spam,True,ok,spam,False,This is an unsolicited marketing email offering non-accredited degrees for life experience.
+8f98102323a6c0ee912b,easy_ham,False,ok,routine,False,This is an informal informational email about local Wi-Fi availability sharing no urgent personal action items.
+97088db1195aa8fed909,spam,True,ok,spam,False,This is an unsolicited marketing message regarding mortgage careers from an unverified address.
+95e4eebb35777a79b10a,spam,True,ok,spam,False,This email is unsolicited junk containing explicit and malicious content.
+98257f2db6cded1ef44e,hard_ham,False,ok,newsletter,False,This is a bulk promotional newsletter containing tech updates and articles from AnchorDesk.
+51747b8b069c1c035811,easy_ham,False,ok,newsletter,False,This is a discussion post from a mailing list regarding Linux distributions.
+a807295e126be47e76a4,easy_ham,False,ok,newsletter,False,This is a forwarded news article about industry developments.
+b8c004a5feb5e39b12b6,easy_ham,False,ok,newsletter,False,This is an informational tech news digest and discussion sent from a mailing list.
+7d7bd5d0b0d4575b6076,easy_ham,False,ok,newsletter,False,This is an informational mailing list article and does not require any personal action.
+ded3d398c1781119d09d,spam,True,ok,spam,False,This is unsolicited promotional material regarding mortgage refinancing.
+380f71d85f3a1fbe340d,spam,True,ok,spam,False,This is unsolicited bulk marketing and promotional junk email.
+1681c6ba4f2134f7dd22,hard_ham,False,ok,newsletter,False,This is a bulk tech news and review dispatch from CNET.
+91ee96fe74d9c16ad6d8,spam,True,ok,spam,False,This is an unsolicited promotional email advertising HGH supplements with exaggerated claims.
+850eeb0821226d456cad,easy_ham,False,ok,important,True,This is a personal message with interpersonal conflict regarding job assistance that requires personal attention.
+459472e8e006b83e33b2,spam,True,ok,spam,False,"This is an unsolicited mass email offering advertising services, typical of spam."
+ce79669eaf095c9eac33,easy_ham,False,ok,newsletter,False,This is a mailing list discussion thread about constitutional rights and free speech.
+93384d248efd73d159ee,spam,True,ok,spam,False,This is unsolicited junk mail promoting free cars with suspicious links.
+e23001750435b2054d19,easy_ham,False,ok,newsletter,False,This is a standard mailing list discussion thread rather than a direct personal message.
+f95821541d395e2d5e7c,hard_ham,False,ok,newsletter,False,This is a product announcement and promotional offer for a software subscription.
+89482dff2b9528c1c875,spam,True,ok,spam,False,This is an unsolicited promotional email for a dubious health product.
+7ac822e2b10f06463bda,easy_ham,False,ok,spam,False,"This is an unsolicited, off-topic message from an unknown sender questioning intellectual property rights."
+47073388ac2e35e4b76f,easy_ham,False,ok,newsletter,False,This is an automated mailing list headline update.
+7610999429ff7b5de443,hard_ham,False,ok,newsletter,False,"This is an automated tech newsletter containing articles, product announcements, and subscription updates."
+1454013519e475050910,spam,True,ok,spam,False,This is unsolicited junk email advertising mortgage refinancing services from an unknown sender.
+1f1fbdc82b10a654bee8,hard_ham,False,ok,newsletter,False,This is an automated daily news dispatch containing tech articles and updates.
+a6a2d530b639dcab7ab4,easy_ham,False,ok,newsletter,False,This is an automated RSS feed update and blog post link.
+91fab87a1801920b33dc,spam,True,ok,spam,False,This is unsolicited promotional junk mail selling printer supplies.
+dc176047a656cc880799,spam,True,ok,spam,False,This is an unsolicited talent agency recruitment email asking for a fee.
+150d6036ccbda502c876,easy_ham,False,ok,newsletter,False,This is a forwarded mailing list discussion regarding a historical literary text and political commentary.
+65c8f1d74e6dac95ad4d,spam,True,ok,spam,False,This is an unsolicited stock promotion spam email.
+710d5969c26fcbf762e1,easy_ham,False,ok,routine,False,This is a conversational mailing list discussion thread that does not require direct action.
+753587cefcfb7d12d129,spam,True,ok,spam,False,This is an unsolicited promotional email offering DVD copying software.
+bc35156a78460340d105,spam,True,ok,spam,False,This is an unsolicited commercial advertisement for bulk email harvesting software.
+e2827ebbd6263368161b,hard_ham,False,ok,important,True,This is a direct business inquiry from a partner requiring a specific explanation about system functionality.
+5c6f60ceb924668f3000,hard_ham,False,ok,newsletter,False,This is a daily poem mailing list and subscription content.
+d794ff32052056ac5896,easy_ham,False,error,,,"classify failed: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+487fcef671d4434a3289,easy_ham,False,ok,spam,False,"This is an unsolicited, erratic vulnerability disclosure email containing bizarre text and spam characteristics."
+871bd33521733667d799,easy_ham,False,ok,newsletter,False,"This is a blog post feed update containing personal notes and links, characteristic of a newsletter."
+6e89e5a6db2e7114bf3e,spam,True,ok,spam,False,This is an unsolicited promotional email offering bulk email and fax lists.
+39a44bf70732bec8f9c2,easy_ham,False,ok,newsletter,False,This is a mailing list discussion about technical software packaging and does not require personal attention.
+9133a35c684167a203ac,hard_ham,False,ok,newsletter,False,This is a promotional product release announcement for software.
+2dd47f6775c00679172a,easy_ham,False,ok,newsletter,False,This is a forwarded news article sharing commentary and information from the New York Times.
+2e44026a4f8c892266b7,spam,True,ok,spam,False,This is an unsolicited bulk email promoting lead generation and email marketing services.
+42696d430fad05838cff,easy_ham,False,ok,spam,False,This is an unsolicited sensational news feed item typical of spam or junk RSS content.
+3b74ea73deef3b7a3ea2,easy_ham,False,ok,newsletter,False,This is a technical discussion from a mailing list archive.
+88ef80b8c2515c9a10a6,easy_ham,False,ok,newsletter,False,This is a casual follow-up message from a mailing list discussion requiring no action.
+716626542c2f82371161,hard_ham,False,ok,newsletter,False,This is an announcement email detailing software beta releases and updates.
+091ff873b7b70a60b2a9,spam,True,ok,spam,False,This is an unsolicited promotional email offering DVD burning alternatives.
+e389c0c29f7e6756ba8a,easy_ham,False,ok,routine,False,This is a casual mailing list discussion about asteroids and does not require urgent action or a personal reply.
+70fa4e0dccf787b085d9,spam,True,ok,spam,False,This is unsolicited promotional junk offering a free cell phone.
+1995fb72e0d5309c5ae2,easy_ham,False,ok,routine,False,This is a mailing list discussion sharing an update on a hardware purchase and does not require a reply.
+2ce2d5c021c0a976e68d,easy_ham,False,ok,routine,False,This is a standard mailing list discussion about technical backup solutions.
+29193748ea04244bd578,spam,True,ok,spam,False,This is unsolicited adult marketing content.
+5116ccc918e34e2341f4,easy_ham,False,ok,newsletter,False,This is a mailing list discussion thread rather than a direct personal message.
+639c1bbee029a678c43b,spam,True,ok,spam,False,This is an unsolicited timeshare offer which qualifies as spam.
+b7737ad56fb6478138a4,easy_ham,False,ok,routine,False,This is a casual social mailing list reply about meeting for a pint.
+2786964d99cbb574f9c7,easy_ham,False,ok,newsletter,False,This is a technical discussion from a mailing list.
+b4a2b6a3499b12f9974e,spam,True,ok,spam,False,This is an unsolicited advertisement for auto warranties.
+75c7d2d8f6330c83e2d4,spam,True,ok,spam,False,This email is an unsolicited promotional advertisement for phone services.
+a96ae9c3913c6012e2d7,spam,True,ok,spam,False,This is unsolicited promotional junk advertising life insurance.
+0dcb16c36629ad9e4470,easy_ham,False,ok,newsletter,False,This is an RSS feed update containing blog post links and excerpts.
+bc1bb93d6b29ba220b9d,easy_ham,False,ok,routine,False,This is a casual personal reply to a mailing list discussion about pop music.
+756742373ff817932a34,easy_ham,False,ok,newsletter,False,This is a message from a mailing list discussion about programming resources.
+3411862e31fb4cdfb3cd,hard_ham,False,ok,newsletter,False,"This email is a mass-distributed CNET newsletter containing technology news, product reviews, and software downloads."
+a90127d2ffc5efd4caa4,easy_ham,False,ok,routine,False,This is a technical mailing list discussion confirming that a bug fix has been checked in.
+d0028568bbe35c16e61f,spam,True,ok,spam,False,This is unsolicited promotional junk offering to buy renewal commissions.
+aca43b03571630f3b30f,easy_ham,False,ok,routine,False,This is a standard mailing list discussion regarding software repositories.
+e4baacaf6cbd702610e6,hard_ham,False,ok,newsletter,False,"This is a periodic personal email newsletter containing commentary, links, and updates."
+814e8c31d5c2c82621c1,easy_ham,False,ok,newsletter,False,This is an automated CVS commit notification mailing list update.
+78685c3d1dc7ea241afe,easy_ham,False,ok,routine,False,This is a mailing list discussion about technical integration and does not require urgent personal action.
+cd3d87bed94d4d9f2db3,hard_ham,False,ok,newsletter,False,This is a bulk tech update newsletter from ZDNet containing news and product reviews.
+fa49cce23836282c0943,spam,True,ok,spam,False,This is an unsolicited get-rich-quick pyramid scheme email.
+174a3389f4bca98c0c24,easy_ham,False,ok,newsletter,False,This is an automated RSS feed entry containing a blog post and quotes.
+847121ff45f1ff9b4081,hard_ham,False,ok,newsletter,False,This is a periodic informational newsletter containing technical tips and software reviews.
+2ab5241467f952337982,easy_ham,False,ok,newsletter,False,This is a mailing list discussion about spam definitions rather than a direct message needing attention.
+1403260b77a996c8fbb1,hard_ham,False,ok,important,True,The user is asking for direct technical assistance with a database query requiring a personal reply.
+87d6d22fd880bcc152fa,spam,True,ok,spam,False,This is an unsolicited get-rich-quick recruiting scheme.
+ce983f0450668b523fbe,easy_ham,False,ok,newsletter,False,This is a technical mailing list discussion about spam filtering development.
+410b6400d968135566c8,spam,True,ok,spam,False,This is an unsolicited mass email regarding a class action lawsuit and potential phishing/spam tactics.
+118c6c66238c15f7442c,spam,True,ok,spam,False,This is an unsolicited marketing email promoting a suspicious breast enhancement product.
+dc31cc20dd7eaa6f3270,spam,True,ok,spam,False,This is a classic unsolicited prize-winning phishing email.
+3e89a7849589637022ae,easy_ham,False,ok,routine,False,This is a casual joke shared among mailing list participants requiring no action.
+e73440269bd83053a176,easy_ham,False,ok,newsletter,False,This is a mailing list discussion about a release process and does not require personal attention.
+db7104657478d09b2b4c,easy_ham,False,ok,routine,False,This is a casual discussion email reply that does not require action.
+98bea8fc3187ca94565c,easy_ham,False,ok,spam,False,This email is part of an uncurated mailing list discussion with no actionable content.
+8018f13bc34199d5220f,easy_ham,False,ok,newsletter,False,This is an automated mailing list digest containing daily headlines.
+b4551e9b7e2c50f5b257,spam,True,ok,spam,False,This is an unsolicited mass email advertising get-rich-quick broadcast software.
+67d8340a2420e9035e9d,hard_ham,False,ok,newsletter,False,This is an automated tech and stock market newsletter from CNET.
+e2899c8914c9df8b6d97,spam,True,ok,spam,False,This is unsolicited marketing content promoting insurance rates.
+1fde3752361e760bfaa6,spam,True,ok,spam,False,This is a classic advance-fee fraud (419 scam) offering a fake inheritance share.
+f8f0994301201cee8f38,hard_ham,False,ok,newsletter,False,This is a marketing and software update newsletter from CNET.
+f391f21987aee243a1f3,hard_ham,False,ok,newsletter,False,This is a promotional marketing email for a sports subscription service.
+71b94dcb1908fe8b632a,spam,True,ok,spam,False,This is unsolicited adult content advertising and fits the criteria for spam.
+f964cce9c286344f5b1f,spam,True,ok,spam,False,This is an unsolicited promotional email offering SEO services.
+ab6d1809e79f28ce1678,easy_ham,False,ok,newsletter,False,This is a mailing list discussion about SpamAssassin configuration and is not a personal email requiring direct action.
+cb939ef14a1cbdb8b53f,spam,True,ok,spam,False,This is an unsolicited commercial email offering a business database CD for purchase.
+9ce1fe8e7bfb76eaef38,easy_ham,False,ok,newsletter,False,This is a mailing list discussion about RPM package macros.
+449d23831e0d9e434454,spam,True,ok,spam,False,This is an unsolicited promotional email offering printer supplies.
+595e07e34cc4bc9e23fd,spam,True,ok,spam,False,This is an unsolicited promotional email for a commercial service.
+7d3cc2a92a62a97426a4,easy_ham,False,ok,newsletter,False,This is an automated CVS commit notification mailing list email.
+5b47c8cea2241707a6b2,easy_ham,False,ok,newsletter,False,This is a mailing list discussion about technical trivia and does not require urgent personal action.
+ec99680d2c8b81a1a90e,spam,True,ok,spam,False,This is unsolicited promotional junk advertising life insurance rates.
+c34b69ef09b0364310cd,easy_ham,False,ok,newsletter,False,This is a mailing list discussion message rather than a direct personal email.
+9dba1ad150a0233a01ad,spam,True,ok,spam,False,This is an unsolicited mass email offering mortgage loans.
+eb2987de2c5a3a89c323,spam,True,ok,spam,False,This is a classic advance-fee financial scam.
+c7cacbf43e836da8d64d,spam,True,ok,spam,False,This is an unsolicited promotional email for herbal supplements.
+53953d56523cf037d5d1,spam,True,ok,spam,False,This is unsolicited adult content and phishing junk.
+834900037362ed688d63,spam,True,ok,newsletter,False,This is a promotional marketing email offering free software lessons with shipping costs.
+0d19bfba00ad999a90cc,easy_ham,False,ok,routine,False,This is a casual discussion email from a mailing list that does not require urgent action or a real reply.
+d98a989fe3598eb9b92a,easy_ham,False,ok,newsletter,False,This is an informational mailing list discussion message regarding technical setups.
+3edfacdac1504fd75033,spam,True,ok,spam,False,This is unsolicited promotional email offering unauthorized software copies.
+998367bc3f843e5ab165,easy_ham,False,ok,newsletter,False,This is an automated mailing list update containing daily headlines.
+07713b75af2faa9034f7,easy_ham,False,ok,routine,True,Mailing list moderation request requiring admin approval.
+a6772e1b9126d15066e5,easy_ham,False,ok,newsletter,False,This is an automated mailing list discussion thread rather than a direct personal message.
+7142b0ee90ae84c88c10,hard_ham,False,ok,newsletter,False,This is an automated tech industry newsletter from ZDNet containing news updates and articles.
+a7fe4ddc6e2b7cb2670e,easy_ham,False,ok,newsletter,False,This is an automated RSS feed update from a blog announcing guest bloggers.
+29ffc064aafcf0e6c4cd,spam,True,ok,spam,False,This is a classic advance-fee financial scam or phishing attempt.
+a5ac96d07c603149d4b7,spam,True,ok,spam,False,This is an unsolicited commercial email offering discounted software.
+c9c85aaa07e6837ebd84,hard_ham,False,ok,newsletter,False,"This is a bulk subscription-based tech media report containing news, product reviews, and links."
+c3630b140dbce1cf9948,easy_ham,False,ok,newsletter,False,This is an automated RSS feed post containing blog content and links.
+0975aa52dbdc63fa661d,spam,True,ok,spam,False,"This email is an unsolicited promotional advertisement for monitoring software, which is characteristic of spam."
+29628c2b0468895925bb,spam,True,ok,spam,False,This is an unsolicited bulk email offering marketing services.
+2e4e5c095af59b1b570e,easy_ham,False,ok,newsletter,False,This is an informational email sent to a mailing list sharing humor and news.
+c92427d4d509fb92a2ff,easy_ham,False,ok,newsletter,False,This is an automated RSS feed post containing blog updates and commentary.
+febefe6dd1f7c8935495,easy_ham,False,ok,routine,False,This is a technical mailing list discussion offering advice on PHP and SQL.
+6b616a20fec0505d628d,spam,True,ok,spam,False,This is an unsolicited marketing email promoting forex trading.
+6568a4af07a14f942561,spam,True,ok,spam,False,This email is an unsolicited promotional advertisement for a miracle anti-aging and weight loss supplement.
+17ffed66e885a51d8e0c,easy_ham,False,ok,newsletter,False,This is an email list discussion thread and includes automated unsubscribe footer info.
+e4036ca10e27c048d1b7,spam,True,ok,spam,False,This is unsolicited junk mail from an unknown sender with nonsensical content.
+469968dd73aef83ff67f,easy_ham,False,ok,newsletter,False,This is a message from a mailing list discussing technical topics with no action required from the user.
+66db266c44c2689206bd,spam,True,ok,spam,False,This is unsolicited promotional junk advertising an e-book for job hunting.
+ed81bd0c3dcc0e64e16e,spam,True,ok,spam,False,This is an unsolicited promotional offer for a free home security system.
+625c68444c8051b8d3ef,spam,True,ok,spam,False,This is an unsolicited financial get-rich-quick promotional email.
+cc0a342dbca9ad30c752,easy_ham,False,ok,routine,False,This is a discussion thread from a mailing list that does not require personal action or a direct response.
+45e0e9e9f8b63e0a28ba,hard_ham,False,ok,newsletter,False,This is an automated seminar lesson email from an investment education service.
+f96b94704a1e25369a76,easy_ham,False,ok,newsletter,False,This is a technical discussion from a mailing list.
+d7166e46e32772fcae23,hard_ham,False,ok,newsletter,False,This email is a daily dispatch newsletter containing tech news articles and links.
+c8f9c4976a6f6476ed32,spam,True,ok,spam,False,This is an unsolicited promotional email offering merchant account services.
+1668795fc7339b2df9a4,spam,True,ok,spam,False,This is an unsolicited promotional email promising easy money from a suspicious link.
+c35ba7bc8b41d5b44aec,spam,True,ok,spam,False,This is an unsolicited financial grant scam and junk email.
+963aef2116d40baf08de,spam,True,ok,spam,False,This is an unsolicited financial advisory email with typical spam characteristics and a suspicious link.
+62a7169bfcee457fbbaa,easy_ham,False,ok,newsletter,False,This is a mailing list discussion about spam filter statistics and configurations.
+aeb39885cc63a6dacdd8,hard_ham,False,ok,newsletter,False,This is a bulk tech subscription newsletter containing articles and updates.
+b11fbd620d85c4d6915d,easy_ham,False,ok,newsletter,False,This is an automated RSS feed update and blog post about a beta feature.
+2e843598ab2446261e65,spam,True,ok,spam,False,This email is an unsolicited promotional advertisement for a questionable health supplement.
+806ae96d6324d8918e43,spam,True,ok,spam,False,This is unsolicited promotional junk mail offering health insurance quotes.
+6786ff761152ced2d955,easy_ham,False,ok,routine,False,This is a casual discussion email sharing personal anecdotes and thoughts on telecommunications history.
+af8bbb99aef1368d270d,hard_ham,False,ok,newsletter,False,This is a promotional newsletter from Apple with no action required.
+6de2204884602eae2455,easy_ham,False,ok,routine,False,This is a routine technical discussion from a mailing list.
+57d7c9fed401aab1433f,spam,True,error,,,classify: Gemini returned an empty response
+ee448325611b7957a48b,easy_ham,False,ok,routine,False,This is a casual mailing list discussion thread with no action required.
+b9731af93f9596378e25,hard_ham,False,ok,newsletter,False,This is a commercial product recommendation newsletter from CNET.
+8831b8f707fed6c31d60,easy_ham,False,ok,newsletter,False,This is an automated daily headline email from a mailing list.
+d7ca1feb40359356165e,easy_ham,False,ok,newsletter,False,This is an automated RSS feed post containing blog content.
+4d34b68068afd10ef5d4,spam,True,ok,spam,False,This is unsolicited promotional junk mail for a weight loss product from an external marketing list.
+12f5e6d6e50349cacef2,spam,True,ok,spam,False,This is unsolicited promotional junk offering free satellite TV.
+6519c0b1c69c26ffbbfb,spam,True,ok,spam,False,This is an unsolicited marketing email for prescription drugs.
+36912a4a65fe7295b4ce,spam,True,ok,spam,False,This is an unsolicited mass marketing email offering paid email blast services.
+acb6c6d110a9c5fd840f,hard_ham,False,ok,newsletter,False,This is an automated technology news and update bulletin.
+8687d33a9825c508adaf,spam,True,ok,spam,False,This is a classic advance-fee financial scam or phishing attempt.
+9d8fbbe67c14c01b6c17,spam,True,ok,spam,False,This is an unsolicited get-rich-quick scheme typical of junk email.
+ff0939195234a907c42e,spam,True,ok,spam,False,This is a classic advance-fee fraud scam email offering a fake inheritance.
+b2e68d232e6737ae3484,spam,True,ok,spam,False,This email is an unsolicited promotional offer for legal services and commissions.
+2c8a9f290af3d056c9e9,spam,True,ok,spam,False,This is unsolicited promotional junk advertising security products from an unknown sender.
+988044d0197667a87a03,spam,True,ok,newsletter,False,This is a marketing email promoting insurance products to professionals.
+e2f1bb1824e790603ca3,easy_ham,False,ok,newsletter,False,This is an automated RSS feed update containing a news link.
+b27bd7b7f633200ee6b3,spam,True,ok,spam,False,This is an unsolicited grant offer and phishing junk email.
+12fc1727f478b03093f2,spam,True,ok,spam,False,This is an unsolicited promotional email offering casino bonuses and vacations.
+b1b6d82c6aa24034d50a,spam,True,ok,spam,False,This is unsolicited promotional junk for printer supplies.
+9a306b6e474db5ce3888,easy_ham,False,ok,newsletter,False,This is a mailing list discussion about DNS and technical administration of .ie nameservers.
+01929ae8de270724716a,easy_ham,False,ok,routine,False,This is a mailing list discussion thread with no required action or personal importance.
+79ab56da721ce320546e,easy_ham,False,ok,routine,False,This is a technical mailing list query about software functionality rather than a direct personal message.
+64b8dac9b40464403e2b,spam,True,ok,spam,False,Unsolicited debt consolidation offer containing typical phishing and junk email characteristics.
+46ddd96fc35385b89e38,easy_ham,False,ok,routine,False,This is a technical mailing list reply discussing spam filter false positives and system updates.
+cd570efe96fab36faef0,easy_ham,False,ok,routine,False,This is a technical discussion email about spam filtering heuristics.
+3ecd8738541d4636f652,easy_ham,False,ok,newsletter,False,This is a forwarded mailing list or group discussion about a bizarre news story.
+79bd92eb0b78fd871bfe,spam,True,ok,spam,False,This is an unsolicited promotional email offering herbal enhancement products.
+6d26a11f2f2a75a3802c,spam,True,ok,spam,False,This is an unsolicited promotional email offering a health supplement.
+ade9c02812422ed6773a,easy_ham,False,ok,newsletter,False,This is an automated mailing list discussion thread rather than a personal message.
+ab50fd0d92525e9c871a,spam,True,ok,spam,False,This is an unsolicited promotional email advertising a marketplace website.
+6f56f928100f14fcbc28,spam,True,ok,spam,False,This email is unsolicited junk advertising a weight-loss pill.
+51d05a66c9c8e88eefb2,spam,True,ok,spam,False,This is an unsolicited promotional marketing email for herbal smoking products.
+998f863cada1f6dc493f,spam,True,ok,newsletter,False,This is a promotional bulk marketing email offering a free trial subscription.
+eaaa53678bc92be2d930,spam,True,ok,spam,False,This is an unsolicited mass advertising email offering email marketing services.
+8caa7351123390991eb0,spam,True,ok,important,True,This is a direct business inquiry asking for specific contact information that requires a personal response.
+afae60a9e4352e77a138,easy_ham,False,ok,routine,False,This is a technical mailing list discussion about software licensing that does not require a personal response.
+7b30e04da713436d744d,easy_ham,False,ok,newsletter,False,This is a technical mailing list discussion about SpamAssassin configuration.
+1c95ff625f44a8301cf5,easy_ham,False,ok,spam,False,This is unsolicited junk linking to an external auction site.
+ff46edc3b3da84a3e228,easy_ham,False,ok,newsletter,False,This is an automated RSS feed update containing a news link.
+244a1c1fdd0af27e3795,easy_ham,False,ok,routine,False,This is an informational mailing list message sharing a news article about buffer overflows.
+3df49a71341dbb0b2f3a,spam,True,ok,spam,False,This is an unsolicited marketing email promoting a get-rich-quick scheme and free vacation.
+07c07f22269a85775087,easy_ham,False,ok,newsletter,False,This is a security advisory notification about a software update.
+43e3232b060d13e7ea19,easy_ham,False,ok,newsletter,False,This is a bulk mailing from an archive list sharing a news article.
+25b68bf4c4be0fc19ada,easy_ham,False,ok,newsletter,False,"This is a mailing list discussion about spam filtering software, which functions like a newsletter or community update."
+e815a61b84e24d7c6c1b,easy_ham,False,ok,newsletter,False,This is a mailing list discussion thread rather than a direct personal message requiring action.
+62a60ea291b45bd35604,spam,True,ok,spam,False,This is an unsolicited promotional email advertising dubious products and using spammer techniques.
+b7d15e8ad3601cfbcfc7,spam,True,ok,spam,False,Unsolicited promotional marketing content regarding financial sales tools.
+ff95d2a352298169dfda,spam,True,ok,newsletter,False,This is a promotional marketing email from a supermarket advertising special offers.
+99bbacb7d38ecec832d1,spam,True,ok,spam,False,This is a classic advance-fee fraud (419 scam) offering millions in exchange for bank account details.
+18bc1ab3dc69768057da,easy_ham,False,ok,spam,False,This email is part of a political mailing list discussion and does not require personal action.
+20e5594868e7d38b33b3,easy_ham,False,ok,routine,False,This is a technical mailing list discussion regarding LILO installation which requires no direct personal action.
+9f4aa362ce261878fee5,spam,True,ok,spam,False,This is unsolicited bulk marketing offering to buy surplus inventory.
+7686c859d14da76ab3ad,hard_ham,False,ok,newsletter,False,This email is a promotional technology newsletter containing product deals and reviews.
+bc8880fee17ef55a25ae,easy_ham,False,ok,routine,False,This is a casual mailing list discussion about economics and property law.
+9d9d2ca61c55f77269ca,easy_ham,False,ok,newsletter,False,This is an automated RSS feed post sharing a blog update.
+1818c37c2645770bdb01,easy_ham,False,ok,newsletter,False,This is a technical discussion from a public mailing list.
+8c49c7321ad7e6678756,spam,True,ok,spam,False,This is unsolicited junk promising instant credit and free airline tickets.
+d5c0b626249d34b6b798,easy_ham,False,ok,newsletter,False,This is a message from an email mailing list containing casual discussions and unsubscribe instructions.
+bdf9335156d8fb3d88e4,spam,True,ok,spam,False,This is unsolicited adult advertising junk mail.
+0e3efef1c19edbc4d05b,spam,True,ok,spam,False,This is an unsolicited promotional offer for a commercial product.
+71f826804abb1c1a6944,spam,True,error,,,"classify failed: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+f1b454123bc3d28ce39d,spam,True,ok,spam,False,This is an unsolicited get-rich-quick pyramid scheme email.
+ea9981afc6e4c5a1284f,spam,True,ok,spam,False,This is an unsolicited promotional email selling a weight loss supplement.
+587aa9aae22794a5f6ff,easy_ham,False,ok,routine,False,This is a standard mailing list discussion reply regarding historical facts.
+771a260c6e36e6e0e6a6,easy_ham,False,ok,important,True,This is a developer bug report about a broken test that requires code investigation and fixing.
+2b5441b9e65ac536deb6,spam,True,ok,spam,False,This is an unsolicited marketing email offering targeted email lists.
+34b45653fb393adadc7f,spam,True,ok,newsletter,False,This is a marketing email offering discounts on printer cartridges with an unsubscribe link.
+c4758554f6879066b1e5,spam,True,ok,newsletter,False,This is a promotional invitation and event schedule sent to insurance professionals.
+e9ffdd0c691107f74489,spam,True,ok,spam,False,This is unsolicited promotional junk mail for discounted tobacco products.
+d6ba705ac9b43b2cafad,easy_ham,False,ok,newsletter,False,This is an automated RSS feed article update.
+8734462edd2071102d42,spam,True,ok,spam,False,This is an unsolicited stock promotion email typical of penny stock spam.
+4824c107b89b948f0f4b,spam,True,ok,spam,False,This email is an unsolicited promotional advertisement for adult content.
+2cdffa892e116fc2c314,spam,True,ok,newsletter,False,This is a marketing email offering cash bonuses to insurance professionals.
+90164be36123a2c45d8d,spam,True,ok,spam,False,This is an unsolicited marketing email promoting a get-rich-quick business opportunity.
+cc72f5798c952a7e7b95,hard_ham,False,ok,newsletter,False,This is a periodic financial newsletter containing articles and tips.
+9fcc3874ecd2e96cf517,spam,True,ok,spam,False,This email is an unsolicited promotional message about an online business opportunity.
+b5006a7703b8157b0190,easy_ham,False,ok,newsletter,False,This is an automated RSS feed or blog update requiring no personal action.
+d05d89d0673f245cf73a,spam,True,ok,spam,False,This is an unsolicited business promotion offering merchant accounts.
+938795b4be5dc579692d,spam,True,ok,spam,False,This is unsolicited promotional junk regarding background check software.
+0895a2c321091921aa30,hard_ham,False,ok,newsletter,False,This is an automated stock market newsletter from CNET News.com.
+62ba8cbeb24639a8785d,spam,True,ok,spam,False,This is an unsolicited promotional email selling questionable products and services.
+9c3e28d1724313f35c65,spam,True,error,,,classify: Gemini returned an empty response
+e83b888b10105df424aa,spam,True,ok,spam,False,This is unsolicited marketing content promoting annuity bonuses.
+3b9099d8e9297e969a12,easy_ham,False,ok,newsletter,False,This is an automated mailing list post sharing news clippings and humorous stories.
+b54bb0b55fe02804a1ca,easy_ham,False,ok,routine,False,This is a technical mailing list discussion which does not require direct personal action.
+3841773915f4f4469b2f,hard_ham,False,ok,newsletter,False,"This is a bulk email containing tech articles, software reviews, and advertisements from a mailing list."
+88231fe045e270be5120,spam,True,ok,newsletter,False,This is a promotional email offering a financial product and includes an opt-out link.
+fdf6e52e539d0d78afdf,easy_ham,False,ok,newsletter,False,This is a periodic informational mailing containing essays and links.
+2d088d177aafa8d0a4b1,easy_ham,False,ok,routine,False,This is a casual tech debate thread that does not require action.
+69178132f52b364f450c,easy_ham,False,ok,routine,False,This is a mailing list discussion providing technical troubleshooting advice for a spec file.
+4a92581bdaae19059503,spam,True,ok,spam,False,This is unsolicited junk mail advertising credit card processing with no credit checks.
+9872f49565d300405dc2,easy_ham,False,ok,newsletter,False,This is an automated RSS feed post from a personal blog.
+b13751ee37dae3e7a465,easy_ham,False,ok,newsletter,False,This is a broadcast status update sent to a mailing list about internet outages.
+f24bcd558913c21c2900,spam,True,ok,spam,False,This is an unsolicited link exchange pitch from a bulk SEO service.
+c5ffed9c3b564308d143,spam,True,ok,spam,False,This is an unsolicited get-rich-quick financial scheme.
+6602d51505263e04a12b,easy_ham,False,ok,routine,False,This is a casual discussion email that requires only a simple reply or acknowledgment.
+51e61cfed6b021c01cd3,spam,True,ok,spam,False,This is an unsolicited promotional email selling MLM leads.
+406f1b09f916b2ff4e9c,spam,True,ok,spam,False,This is unsolicited junk advertising legal high herbal products.
+8d087c99010b84c28c73,hard_ham,False,ok,newsletter,False,This is an automated promotional sweepstakes reminder email.
+69401574af3cd46bebf9,spam,True,ok,spam,False,This is an unsolicited marketing email offering mortgage loans from an unknown sender.
+86e163f61a44d8c0fbf1,spam,True,ok,spam,False,This is a classic advance-fee financial scam email.
+4b9ca6d6aad13afbe64e,hard_ham,False,ok,newsletter,False,"This is an informational webmaster weekly newsletter containing tips, tools, and updates."
+304c456942f3a0bc08b8,easy_ham,False,ok,routine,False,This is a technical discussion about email security and STARTTLS shared among peers.
+df157726eb877b4ba778,hard_ham,False,ok,newsletter,False,This is a promotional email advertising a book with an option to unsubscribe.
+df12698449d68c6a3106,spam,True,ok,spam,False,This is an unsolicited promotional email offering ringtones and logos.
+21c158daf914494e4343,spam,True,ok,spam,False,This is an unsolicited marketing flyer from an unknown sender obtained via a purchased list.
+dbfecf3e8add999e2e4f,easy_ham,False,ok,newsletter,False,This is a mailing list discussion about Unix file deletion and history.
+d5ca26b4f20474aff077,spam,True,ok,spam,False,This is an unsolicited marketing email promoting bulk mailing software and get-rich-quick schemes.
+4cd9eedbe2df3799d636,spam,True,ok,spam,False,This is a classic unsolicited promotional junk email offering a get-rich-quick scheme.
+a91fafaa666c991c5767,spam,True,ok,spam,False,This is an unsolicited marketing email for adult products.
+0b7a308325a4812ebaae,easy_ham,False,ok,routine,False,This is a standard mailing list discussion regarding technical troubleshooting.
+478a9a74baa3427646f4,easy_ham,False,ok,newsletter,False,This is a discussion thread from a public mailing list.
+80d8876c012d99d41c58,spam,True,ok,spam,False,This is an unsolicited promotional email offering discounted hardware.
+e0939e6e01f117233fe4,spam,True,error,,,classify: Gemini returned an empty response
+1585df483be453ea6d8b,easy_ham,False,ok,newsletter,False,This is an automated RSS feed post discussing grammar and language pet peeves.
+9838b8480d7a0f9b9973,hard_ham,False,ok,newsletter,False,This is a promotional email announcing a new browser version and offering downloads.
+e139a30fbc03d817dafe,spam,True,ok,spam,False,This is unsolicited promotional junk advertising a work-from-home opportunity.
+5459751df90f719e9d5f,spam,True,ok,newsletter,False,This is a promotional marketing email advertising hosting services.
+54d3fd2ddd98d29a3dc5,spam,True,ok,spam,False,This email is an unsolicited promotional offer for printer ink and toner cartridges.
+835d96f480365e2c7cb3,spam,True,ok,spam,False,This is an unsolicited marketing email offering sales manuals and databases.
+2a8053d2b9f555ea2e23,easy_ham,False,ok,newsletter,False,This is an automated mailing list discussion thread about economic and political commentary.
+09bc9a20da4d669a09a2,spam,True,ok,spam,False,This is unsolicited adult content advertising junk.
+6274af027cbc27b14980,easy_ham,False,ok,newsletter,False,This is a technical discussion from a mailing list.
+38291890a0769eac770b,spam,True,ok,spam,False,This is an unsolicited promotional email offering a paid phone service.
+1b28641c429cb4271875,spam,True,ok,spam,False,This is unsolicited promotional junk advertising a get-rich-quick home-based business.
+2f5f24a6f57defc9355d,spam,True,ok,spam,False,This is an unsolicited marketing email offering guaranteed mortgage rates.
+dfd440f2a81113c78ef0,easy_ham,False,ok,newsletter,False,This is an automated RSS news feed article.
+4cf697a123e913fef249,easy_ham,False,ok,important,True,"This is a direct personal email communication ending a conversation abruptly, which may require personal follow-up."
+afb7edc4416ec8ed992b,easy_ham,False,ok,newsletter,False,This is an automated daily headline email from a mailing list subscription.
+cce0bf94a541424c76c4,spam,True,ok,spam,False,This is a classic unsolicited stock pump-and-dump junk email.
+6d51299c9ed399be08eb,spam,True,ok,spam,False,This is an unsolicited adult promotional email containing typical spam links.
+8d6c7343d3808235c274,spam,True,ok,spam,False,This is unsolicited promotional junk advertising free adult site passwords.
+7885ec374c4a17935703,spam,True,ok,spam,False,This email is unsolicited junk containing illicit and harmful content.
+7ff4b9af65f3e9ae73f0,hard_ham,False,error,,,"classify failed: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+b84197ac13943e6a2e21,spam,True,ok,newsletter,False,This is a promotional bulk email about translation software sent to a mailing list.
+fceaee40125280805afd,spam,True,ok,spam,False,This is an unsolicited get-rich-quick pyramid scheme email.
+45758b94a7790241dfa9,spam,True,ok,spam,False,This is unsolicited promotional junk offering a free cell phone.
+c189fbb294516742aa74,spam,True,ok,spam,False,"This is an unsolicited marketing email for a health product, qualifying it as spam."
+208eb3bd85596361dc7c,easy_ham,False,ok,newsletter,False,This is an automated RSS feed notification about a new blog category.
+0ccab9246b2cb934e321,easy_ham,False,ok,newsletter,False,This is a discussion thread from a mailing list.
+5cf5453612b86cc8f9c5,easy_ham,False,ok,newsletter,False,This is an automated RSS feed update containing industry interview links.
+4e1e0c4097a255f382e1,hard_ham,False,ok,newsletter,False,This is a commercial product recommendation newsletter from CNET.
+8b57923b399b09b634d5,easy_ham,False,ok,newsletter,False,This is a technical discussion from a mailing list.
+7a43c1f6cf56d66bc32a,easy_ham,False,ok,newsletter,False,This is a technical discussion mailing list message rather than a personal email.
+a536f62e9829861d1bc7,spam,True,ok,spam,False,This is an unsolicited promotional email selling stun guns and self-defense products.
+488f6b3bbb6277a28a13,spam,True,ok,spam,False,This is an unsolicited get-rich-quick business opportunity email characteristic of spam.
+de1a906222c210528d14,spam,True,ok,spam,False,This is an unsolicited commercial marketing email offering website design services.
+f434aebd4c9bf0bb90ae,easy_ham,False,ok,newsletter,False,This is a casual mailing list discussion thread rather than a direct request.
+e7fb51314ee43f6c8bdc,spam,True,ok,spam,False,This is unsolicited promotional junk regarding pharmaceuticals.
+d0827d727a1b91f7d8f3,spam,True,ok,spam,False,This is unsolicited junk mail regarding mortgage loans from an unverified sender.
+3e33d885f94d32767363,easy_ham,False,ok,routine,False,This is a general technical discussion inquiry sent to a mailing list that does not require urgent personal action.
+04a29c2a4558003414dd,easy_ham,False,ok,newsletter,False,This is an automated mailing list discussion about software upgrades.
+89841092c5d12ca157fa,easy_ham,False,ok,routine,False,This is a technical mailing list query that can be handled with a simple reply or left to the community.
+5b31402bdc8d6c6cde14,easy_ham,False,ok,routine,False,This is a technical mailing list discussion about spam classification experiments that does not require direct personal action.
+4af40c2cb8cd0faaed08,spam,True,ok,spam,False,"This is an unsolicited mass email promoting website templates, identifiable as spam."
+c32c82e20e46a42046c4,easy_ham,False,ok,newsletter,False,This is an automated mailing list discussion about email configuration.
+1153866883e9c7770771,easy_ham,False,ok,routine,False,"This is a casual conversational email sharing a personal opinion, requiring no urgent action."
+aa04874bb2a7b0f7528a,easy_ham,False,ok,newsletter,False,"This is a mailing list discussion about technical development details regarding Spambayes, not a personal message."
+32d6a5c6369c8551da5d,hard_ham,False,ok,newsletter,False,This email is a mass tech update newsletter containing articles and commentary.
+f0350dd71485a3ef54ef,spam,True,ok,newsletter,False,This is a promotional marketing email about an insurance policy.
+1ef8df91143f969a9924,easy_ham,False,ok,newsletter,False,This is an automated mailing list discussion post sharing a news article about a panther sighting.
+c3901cc559d350c3ea10,spam,True,ok,spam,False,This is an unsolicited promotional email offering domain name registrations.
+028c160f54f1d754d603,easy_ham,False,ok,newsletter,False,This is a mailing list discussion about a Linux film rather than a direct personal inquiry.
+94201a3755022614c822,easy_ham,False,ok,newsletter,False,This is an automated RSS feed update containing science news and humor.
+88ae437f8f34a1d8631a,easy_ham,False,ok,routine,False,This is a resolved technical support mailing list thread where the user expresses gratitude.
+ef40039e2df4b73cd846,spam,True,ok,spam,False,This is an unsolicited promotional email for a commercial product.
+f726b7025361d776652a,spam,True,ok,spam,False,This is unsolicited junk email with a suspicious link.
+e92642d6ba45d3a26c13,spam,True,ok,spam,False,This is an unsolicited promotional email offering cheap cell phone accessories.
+dd12c34e3882f205324a,spam,True,ok,newsletter,False,This is a promotional trade show invitation sent in bulk.
+7b76179baff31726512e,easy_ham,False,ok,newsletter,False,This is a mailing list discussion thread regarding technical troubleshooting on Linux.
+f99647ee59ef6de345a8,spam,True,ok,spam,False,This is an unsolicited promotional advertisement for Star Wars collectibles.
+e7b5e63225727bd72de8,easy_ham,False,ok,routine,False,This is an informal mailing list discussion that does not require any action.
+3b8ff0c83d3627ea2bdf,easy_ham,False,ok,newsletter,False,This is a message from a mailing list discussion about Linux.
+41181b36d691f0d1e391,easy_ham,False,ok,newsletter,False,This is a mailing list discussion about cooking recipes and does not require action.
+a9b9e4cbc1aa78aa92d0,spam,True,ok,spam,False,This is an unsolicited bulk mail campaign with removal links.
+073d0484392d8bafaca3,spam,True,ok,spam,False,This is an unsolicited get-rich-quick marketing email typical of spam.
+a8972685b38f8b408836,spam,True,ok,spam,False,This is an unsolicited prize giveaway email typical of phishing and junk messages.
+3e248a30097bb5ac3129,easy_ham,False,ok,newsletter,False,This is an informational mailing about satellite climate data measurements and scientific links.
+ea444f4f7f512bb66629,easy_ham,False,ok,spam,False,This is a random mailing list discussion thread with a clickbait subject line containing unsolicited noise.
+80750578d51720129477,spam,True,ok,spam,False,This email is an unsolicited financial investment scheme and typical junk mail.
+0026c6e896eaaa31cdb2,spam,True,ok,newsletter,False,This is a marketing and promotional email offering insurance leads and seminar packages.
+6aae37686651ad6fca96,spam,True,ok,spam,False,This is an unsolicited get-rich-quick pyramid scheme email.
+ea6e3ebda1fdc013a6d0,easy_ham,False,ok,routine,False,This is a technical discussion from a mailing list that does not require urgent personal action.
+311ed83651857781d040,spam,True,ok,spam,False,This is unsolicited junk mail promoting a bulk mailing CD.
+5d9f704970bb7123b56b,easy_ham,False,ok,spam,False,"This is unsolicited and offensive mailing list chatter, characteristic of junk or spam."
+21cf59cf9d600bed378d,hard_ham,False,ok,newsletter,False,This is an automated book release notification from a publisher mailing list.
+7d0b23cc18a370de25e6,spam,True,ok,spam,False,This is an unsolicited life insurance promotional email.
+9efdb571dfd9f2432940,easy_ham,False,ok,newsletter,False,This is an automated RSS feed news update.
+888eb3a715d5d96d38d8,easy_ham,False,ok,routine,False,This is an ongoing conversational discussion on historical geopolitics requiring no urgent action.
+9f51a4a6df5ece5530b8,easy_ham,False,ok,spam,False,"This is a mailing list discussion about novelty prank shipping services, which is unsolicited noise."
+28d187b4b5c237a2f2b2,easy_ham,False,ok,newsletter,False,This is an automated mailing list discussion thread with promotional footer content.
+0471a665401bb6ec29f3,spam,True,ok,newsletter,False,This is a commercial promotional email about garden ornaments.
+bc732ba98059df93d803,spam,True,ok,spam,False,This is unsolicited promotional junk offering mortgage refinancing.
+e403061314981125ea78,easy_ham,False,ok,routine,False,"This is a casual, lighthearted reply to a mailing list conversation about a baby."
+a232dfafb8ad4eb70c82,easy_ham,False,ok,newsletter,False,This is an automated mailing list discussion post sharing a news article and sponsor links.
+45d14daa619f82a2058e,easy_ham,False,ok,routine,False,This is a technical discussion from a mailing list about a bug traceback.
+1d5b7d46212862aa6966,easy_ham,False,ok,newsletter,False,This is an announcement sent to a mailing list about a software release.
+890fb4bf07d4116f43c9,spam,True,ok,spam,False,This is an unsolicited adult promotional email containing typical spam characteristics.
+ff888a00e9e7f8931028,spam,True,ok,spam,False,This is an unsolicited promotional email for car sales from an unknown marketing network.
+90d8c4cf1e676d835076,spam,True,ok,spam,False,This email is unsolicited commercial junk promoting a get-rich-quick scheme.
+5696c79a9a612b63fe64,spam,True,ok,spam,False,This is an unsolicited marketing email offering legal services from an unknown sender.
+4bbf25b333502320fa9c,spam,True,ok,spam,False,This is an unsolicited promotional email offering travel and business services in China.
+e042f1f5262f4314532f,spam,True,ok,spam,False,This is a classic get-rich-quick pyramid scheme or financial scam.
+9b397ec367a71a51cfd2,spam,True,error,,,classify: Gemini returned an empty response
+3986a54f196dbf045f6a,hard_ham,False,ok,newsletter,False,This is a mailing list discussion about package repository security.
+42cc947b1ff1ea1aadfa,hard_ham,False,ok,newsletter,False,"This is an informational newsletter about Java technologies, products, and events."
+affa57835970ae9498ec,spam,True,ok,spam,False,This is unsolicited promotional junk advertising a work-from-home business opportunity.
+299588fc5022867c7c60,spam,True,ok,spam,False,This email is a classic unsolicited financial scam offering fake government grants.
+2d48c66f158d75907eb5,easy_ham,False,ok,routine,False,This is a routine technical discussion about a bug fix in a mailing list conversation.
+ee8483d463ee63f602e1,easy_ham,False,ok,routine,False,This is a casual discussion reply from a mailing list regarding political philosophy.
+9121261abf96e8538885,spam,True,ok,newsletter,False,This is a marketing email inviting recipients to a paid industry summit.
+fe53e261a566d18c5446,spam,True,ok,spam,False,This is an unsolicited commercial email offering cheap web design services.
+797c6ae53234b59b5619,spam,True,ok,spam,False,This email is an unsolicited promotional blast offering lead generation services and massive sales guarantees.
+fe9bd543ed00e219fec5,hard_ham,False,ok,newsletter,False,This is an automated informational newsletter about networking and VoIP tips.
+47f464b7ec1a9303d4b0,spam,True,ok,spam,False,This is an unsolicited marketing email offering timeshare services.
+9e53c7630c9717917707,spam,True,ok,spam,False,This is an unsolicited work-from-home get-rich-quick advertisement.
+e655b18a37887e365322,easy_ham,False,ok,newsletter,False,This is an automated RSS feed article post from a blog.
+5a00b5b8d71b77042d35,easy_ham,False,ok,newsletter,False,This is a discussion mailing list post about email security and PGP.
+27d424769024baaf89a7,spam,True,ok,spam,False,This is a classic advance-fee fraud (419 scam) email.
+18ed7b6f52d210664aaa,spam,True,ok,spam,False,This is an unsolicited financial return scheme typical of spam.
+9863519b9c3e591da2e1,spam,True,ok,spam,False,This email is an unsolicited get-rich-quick scheme typical of spam.
+0605fe3de8d37f18adf2,spam,True,ok,spam,False,This email is an unsolicited debt consolidation offer typical of junk mail.
+6a0c878d8e2d63885b5e,spam,True,ok,spam,False,This is an unsolicited marketing email advertising a government grants e-book.
+3983f509c2f8ac950248,spam,True,ok,spam,False,This is an unsolicited mass-marketed advertisement for life insurance.
+00ce093c42ad651d7d92,spam,True,ok,spam,False,This is an unsolicited work-from-home job offer typical of mass marketing junk and phishing attempts.
+d463dfd8277016f00430,easy_ham,False,ok,routine,False,This is a mailing list discussion thread with no direct personal request or action required.
+dc9e0d3f5ec667350458,spam,True,ok,spam,False,This is an unsolicited promotional email selling an herbal product.
+1b205e70a246e2b2007d,easy_ham,False,ok,routine,False,This is a technical discussion from a mailing list that does not require urgent personal action.
+925d3f47fa68e00964a6,easy_ham,False,ok,routine,False,This is a technical mailing list discussion about spam classification algorithms.
+d3e48a05b47185966a16,spam,True,ok,newsletter,False,This is a marketing email promoting insurance brokerage services.
+116c9424f23b066e8cb9,spam,True,ok,spam,False,"This email contains suspicious links and unreadable characters, which are typical characteristics of spam."
+64e804c18f5e267daee3,spam,True,ok,spam,False,This is unsolicited adult spam content.
+b7fe510b14b3d0e2c296,spam,True,ok,spam,False,This is an unsolicited promotional email advertising a dubious cell phone product.
+937cf1f4af893568634f,hard_ham,False,ok,newsletter,False,This is a promotional tech newsletter from CNET containing product reviews and articles.
+14be4b256203f700c42e,hard_ham,False,ok,newsletter,False,This is a periodic updates and news email from a subscribed mailing list.
+95cd76375d2352e9c22a,spam,True,ok,spam,False,This is an unsolicited marketing email offering cheap life insurance.
+58b2b9891eff38db583a,spam,True,ok,spam,False,This is an unsolicited promotional email advertising software to copy DVDs and games.
+2dab5a5948b32d06750f,spam,True,ok,spam,False,This is an unsolicited promotional email offering dubious surveillance software.
+6656e8672053690e2b99,easy_ham,False,ok,newsletter,False,This is an archived mailing list discussion thread rather than a direct personal message.
+ebe53d586b3c0a0f9ee2,easy_ham,False,ok,newsletter,False,This is a blog RSS feed update containing a short quote and a link.
+a70c9a9ac26756bd6d23,easy_ham,False,ok,newsletter,False,This is a mailing list discussion about a technical programming problem.
+05dd6dcd57a60036771e,spam,True,ok,spam,False,This is an unsolicited marketing advertisement for a home-based business opportunity.
+7f99fbf13da10c58d3da,spam,True,error,,,classify: Gemini returned an empty response
+f07b16950a73c94da58c,spam,True,error,,,classify: Gemini returned an empty response
+014c9f5443f354e75a01,easy_ham,False,ok,spam,False,This is an unsolicited mailing list discussion about public domain music and copyright.
+67994609e42b0431c888,easy_ham,False,ok,routine,False,This is a technical discussion from a mailing list that does not require personal action.
+d04c38794f1cf86ddb33,easy_ham,False,ok,newsletter,False,This is an automated RSS feed update containing a humorous news tip.
+8f7fffa3db62c1e31684,spam,True,ok,spam,False,This is unsolicited mass marketing for log homes sent from a generic yahoo address.
+615141fc7f06670716b5,spam,True,ok,spam,False,This is an unsolicited marketing email offering credit repair software.
+91d7d43822d928feec24,spam,True,ok,newsletter,False,This is a commercial promotional email offering database administration services.
+09de4d11bb0ad65b0d1f,spam,True,ok,spam,False,This is unsolicited promotional junk regarding MP3 downloads.
+38391a3a8f1e6531de01,spam,True,ok,spam,False,This is an unsolicited marketing email advertising HGH supplements.
+d38517cd3de572ad29cd,easy_ham,False,ok,newsletter,False,This is a mailing list discussion about software beta testing and RPM packages.
+401d40564bcc1672affd,spam,True,ok,spam,False,This email is unsolicited junk advertising mortgage and loan services.
+f68644aa85ecdd22a26e,easy_ham,False,ok,routine,False,This is a technical discussion mailing list message about spam testing results requiring no urgent personal action.
+10f94111af9530ced68d,spam,True,ok,spam,False,This is an unsolicited commercial advertisement for email harvesting software.
+659350c9fa393217c941,spam,True,ok,spam,False,This is an unsolicited marketing email offering life insurance quotes.
+8d8389a1be206076228d,easy_ham,False,ok,newsletter,False,This is an automated news feed headline update rather than a personal message.
+b76e5907fdfc58f24246,easy_ham,False,ok,newsletter,False,This is an automated news feed article.
+6cbac3c2ce4defa90d1a,easy_ham,False,ok,newsletter,False,This is an automated mailing list discussion thread from a Yahoo! Group.
+e92756d9bb87acf0e4c6,easy_ham,False,ok,newsletter,False,This is an automated RSS feed update containing a news summary article.
+eb2a1f3f53797d55f99e,easy_ham,False,ok,routine,False,This is an old mailing list discussion thread containing anecdotal information without requiring action.
+d334fc69f862539591ab,spam,True,ok,spam,False,This is unsolicited promotional junk offering free business cards.
+b112545ea40ab069e00a,easy_ham,False,ok,newsletter,False,This is a periodic daily newsletter containing community stories and links.
+c377d4f53a6cb49639fd,easy_ham,False,ok,newsletter,False,This is a technical discussion thread from a public mailing list.
+7ef1f8fab1c57286a5f1,spam,True,ok,spam,False,This is unsolicited promotional junk offering hosting and mailing services.
+2744493c49d4da2cd0ff,spam,True,ok,spam,False,This is a classic advance-fee fraud (Nigerian 419) scam email.
+35f3560a43fc684467b6,spam,True,ok,spam,False,This is an unsolicited get-rich-quick scheme offering a guaranteed weekly income.
+54877098f0bfc6f70327,spam,True,ok,spam,False,This is an unsolicited commercial email offering discounted tobacco products.
+b708cb77e538de5bf847,spam,True,ok,spam,False,This is an unsolicited get-rich-quick promotional email containing classic spam markers.
+3dd4093746b1632dc3ee,easy_ham,False,ok,newsletter,False,This is an old mailing list discussion thread rather than a direct personal message.
+8b2365d337c7c0b39cf7,easy_ham,False,ok,newsletter,False,This is an archived mailing list discussion about spam filtering and does not require personal action.
+34bf0d07a5bab9ee2d40,easy_ham,False,ok,newsletter,False,This is an automated RSS feed post sharing community suggestions and links.
+bf6c8de0321bcd46cc46,spam,True,ok,spam,False,This is an unsolicited marketing message promoting a dubious anti-aging product and income opportunity.
+74174ef4f6a3b5024824,spam,True,ok,spam,False,This is an unsolicited promotional email offering a commercial telecommunications service.
+0c0bbdafbb1a4f97d27d,easy_ham,False,ok,routine,False,"This is a casual, humorous mailing list reply that does not require any action or a personal response."
+96a9444bf34b5e01b54a,spam,True,ok,spam,False,This is unsolicited promotional junk advertising printer supplies.
+65c114d640fb0e5c7c82,spam,True,ok,spam,False,This email is unsolicited adult promotional content and junk.
+0e63275382c70731b077,spam,True,ok,spam,False,This is an unsolicited promotional email offering credit repair services from an unknown sender.
+243857943ce6a4fe765b,spam,True,ok,spam,False,This is an unsolicited adult promotional email containing typical spam characteristics.
+5811737ec534d64e95d5,spam,True,ok,spam,False,Unsolicited promotional email for an online investigation tool.
+b9330e656f8f427bfab4,spam,True,ok,spam,False,This is an unsolicited advertisement for auto warranties.
+19640aa4cc23e27bc2a3,easy_ham,False,ok,routine,False,This is a standard mailing list discussion thread where no direct action or personal reply is required from the user.
+ae877f9a1403ee13afd2,spam,True,ok,spam,False,This is unsolicited promotional junk advertising a free cosmetic sample.
+c1221c6af928f5a8ac96,spam,True,ok,spam,False,This is unsolicited junk mail advertising an unverified health supplement with exaggerated claims.
+ec4ce4759f908f7d2760,spam,True,ok,spam,False,This email is an unsolicited promotional advertisement for mortgage refinancing from an unknown sender.
+565e9863b995f0c91b91,easy_ham,False,ok,newsletter,False,This is an automated mailing list or discussion group message containing general commentary.
+7b415547616de1794d0e,spam,True,ok,spam,False,This is an unsolicited junk email promoting a pharmaceutical product.
+979604ce2175453e1d7a,spam,True,ok,spam,False,This is unsolicited junk email with garbled text and a suspicious link.
+cdc5a3e3b7b35ebccdfc,easy_ham,False,ok,important,True,This is a technical discussion about code patches and missed function calls that requires developer review.
+b231d42009f60349fb79,spam,True,ok,spam,False,This is a classic advance-fee fraud scheme and unsolicited phishing email.
+996593d812fc73bdbcc6,spam,True,ok,spam,False,This is an unsolicited promotional email advertising a weight loss supplement.
+1cb3ed1aa3bc19c107e2,easy_ham,False,ok,newsletter,False,This is a broadcast message from a mailing list seeking software packages.
+e116cd0ed5caa94ef1f1,hard_ham,False,ok,newsletter,False,This is a periodic literary newsletter containing Aesop's fables and subscriber announcements.
+c8cecfdd568cef0b67ea,hard_ham,False,ok,newsletter,False,This is an automated weekly promotional newsletter from CNET containing product updates and links.
+b4ab5239108eb66254a5,hard_ham,False,ok,newsletter,False,This is a weekly software update and editorial newsletter from CNET.
+5399a14b9822e10db7e3,hard_ham,False,ok,newsletter,False,This is a periodic media and market analysis newsletter.
+fa3be95ce7bcd6063b54,spam,True,ok,spam,False,This is an unsolicited promotional email selling a pharmaceutical product.
+a10fba7e9a30db0441a3,spam,True,ok,spam,False,This is an unsolicited promotional offer with typical spam characteristics.
+3b27a1a21c443fe48501,hard_ham,False,ok,important,True,This is a technical bug report and kernel panic analysis requiring engineering investigation and a code fix.
+75926d5733a34fabd2c9,easy_ham,False,ok,newsletter,False,This is a mailing list discussion thread rather than a direct personal message.
+4b0e302ac5e93d9e90c2,easy_ham,False,ok,routine,False,This is a technical mailing list discussion requiring a simple reply.
+1175a03368c988ab9281,spam,True,ok,spam,False,This is an unsolicited promotional email for questionable HGH supplements.
+1008035405a12292d0bf,spam,True,ok,spam,False,This is an unsolicited junk email offering a suspicious vacation package and PC giveaway.
+af1a0a495c54015bd450,easy_ham,False,ok,spam,False,"This email is an unsolicited inquiry regarding distribution lists, typical of promotional or low-relevance outreach."
+a4ddc839185b2f0c3ebe,spam,True,ok,spam,False,This is unsolicited mass real estate advertising junk email.
+ffcdbea02f0713eaa568,spam,True,ok,spam,False,This is unsolicited adult marketing content.
+bf3cdee13a021232d8f8,spam,True,ok,spam,False,This is an unsolicited marketing email regarding mortgage refinancing from an unknown sender.
+fd0bcabb5c48e0527acb,spam,True,error,,,"classify failed: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+166727bc3cab8e190340,spam,True,ok,spam,False,This is a classic advance-fee fraud (419) scam email promising millions in exchange for personal assistance.
+76ef9cc0f3792bf9f6a4,spam,True,ok,newsletter,False,This is a bulk partnership and advertising pitch sent out to prospective websites.
+872fb1a79905ce5a265e,easy_ham,False,ok,newsletter,False,This is a standard mailing list discussion thread.
+31701fb4a0f870385337,hard_ham,False,ok,newsletter,False,"This is a weekly webmaster update containing articles, product reviews, and tips."
+38b5b6e63ca1cc8fe569,easy_ham,False,ok,routine,False,This is an ongoing mailing list discussion about technology and history.
+ea74b2127cd62a8473eb,easy_ham,False,ok,newsletter,False,This is a periodic daily newsletter containing articles and updates.
+af5ea664bf4ea5fe3db1,hard_ham,False,ok,newsletter,False,This is a promotional newsletter announcing a virtual job fair event.
+507c6a0fd5a97ed361e6,spam,True,ok,spam,False,This is unsolicited adult marketing content.
+a97a02d7f9d300545337,easy_ham,False,ok,newsletter,False,This is an archived mailing list discussion thread rather than a direct personal message.
+b6ccc8ca8151cbcdb113,easy_ham,False,ok,routine,False,This is a casual mailing list or reply conversation that does not require an immediate action or serious reply.
+2cad50e6ff62488df211,hard_ham,False,ok,newsletter,False,This is an automated promotional and informational email newsletter from Lockergnome Digital Media.
+f708a9a5139b705ef6f0,easy_ham,False,ok,newsletter,False,This is an automated RSS feed update providing a news snippet and links.
+f3c17364f92359fd00b7,easy_ham,False,ok,newsletter,False,This is an automated mailing list discussion post sharing a news article.
+a2f6191f1d13db8224df,spam,True,ok,spam,False,This is an unsolicited marketing email for printer supplies.
+9cf8bd82ded161eca6cb,spam,True,ok,spam,False,This is unsolicited promotional junk offering home loans with generic sender details.
+da535c908924f59ede47,easy_ham,False,ok,newsletter,False,This is an informational tech-related mailing list post rather than a personal message.
+9742e18d49c80d6e40f0,easy_ham,False,ok,newsletter,False,This is an automated RSS feed update containing blog links and news snippets.
+e4831033f43b1309c95f,spam,True,ok,spam,False,This is a classic advance-fee fraud (419) scam offering a share of millions of dollars.
+e713a4eb5f15855a62f5,spam,True,ok,spam,False,This email is an unsolicited promotional offer for online pharmaceuticals.
+685dd1e748ff6fab6a86,easy_ham,False,ok,newsletter,False,This is a casual discussion thread from a mailing list and requires no action.
+e15a5d0fc9f1453e78d6,easy_ham,False,ok,important,True,This is a technical discussion about software architecture and deployment requiring a thoughtful response.
+b462f45c4fdfb77ce6bd,easy_ham,False,ok,newsletter,False,This is a mailing list discussion thread containing news commentary rather than a personal message requiring action.
+041ebc103248173031a9,spam,True,ok,spam,False,This is unsolicited promotional content for life insurance.
+c256ca2936cbd970f840,spam,True,ok,spam,False,This is unsolicited junk advertising male enhancement pills.
+cf2543a3000bbbe56a17,spam,True,ok,spam,False,This is unsolicited promotional junk offering merchant account services.
+55a6364b32d349b7c460,spam,True,ok,newsletter,False,This is a marketing email promoting insurance products and services to agents.
+a462a8bfc6951868ed81,spam,True,ok,spam,False,This email is an unsolicited commercial electronic mail advertising a get-rich-quick chain letter scheme.
+73edab18a32ebe3eb680,spam,True,ok,spam,False,This is an unsolicited mass-market advertisement for life insurance.
+93fa420c65841dd086f0,hard_ham,False,ok,newsletter,False,This is a periodic trivia and promotional email sent to a mailing list.
+bc11854efb77916b0e8b,hard_ham,False,ok,newsletter,False,This is a bulk mailing subscription update and community newsletter from Lockergnome.
+a106abc75b09fb4d80aa,easy_ham,False,ok,newsletter,False,This is a message from a mailing list discussion about phone recommendations.
+5c58ae7424efac19d31c,easy_ham,False,ok,newsletter,False,"This is an opinion article distributed via an email list, containing political commentary."
+9d17cc6fc7e86de8e050,easy_ham,False,ok,newsletter,False,This is a technical discussion from a mailing list.
+e6dc995fa456bd315135,spam,True,ok,spam,False,This is an unsolicited mortgage advertisement email.
+33627a538d106184c3cf,easy_ham,False,ok,newsletter,False,This is an automated mailing list notification containing daily headlines.
+5a86943b45d90971a88b,easy_ham,False,ok,routine,False,"This is a technical support question sent to a mailing list, requiring a simple community response rather than urgent personal attention."
+be63de7ad6282c6c2934,spam,True,ok,spam,False,This email is an unsolicited promotional offer for a business mailing list.
+b7e7c48cb128d15d9396,easy_ham,False,ok,newsletter,False,This is an automated RSS feed update containing a news article.
+cf293a77a74510c6326c,spam,True,ok,spam,False,This is an unsolicited promotional email offering a get-rich-quick training course.
+6ed3946e48c71d3411fb,easy_ham,False,ok,newsletter,False,This is an automated RSS feed post sharing blog content.
+a21742eb32512dcdaeb2,easy_ham,False,ok,routine,False,This is a casual discussion from a mailing list.
+71d362f8b5179f278c81,spam,True,ok,spam,False,This is unsolicited junk mail promoting questionable investigative software.
+b04499cfc82369b40b44,spam,True,ok,spam,False,This is a classic advance-fee financial scam email.
+38ca2036699c24308abf,easy_ham,False,ok,newsletter,False,This is a forwarded quote of the day email typical of bulk mailing lists.
+b6797b1cf2d1ae760785,easy_ham,False,ok,newsletter,False,This is a technical discussion from a mailing list.
+b0e16417c34be2d80078,easy_ham,False,ok,routine,False,This is a mailing list discussion thread about a political and religious topic requiring no direct action or response.
+89dc82864f2c39ba70c3,easy_ham,False,ok,newsletter,False,This is an automated mailing list discussion about spam filtering technology.
+4feddd487a44f5133802,spam,True,ok,spam,False,This email contains garbled promotional Japanese text and an unverified external link typical of unsolicited spam.
+e6cff57fa1d13aafa2ae,spam,True,ok,spam,False,This is unsolicited promotional junk advertising psychic services.
+13ac92b42aef8bfbb8bc,spam,True,ok,spam,False,This is an unsolicited marketing email for a male enhancement product.
+55bfedaedbabc787251a,spam,True,ok,spam,False,This is an unsolicited marketing email offering various insurance and loan quotes.
+d0fbd3778f8080ff897e,spam,True,ok,spam,False,This is a classic work-from-home financial scam requesting an upfront processing fee.
+d874c7cd24df34b063f6,easy_ham,False,ok,routine,False,This is an informal developer mailing list discussion about testing data.
+3d57fc302736786f0658,spam,True,ok,spam,False,Unsolicited promotional marketing email with opt-out links.
+8e31946981958e2826e6,hard_ham,False,ok,newsletter,False,This is a bulk tech subscription report and promotional newsletter.
+6c4458e581f98eb41eb9,spam,True,ok,spam,False,This is unsolicited commercial marketing for a product.
+17089be0b9f2ab7d9ad9,hard_ham,False,ok,newsletter,False,"This is a periodic digest and programming newsletter containing updates, articles, and seminar announcements."
+01587c8300734cbf1055,spam,True,ok,newsletter,False,This is a marketing email promoting career tools and job search services.
+0fe58cf74cb99c60dbe4,spam,True,ok,newsletter,False,This is an unsolicited product promotional email from a supplier.
+9a1927746b16922937ef,easy_ham,False,ok,newsletter,False,This is a technical discussion from a mailing list.
+5913c6b7ffc96c6e8263,spam,True,ok,spam,False,This is an unsolicited cold sales pitch from an unknown overseas manufacturer.
+a8aaab94556c18050629,spam,True,ok,spam,False,This is an unsolicited mass marketing email offering software development services.
+1e41e3b72aacc94ce074,spam,True,ok,spam,False,This is an unsolicited promotional email offering ringtones and logos from an unknown sender.
+5a8a38a021fd47a4f108,hard_ham,False,ok,newsletter,False,This is a technical discussion email from a mailing list regarding Linux wireless networking.
+16283da0f6ca6a4ccf6a,easy_ham,False,ok,newsletter,False,This is an automated mailing list discussion about technical tips.
+70dc1a355ef6141dfed7,spam,True,ok,spam,False,This is an unsolicited dating solicitation email which is characteristic of spam.
+97f6f5472a1300529b45,spam,True,ok,newsletter,False,This is an unsolicited promotional marketing email for software.
+6387f89b778635e31717,spam,True,ok,newsletter,False,This is a marketing email offering a seminar system to insurance professionals.
+1d736f576f121dcb0d26,spam,True,ok,newsletter,False,This is a promotional email advertising domain registration and web hosting services.
+d8dbb5585546eea37e74,spam,True,ok,spam,False,This is an unsolicited multi-level marketing pitch sent to a purchased email list.
+81171eacedfd620b9456,easy_ham,False,ok,routine,False,This is a simple programming query with a minor typo in the loop condition.
+b57d4d71a3dde56a988f,easy_ham,False,ok,newsletter,False,This is a message from a mailing list regarding technical discussions about package management.
+506f3a403b774de460ff,easy_ham,False,ok,routine,False,This is a casual mailing list discussion thread requiring no action or real reply.
+9c8ea9a73056ed611cde,spam,True,ok,spam,False,This is an unsolicited work-from-home get-rich-quick scheme typical of junk email.
+676e5aa875e31496ed0e,spam,True,ok,spam,False,"This email is an unsolicited promotional advertisement with corrupted encoding, typical of spam."
+7dca584d1fb0371c5368,spam,True,ok,spam,False,This email is an unsolicited promotional message offering a free trial for septic tank care.
+7c9ac0a45cc9029c824f,spam,True,ok,spam,False,This is an unsolicited promotional email for adult websites.
+6a3b299feeb8530ef9f0,easy_ham,False,ok,newsletter,False,This is an automated RSS feed article from a gaming industry publication.
+b26d02ab469ae648ac44,hard_ham,False,ok,newsletter,False,This is a periodic software update and review newsletter from CNET Download.com.
+c731867b055454ccf1ee,easy_ham,False,ok,newsletter,False,This is an automated RSS feed post containing blog updates and links.
+e00853aefbaf422592fb,easy_ham,False,ok,newsletter,False,This is a mailing list discussion about software packaging and development updates.
+23328e759d2552e952bb,spam,True,ok,spam,False,This is unsolicited junk mail promoting a lottery service and get-rich-quick scheme.
+d55deb780c4f567cab33,hard_ham,False,ok,newsletter,False,This is a bulk subscription-based daily email newsletter containing promotional links and updates.
+55f4b87c5f96ffd15b60,spam,True,error,,,classify: Gemini returned an empty response
+d54ae7f5607c5d92661f,easy_ham,False,ok,newsletter,False,This is a mailing list discussion thread with multiple contributors and promotional footer links.
+d82b6ec4c297355e77ee,easy_ham,False,ok,spam,False,"This is an old mailing list discussion thread with off-topic argument content, requiring no action."
+8e783c1210d61ed3613f,easy_ham,False,ok,newsletter,False,This is a message from a mailing list discussion about technical Linux topics.
+d61b94be733d804ed04a,spam,True,ok,newsletter,False,This is a marketing email offering cash bonuses for insurance products.
+5adcf45c44d9a93a74fe,spam,True,ok,newsletter,False,This is a bulk promotional email advertising digital fonts and English learning products.
+2b4c37a867d0ea10f959,easy_ham,False,ok,newsletter,False,This is a mailing list discussion about programming practices and does not require personal action.
+b76e727ac3d08c505314,easy_ham,False,ok,routine,False,"This is a casual, conversational mailing list reply about internet availability and does not require urgent action or a complex response."
+be40fd70b754140bfba0,spam,True,ok,newsletter,False,This is a bulk promotional email offering a free newsfeed and marketing resources.
+c9169560495b40848a36,hard_ham,False,ok,newsletter,False,"This is a periodic informational email with technical tips and reader mail, characteristic of a standard newsletter."
+306e3f8d86acd8a42ed8,easy_ham,False,ok,routine,False,This is an informational mailing-list style discussion about digital radio laws and tech ideas that does not require a direct reply.
+ae492994617c5df686ff,easy_ham,False,ok,newsletter,False,"This is a mailing list discussion thread, which falls under bulk updates and newsletters."
+9899a5fd318a2efe809e,easy_ham,False,ok,routine,False,This is an interesting link shared among a mailing list with no direct action or reply required.
+ea3c7a3b36b849d9de65,spam,True,ok,spam,False,Unsolicited promotional content with garbled encoding and a suspicious link.
+187c459a4b1cb32c1730,spam,True,ok,spam,False,This email is an unsolicited promotional message claiming unverified cash windfalls.
+5d405dfa16b8ddb7dfe0,easy_ham,False,ok,newsletter,False,"This is an automated RSS feed post containing a personal blog update about medical notes, not a direct communication."
+d0ea5b7011c051d40b1c,easy_ham,False,ok,newsletter,False,This is an automated news feed article.
+1804a3087fbf5573fa31,easy_ham,False,ok,important,True,This is a technical discussion regarding a software bug report requiring developer input.
+b5dd1aa22ae6d09ba60c,spam,True,ok,spam,False,This is an unsolicited make-money-at-home scheme typical of promotional junk email.
+7a3d14b686e5640c2d09,easy_ham,False,ok,routine,False,This is a standard mailing list discussion about spam filtering technologies requiring no action.
+c99c3c0da9e92520ca31,spam,True,ok,spam,False,This is an unsolicited promotional email for online pharmaceuticals.
+b1e16857dd81b3215d6f,spam,True,ok,spam,False,This is an unsolicited promotional marketing email trying to sell a business opportunity.
+6be98c26b7a85f5e75d7,easy_ham,False,ok,newsletter,False,This is an automated daily newsletter from use Perl containing community stories.
+5055b5b087958791b515,spam,True,ok,spam,False,This is an unsolicited promotional advertisement for perfume.
+a9ae7f38f42358119006,easy_ham,False,ok,routine,False,This is a technical mailing list discussion about programming languages that does not require an urgent reply.
+aa9e16a438a0a2c6f883,spam,True,ok,spam,False,This is an unsolicited commercial advertisement for bulk email scraping software.
+3c92c2cd4ca520146277,easy_ham,False,ok,routine,False,This is a mailing list discussion about Linux software distribution which requires no action.
+9f653f34fb66e6716f32,easy_ham,False,ok,newsletter,False,This is a mailing list discussion about technical configurations and does not require personal attention.
+9ab4943e97aadbcdb1fa,easy_ham,False,ok,newsletter,False,This is a mailing list discussion about backup solutions requiring no personal action.
+427901e0ff908a7f35a7,easy_ham,False,ok,newsletter,False,This is a mailing list discussion about programming philosophy and is not actionable.
+d2102d8b7e5123f34c2b,easy_ham,False,ok,newsletter,False,This is an archived mailing list discussion thread rather than a personal message.
+4575deb64d5bab1d8757,spam,True,ok,spam,False,This is an unsolicited promotional email offering dubious herbal products and supplements from an unknown sender.
+ca02982fc9396edbfde4,hard_ham,False,ok,newsletter,False,This is a periodic bulk informational newsletter about ISO17799 security standards.
+4cbe1a304f6701a27231,hard_ham,False,ok,newsletter,False,This is a bulk subscription-based tech report email containing articles and security tips.
+6fcb321c8e363680b614,easy_ham,False,ok,routine,True,"This is a personal message from an acquaintance asking about online writing, requiring a simple conversational reply."
+ad1d7dd2d12bd1056c8b,easy_ham,False,ok,routine,False,"This is a technical question sent to a mailing list, requiring a routine technical reply."
+e453605c5bbc95b85bfd,spam,True,ok,spam,False,This is unsolicited promotional junk regarding mortgage rates.
+17b0101d90455e6cd9e9,easy_ham,False,ok,newsletter,False,This is a technical discussion message from a mailing list.
+cedaa35382297af7d889,spam,True,ok,spam,False,This is an unsolicited marketing email advertising life insurance.
+158b2a094146f4bb7baa,spam,True,ok,spam,False,This is an unsolicited promotional email for commercial products.
+458984452d06e4a8a646,spam,True,ok,spam,False,This email is an unsolicited mass advertising and promotional junk message.
+e3ebaf837b1266ca32e7,spam,True,ok,newsletter,False,"This is an issue of a membership exchange newsletter containing tips, Q&A, and bulk promotional links."
+23c2e8cb366074569a82,spam,True,ok,spam,False,This is unsolicited promotional junk advertising an investment opportunity.
+eb62ac994dabda376c25,spam,True,ok,spam,False,This email is unsolicited junk advertising life insurance rates.
+8fe867cf9cfde038e38b,easy_ham,False,ok,newsletter,False,This is an automated RSS feed post containing blog content and tech news.
+af271ffc3a843bdc4b84,spam,True,ok,spam,False,This is an unsolicited promotional email selling domain registrations.
+e93a5da99544b10a3e21,spam,True,ok,spam,False,The email is an unsolicited promotional message promising get-rich-quick internet marketing schemes.
+834f30bc49d625bda07e,spam,True,ok,spam,False,This email is an unsolicited promotional advertisement for life insurance quotes.
+04a51e0b271bf665e0df,spam,True,ok,spam,False,Unsolicited commercial advertisement offering software at a discount.
+8eb77134a3bec530e338,spam,True,ok,spam,False,This is an unsolicited marketing email offering low-rate loans and debt consolidation.
+a071252a3985a9ec3f51,hard_ham,False,ok,routine,False,This is an automated system notification containing an administrator password that was explicitly requested.
+bc1428615f5b2d98d44b,spam,True,ok,spam,False,This is an unsolicited promotional email selling cell phone signal boosters.
+dd0810e50d7f5239784e,spam,True,ok,spam,False,This is unsolicited promotional junk mail with typical unsubscribe instructions.
+4b791b22fff496515878,spam,True,ok,spam,False,This is an unsolicited adult promotional email containing spam content.
+6621c41a2df609dbbf7b,easy_ham,False,ok,routine,False,This is a casual mailing list or personal correspondence discussing programming languages.
+5a8c15fe8291db686987,hard_ham,False,ok,newsletter,False,This is an informational organizational newsletter about anti-spam legislation and updates.
+14f6414a45a42589d8d0,spam,True,ok,spam,False,This is unsolicited junk mail offering debt relief services.
+6544585024d4218ef6b6,easy_ham,False,ok,routine,False,This is a casual mailing list discussion thread about French economics and entrepreneurship.
+7fa148d467f5a59269a6,spam,True,ok,spam,False,This is an unsolicited marketing email offering search engine submission services.
+1e4301463a184ba39cdc,easy_ham,False,ok,routine,False,This is a casual personal correspondence sharing an amusing anecdote without requiring any action.
+a703ca1a4b786dc07fa7,easy_ham,False,ok,newsletter,False,This is a technical discussion message from a mailing list.
+e84aed7273164f19a6c5,easy_ham,False,ok,routine,False,This is a technical mailing list discussion about a software bug and does not require immediate personal action.
+7c8c550986bb975c2174,hard_ham,False,ok,newsletter,False,This email is a recurring informational newsletter containing media updates and business news.
+1bfe6970455aba61eda2,spam,True,ok,spam,False,This email is an unsolicited promotional advertisement for a weight loss and anti-aging supplement.
+c17bad4d61f6ef4b55d0,easy_ham,False,ok,newsletter,False,"This is a casual discussion thread from a mailing list, requiring no action."
+4189c97d898f6f1ae5a4,easy_ham,False,ok,newsletter,False,This is an RSS feed article update containing blog commentary.
+c9eace01b4f64013d454,spam,True,ok,spam,False,This is an unsolicited sales seminar advertisement.
+66257ad2cf83d78148a6,spam,True,ok,spam,False,This is a classic advance-fee financial scam or phishing email.
+1e765c918210c84e60ca,easy_ham,False,ok,newsletter,False,This is a mailing list discussion thread rather than a direct personal message.
+426d4e48f5b3ff6361b6,spam,True,error,,,classify: Gemini returned an empty response
+f7c2636c06dbf9bd110d,spam,True,ok,spam,False,This is unsolicited promotional junk mail advertising database software.
+a830593165df6f6286d6,hard_ham,False,ok,newsletter,False,This is a product announcement and beta release update sent from a mailing list.
+66e16a60d7dc75eb3c9e,easy_ham,False,ok,spam,False,"This is an unsolicited mailing list discussion about spam and unrelated topics, lacking personal relevance."
+4dc1f3295c410a56c974,spam,True,ok,spam,False,This is an unsolicited marketing email for unverified health supplements.
+725fa085a0126f091091,spam,True,ok,spam,False,This is an unsolicited promotional email selling an audio training course.
+c78038e8485e971147e5,easy_ham,False,ok,newsletter,False,This is an automated mailing list discussion regarding software development.
+32ad64a0fe5815e7dc60,spam,True,ok,spam,False,This is an unsolicited promotional email selling software.
+46d5b467a919e0edf12a,spam,True,ok,spam,False,This is an unsolicited promotional email offering a mortgage sweepstakes and loan services.
+d5926d4f73f79f2533ff,spam,True,ok,spam,False,This is an unsolicited get-rich-quick promotional email sent to a mailing list.
+201e8796411ba9edcf2d,spam,True,ok,spam,False,This is an unsolicited marketing email offering questionable health supplements.
+5c5f25416f55f96e8cfe,hard_ham,False,ok,newsletter,False,This is a bulk promotional update and message board digest from CNET.
+e2c995a717180f7a5b93,spam,True,ok,spam,False,This is an unsolicited marketing email offering credit card processing services.
+ff6dfc4dd813a688eb02,easy_ham,False,ok,routine,False,This is a casual threaded discussion on a mailing list about the First Amendment and free speech.
+4beb2fcb906d0b7a5d26,spam,True,ok,spam,False,This is an unsolicited paid directory listing renewal notice and marketing pitch.
+b1933b214f16a7d5f7d7,easy_ham,False,ok,routine,False,This is a technical mailing list discussion about bug fixes among developers.
+920e494f7a61e10412be,easy_ham,False,ok,newsletter,False,This is an automated RSS feed news update.
+dc1cca966df6ff8c56eb,spam,True,ok,spam,False,This is an unsolicited promotional email offering shady background check software.
+c0a148a6b825fe030784,spam,True,ok,spam,False,This is an unsolicited promotional email offering discounted software from an unknown sender.
+6251f97b62627db337e8,spam,True,ok,spam,False,"This is an unsolicited marketing email for prescription drugs, typical of junk mail."
+93d61b8758f808040969,easy_ham,False,ok,newsletter,False,This is an automated RSS feed update containing news links.
+4cfb95f9efb65c4febdf,easy_ham,False,ok,routine,False,This is a mailing list discussion about email security and does not require action.
+2852914fc52def483aae,easy_ham,False,ok,routine,False,"This is a casual, conversational reply on a mailing list sharing a joke."
+470cc48c8a61e54bf2a3,spam,True,ok,spam,False,This email is an unsolicited get-rich-quick advertisement characteristic of spam.
+ba7bd5196cca465e0d45,easy_ham,False,ok,newsletter,False,This is a forwarded mailing list discussion about spam frameworks and hashcash.
+f9efa772a0ac267c522a,hard_ham,False,ok,newsletter,False,This is a daily news update and headline digest from a publication.
+0fa705c8582e73989799,easy_ham,False,ok,routine,False,This is a standard mailing list response regarding software compilation instructions.
+2b2bad570ae1da0e3e89,easy_ham,False,ok,spam,False,This is an unsolicited mailing list discussion with no personal relevance or action required.
+314062555b21502ddee5,spam,True,ok,spam,False,This is unsolicited junk advertising credit repair services.
+6cea965d59e00c675a2a,spam,True,ok,spam,False,This email is an unsolicited commercial promotional offer for software.
+38f89418f739d5c934c6,spam,True,ok,spam,False,This is an unsolicited marketing email offering life insurance discounts with spam characteristics.
+e798cb6644aa340817c9,easy_ham,False,ok,newsletter,False,This is a technical support mailing list discussion about Razor2 and SpamAssassin.
+7eda8e4a0027a7b4eaa2,hard_ham,False,ok,newsletter,False,This is a promotional tech shopping newsletter containing product recommendations and deals.
+edf618359f8670e8d026,spam,True,ok,spam,False,This is an unsolicited work-from-home job offer typical of spam and phishing emails.
+faa6db1956df87f1aab4,easy_ham,False,ok,newsletter,False,"This is a mailing list discussion about spam filtering and legal issues, requiring no direct action."
+8b58d3c6b1797f85ee8c,easy_ham,False,ok,important,True,This is a software bug report discussion that requires investigation and a fix.
+a350fe199506efb79492,spam,True,ok,spam,False,This is an unsolicited promotional email advertising a dubious car fuel-saving device.
+60f4a260f909536256a0,spam,True,ok,spam,False,This is an unsolicited marketing email offering search engine submission services.
+636215531152564646c2,easy_ham,False,ok,newsletter,False,This is a mailing list discussion about server status and does not require personal action.
+a7c0ecac2b7c03bf3909,spam,True,ok,spam,False,This is a classic advance-fee financial scam or phishing email offering millions of dollars in exchange for assistance.
+9be49aefb5b38f3628d4,easy_ham,False,ok,routine,False,This is a technical mailing list discussion about operating system I/O models requiring no personal action.
+1cc35c78fd8808c0cb2e,easy_ham,False,ok,newsletter,False,This is an automated RSS feed syndication update containing blog post content.
+6abe644d03181e8ba87f,spam,True,ok,spam,False,This is unsolicited promotional junk advertising a business opportunity and weight loss product.
+5191f7ab0f19955ff374,spam,True,ok,spam,False,This is a classic advance-fee fraud (419 scam) email offering a percentage of a large sum of money.
+7e94e08116902b76023b,spam,True,ok,spam,False,This is an unsolicited marketing email advertising mortgage rates.
+371445103be2e5d9423f,easy_ham,False,ok,routine,False,This is a casual mailing list discussion reply regarding asteroid sizes.
+d2830ff66b27787c56a0,easy_ham,False,ok,newsletter,False,This is an automated RSS feed post from a personal blog sharing casual thoughts.
+95c2834b17fc0cf14532,hard_ham,False,ok,newsletter,False,This is a promotional marketing email offering software discounts.
+89af8d55d8439ae1cb7a,easy_ham,False,ok,routine,False,This is an academic mailing list or discussion thread discussing climate change rather than a direct personal request.
+263c559903d7aff93965,hard_ham,False,error,,,"classify failed: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+b439cdd37ca108f22770,easy_ham,False,ok,routine,False,This is a technical support question sent to a mailing list rather than a direct personal request requiring immediate intervention.
+7639601b5cfb2cee03b4,easy_ham,False,ok,routine,False,This is a mailing list discussion about spam filtering techniques and does not require immediate action.
+d2cc83ca91ab36bd4d41,easy_ham,False,ok,newsletter,False,This is a technical discussion from a mailing list.
+1b04002e486e9646076c,easy_ham,False,ok,newsletter,False,This is an automated CVS commit notification mailing list update.
+b33f84caa0f97b6cb800,easy_ham,False,ok,newsletter,False,This is a technical discussion from a mailing list.
+5a0eefd7315eb5384415,spam,True,ok,newsletter,False,This is a marketing email promoting an insurance policy to professionals with an opt-out link.
+502f49c4f7edc0ae2cb0,easy_ham,False,ok,routine,False,This is a technical discussion from a mailing list that does not require urgent personal action.
+97c4a2c74b33937e9e23,hard_ham,False,ok,important,True,This is a technical email reporting a potential deadlock bug in the code requiring developer attention.
+8f6f657a733d37e6c151,spam,True,ok,spam,False,This is an unsolicited commercial marketing email offering cheap web design services.
+6e9387ad05d6fd12920b,spam,True,ok,spam,False,This is an unsolicited junk email promoting penis enlargement.
+c5cd19fdcd91ed9025e1,easy_ham,False,ok,routine,False,This is a casual mailing list reply correcting a typo and does not require action.
+e59d05f24cd9e5298f46,easy_ham,False,ok,routine,False,This is an informational discussion about technology news and does not require an urgent reply or action.
+9403edc55c04fc20915d,easy_ham,False,ok,newsletter,False,This is an informal mailing list message sharing links and humor.
+0d084d8606a354e2968a,hard_ham,False,ok,newsletter,False,This is an automated promotional newsletter from CNET featuring product listings and advertisements.
+174c7e5ed8eb25cd6faa,spam,True,ok,spam,False,This is an unsolicited get-rich-quick junk email.
+94de76a9ca7c150e3615,spam,True,ok,spam,False,This is an unsolicited bulk email advertising marketing services.
+6be17e27ebe5d7126c9c,spam,True,ok,spam,False,This is unsolicited promotional content regarding an unknown sports pick account.
+b6d914051661cc13d87f,easy_ham,False,ok,routine,False,This is a casual conversational email from a mailing list reply that does not require urgent action.
+a75b8cfb9f67136bbd00,spam,True,ok,spam,False,This email is unsolicited junk with suspicious formatting.
+123f39aa14606ad02f7f,hard_ham,False,ok,newsletter,False,This is an automated daily dispatch of tech news articles from CNET.
+71ced6a4bb3161726081,easy_ham,False,ok,routine,False,This is a technical discussion from a mailing list regarding software development.
+bce9ffb3a8e66a17dcc7,easy_ham,False,ok,newsletter,False,This is an automated RSS feed news update rather than a personal message.
+0f3939ad3f109b35cb68,easy_ham,False,ok,newsletter,False,This is an automated RSS feed news update from a media outlet.
+77f98cc9e9e6328a9dde,spam,True,ok,spam,False,This is a classic unsolicited 'get-rich-quick' business opportunity scam email.
+fc29403c0d68052e3241,spam,True,ok,spam,False,This is unsolicited adult spam containing explicit phishing-style links.
+71350b1e807686d40ed8,easy_ham,False,ok,newsletter,False,This is a mailing list discussion about technical development details that requires no action.
+6b51234530f9d5403b2d,easy_ham,False,ok,newsletter,False,This is an informational mailing list update regarding legislation.
+4cb02b4a57da8bc253bb,spam,True,ok,spam,False,This is an unsolicited bulk commercial offer for DC motors from an unknown sender.
+a1a241a2ecd20cc37666,easy_ham,False,ok,newsletter,False,This is an archived mailing list discussion thread rather than a personal message requiring action.
+1929a156d687271e433c,easy_ham,False,ok,newsletter,False,This is an automated mailing list discussion thread.
+7ab4cbb1061a02f3494f,spam,True,ok,spam,False,This is unsolicited promotional junk advertising online poker for money.
+a31c434fc4ed82a74bf4,spam,True,ok,spam,False,This is unsolicited promotional junk offering merchant accounts with no credit checks.
+b99ec03f6287e5dfc6f1,easy_ham,False,ok,newsletter,False,This is an automated mailing list discussion thread where a user requested to unsubscribe.
+e6fa792eb4ec57b502c7,spam,True,ok,spam,False,This is an unsolicited mass marketing email advertising lead generation services.
+bc87bdeb5941d1022e53,hard_ham,False,ok,newsletter,False,This is an automated auction newsletter from CNET featuring product listings and starting bids.
+810658be2e66502f6a6b,easy_ham,False,ok,routine,False,This is a technical discussion from a mailing list providing information about PHP form handling.
+ea22f6576d03fbe65852,spam,True,ok,spam,False,This is an unsolicited mass advertising email with an opt-out link.
+844194b4e952fef88380,easy_ham,False,ok,newsletter,False,This is an automated mailing list discussion about software development and performance.
+d55fab5022caf80f822e,spam,True,ok,spam,False,This is unsolicited promotional content for mental working methods.
+d485baec13b566db3b8f,spam,True,ok,spam,False,This is unsolicited promotional junk advertising online dating services.
+cfa81676ab58c126a86e,easy_ham,False,ok,newsletter,False,This is an automated mailing list discussion thread rather than a personal message.
+2bc2ac09d4b2700e2b71,easy_ham,False,ok,newsletter,False,This is an archived mailing list discussion thread rather than a personal email requiring action.
+04be41982e8b3d3d701a,easy_ham,False,ok,routine,False,This is a technical discussion thread among peers about wireless network modeling.
+6bf04c0da93d088084dd,spam,True,ok,spam,False,This is an unsolicited promotional email offering name-brand products below wholesale.
+b61b7991c46357350e2e,spam,True,ok,spam,False,This is unsolicited junk advertising merchant accounts and credit services.
+8d3b593c4068585eed92,easy_ham,False,ok,routine,False,This is a casual mailing list reply about plumbing and requires no action or personal reply.
+d4551d30c3ab85b92e97,spam,True,ok,newsletter,False,This is a marketing and promotional email regarding domain registration services.
+79ba5b68568acb195aad,hard_ham,False,ok,newsletter,False,"This is a bulk update email from CNET containing articles, product links, and discussion board highlights."
+b257c76c7bd658758d8f,easy_ham,False,ok,routine,False,This is a routine mailing list reply providing a technical answer to a question.
+63cd3f665324d2f0f3b9,spam,True,ok,newsletter,False,This is a marketing email promoting financial seminar services and lead generation tools.
+d3afbccfe4d594aad294,easy_ham,False,ok,newsletter,False,This is an automated RSS feed news update.
+bc22b83e2c9b0a04a0c1,easy_ham,False,ok,newsletter,False,This is an automated mailing list article share rather than a personal message.
+40f1bbd2052a2b6c563c,easy_ham,False,error,,,"classify failed: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+cff5c29e55f0382ea6f5,easy_ham,False,ok,routine,False,This is a technical support discussion email from a mailing list regarding ALSA configuration issues.
+6ff7d6e74644afd99d1e,spam,True,ok,spam,False,This is an unsolicited prize and vacation giveaway from an unknown sender.
+ec04f90fbefe18f92949,spam,True,ok,spam,False,This is an unsolicited financial junk email offering debt consolidation.
+201847895ed529dc3c5f,easy_ham,False,ok,routine,False,This is a casual discussion email from a mailing list or personal contact.
+04ab80e483b37baebfc8,spam,True,ok,spam,False,This is an unsolicited stock promotion pump-and-dump email.
+b921f5b9aac77d52b452,spam,True,ok,spam,False,This is unsolicited promotional junk advertising a Green Card lottery.
+572de2426f06577bd05e,spam,True,ok,spam,False,This is unsolicited adult content.
+6b9f060dc7fee63f8ed7,spam,True,ok,spam,False,This is a suspicious promotional email claiming the recipient won a prize.
+4ae29f60e55fb1bfc521,easy_ham,False,ok,important,True,This is a direct discussion about privacy and handling of personal messages in a public repository requiring your attention.
+1b6d1eafdbfaef6c46c4,easy_ham,False,ok,routine,False,This is an informational mailing list reply discussing technical concepts about storage and file systems.
+6124defad3bf91abf966,spam,True,ok,spam,False,This email is an unsolicited commercial offer to sell bulk email address lists.
+2ae365926cf676959f0c,spam,True,ok,spam,False,This is an unsolicited get-rich-quick scheme and pyramid mailing text.
+7a70066733c243b57df3,easy_ham,False,ok,newsletter,False,This is an automated mailing list discussion thread rather than a direct personal message.
+b8da12ea208879a8f58b,spam,True,ok,spam,False,This is an unsolicited promotional email offering questionable investigative software.
+61499f851a21a28af3f1,spam,True,ok,newsletter,False,This is a marketing email promoting a DVD club subscription.
+404af4a053310363a51f,spam,True,ok,spam,False,This is an unsolicited get-rich-quick marketing email regarding eBay.
+20d1c19969d616916466,easy_ham,False,ok,newsletter,False,"This is a mailing list discussion message, which fits the newsletter or bulk update category."
+5642d1e87191f7a264b5,easy_ham,False,ok,newsletter,False,This is a message from a mailing list discussion about Linux kernel development.
+cfb9a41b494c1f7b79e8,spam,True,ok,spam,False,This is unsolicited promotional junk regarding credit cards.
+ec16b6b734d727be4a9e,spam,True,ok,spam,False,Unsolicited commercial marketing email regarding annuity commissions.
+bb93366301a1350687bf,spam,True,ok,spam,False,This is an unsolicited adult product advertisement and phishing-like junk email.
+7aa3960c4e03478a2cd6,spam,True,ok,spam,False,This is an unsolicited grant money offer which is a classic financial scam.
+40f7ae2049d6d1c16d39,spam,True,ok,spam,False,This is an unsolicited promotional marketing email for a product.
+22562c039d49dc72f0ab,easy_ham,False,ok,routine,False,This is a technical discussion email about software troubleshooting that does not require an immediate personal response or action.
+22590b5086d09d1f59c4,spam,True,ok,spam,False,This is an unsolicited junk email offering adult content and free access links.
+7547cf38631bbfbac1e2,spam,True,ok,spam,False,This is an unsolicited business solicitation email from an overseas manufacturer.
+3be25f4f2aa602c2f806,hard_ham,False,ok,newsletter,False,"This is a bulk subscription newsletter containing daily tips, software updates, and articles."
+b5234b59f4166dd8363e,easy_ham,False,ok,important,True,"This is a direct, critical peer discussion regarding scientific assertions that requires a thoughtful personal response."
+9437552759fbe28a835c,spam,True,ok,spam,False,This email is an unsolicited offer to sell bulk email lists.
+f69543d753b80e7398fb,spam,True,ok,spam,False,This is an unsolicited promotional email advertising a pharmaceutical product.
+bd3027a46d50c1187cb9,spam,True,ok,spam,False,This email is an unsolicited get-rich-quick scheme and typical internet junk.
+d7f523f116d4d42d272d,easy_ham,False,ok,routine,False,This is a technical mailing list discussion about a software bug and potential fix.
+cca5baa7ae3b2117c3b6,spam,True,error,,,classify: Gemini returned an empty response
+f26f14194ae30d670423,easy_ham,False,error,,,"classify failed: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+6e2000072f7a8c343082,easy_ham,False,ok,newsletter,False,This is a public mailing list discussion about server configuration and spam filtering.
+8d6341b2cf5a1349dc24,easy_ham,False,ok,newsletter,False,This is an automated RSS feed news update rather than a personal message.
+5297d8eb636c5226b904,easy_ham,False,ok,routine,False,This is a routine mailing list discussion about programming languages.
+bf5305d06c7371e3f0b0,spam,True,ok,spam,False,This is an unsolicited stock promotion junk email.
+254e14ab6589e9f20de8,spam,True,ok,spam,False,This is an unsolicited get-rich-quick make-money-from-home scheme.
+533df8a7dc606abe7a1a,spam,True,ok,spam,False,This is an unsolicited promotional email offering a business opportunity.
+e260321d6725bf32d5fb,spam,True,ok,spam,False,This is an unsolicited get-rich-quick and multi-offer junk email sent to a mailing list.
+09156a8f513ce75745a0,easy_ham,False,ok,newsletter,False,This is an automated mailing list discussion about spam and filtering.
+5f462f1fcaaaeda4461a,spam,True,ok,spam,False,This is an unsolicited promotional email promising guaranteed signups and financial independence.
+cc5466371a57966af3b4,easy_ham,False,ok,newsletter,False,This is an automated mailing list discussion about SpamAssassin.
+f600c884631335112c34,spam,True,ok,spam,False,This is unsolicited promotional junk regarding sexual enhancement products.
+71cea67b7089e71fcee4,spam,True,ok,spam,False,This email is an unsolicited commercial offer for software.
+728af94e89c923dd2829,spam,True,ok,newsletter,False,This is a bulk promotional email announcing a new Céilí dance CD.
+56f1e146622b87816701,spam,True,ok,newsletter,False,This is a marketing and promotional email containing third-party offers.
+18dc0bccfea552de73cb,easy_ham,False,ok,routine,False,This is a message from a mailing list discussion thread with political commentary.
+00bb6588aad7bde6a928,easy_ham,False,ok,newsletter,False,This is an automated RSS feed post containing blog updates.
+2ab1c191bf83558504a3,spam,True,ok,spam,False,This email is an unsolicited get-rich-quick promotional scheme.
+3510f3df3ced6b4e38d3,easy_ham,False,ok,newsletter,False,This is an automated RSS news feed delivery.
+14e30c12f0cfdb678bf9,easy_ham,False,ok,routine,False,"This is a casual, conversational email reply that does not require urgent action."
+682d2bc14166ad710d67,spam,True,ok,spam,False,This is unsolicited promotional junk regarding debt collection services.
+b2cb62a3ff39b1d07894,spam,True,ok,spam,False,This is a classic advance-fee financial scam email offering millions in exchange for bank details.
+9141e82159ea7fd75972,spam,True,ok,newsletter,False,This is a marketing email offering a financial checkup and video disguised as an inspirational story.
+a6a17e63acd3f69f4625,spam,True,ok,spam,False,This is an unsolicited promotional email advertising various questionable schemes and illegal products.
+2bccad66730533e09b06,easy_ham,False,ok,newsletter,False,This is a technical mailing list discussion about email formatting issues.
+f4105779bb34406e390a,spam,True,error,,,classify: Gemini returned an empty response
+8c73bd1d93d81eb8ab7d,easy_ham,False,ok,routine,False,This is a casual mailing list discussion about astronomy and impact craters that does not require a personal action or reply.
+8e906c367aecbaa626e5,easy_ham,False,ok,spam,False,This is a forwarded joke email with no personal or important action required.
+a68cf39eefafd233412f,hard_ham,False,ok,newsletter,False,This is a daily automated news digest containing tech headlines and advertisements.
+8eb190313101fb521178,easy_ham,False,ok,newsletter,False,This is an automated periodic newsletter containing community stories and updates.
+1640b004e83fcb01ca1a,spam,True,ok,spam,False,"This is an unsolicited marketing email offering to sell leads, formatted as spam."
+711d5e68cdf8895a5f90,easy_ham,False,ok,routine,False,"This is a casual, conversational email sharing personal updates and asking for general technical opinions."
+b42b09d91428f3e84121,spam,True,ok,spam,False,This email is an unsolicited commercial advertisement for a cable TV descrambler.
+3eb6556f722074d59176,easy_ham,False,ok,spam,False,This is an automated mailing list message with nonsensical content.
+51ae6f4bc6be2190b26a,hard_ham,False,ok,newsletter,False,This is a promotional email containing product advertisements and special offers from ZDNet Buyer's Alert.
+10b527add0a7c5ae4b4b,easy_ham,False,ok,newsletter,False,This is a discussion thread from a mailing list.
+774afdc06b0bdc766771,spam,True,ok,spam,False,This is an unsolicited promotional email for printer supplies sent from a generic Yahoo address.
+9189640ec21485431c30,easy_ham,False,ok,newsletter,False,"This is a mailing list discussion about a technical query, requiring no direct action from the user."
+a9d5c10ccf37071b4da2,hard_ham,False,ok,newsletter,False,"This is a promotional tech newsletter containing product recommendations, deals, and updates from ZDNet Shopper."
+d0b0e286b886f01b1003,easy_ham,False,ok,newsletter,False,This is a message from a mailing list discussion about spam filtering software.
+bc3671df54d2aee3dc64,spam,True,ok,spam,False,This is an unsolicited market research survey email offering a prize draw.
+43f6ac7c2c7edbaa5623,spam,True,ok,spam,False,This is an unsolicited marketing email offering a non-insurance healthcare plan.
+11b6c42b8576ba10fe55,hard_ham,False,ok,newsletter,False,This is an informational newsletter containing links and updates about archaeology.
+6747338c06b89832dfba,spam,True,error,,,"classify failed: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+4e81087a89a59803f70a,spam,True,ok,spam,False,This is an unsolicited mass email offering loan packages and debt consolidation.
+f7bdb727039a8c4b5eca,easy_ham,False,ok,routine,False,This is a casual mailing list discussion about hardware performance and is not actionable.
+9a8ba8ece16e56dcb512,spam,True,ok,spam,False,This is unsolicited promotional junk mail selling discounted tobacco products.
+a48101efccfe7312a307,spam,True,ok,spam,False,This is an unsolicited work-from-home promotional email with characteristics of junk or phishing.
+73c3bf01c50cf71559fd,spam,True,ok,spam,False,This is an unsolicited bulk sales pitch for digital voice recorders.
+37c973fffc754e3654ea,easy_ham,False,ok,routine,False,This is a casual discussion email that does not require any immediate action or real reply.
+8c0b1cef65a2a0d07f29,easy_ham,False,ok,routine,False,This is a philosophical mailing list discussion requiring no action.
+a468bf277fff09a0c270,easy_ham,False,ok,newsletter,False,This is a mailing list announcement about a PGP key-signing event rather than a personal message.
+6dcb99567b6ee3499e40,spam,True,ok,spam,False,This is unsolicited promotional junk advertising cheap tobacco products.
+970de45f69db76d22dc1,spam,True,ok,spam,False,This is a classic fear-mongering unsolicited junk email selling privacy software.
+951de2efa66388538af9,spam,True,ok,spam,False,This is a classic advance-fee fraud and phishing scam email offering a fake inheritance.
+ab49b682d5bb924ce66c,spam,True,ok,newsletter,False,This is a mass-market promotional email targeted at real estate agents.
+17573d9d357727f2e0ca,easy_ham,False,ok,newsletter,False,This is a mailing list discussion thread rather than a personal message.
+cefcb44712fb22f5bfa0,easy_ham,False,ok,routine,False,This is a technical discussion mailing list reply that requires no action.
+4021df1630be9dc372fd,easy_ham,False,ok,newsletter,False,This is a mailing list broadcast sharing a software build and asking for general feedback.
+e8950977f36733381978,hard_ham,False,ok,newsletter,False,This is an automated daily dispatch of tech news articles from CNET.
+95ebedae04e3a2f0257a,easy_ham,False,ok,newsletter,False,This is a mailing list discussion about historical trivia and does not require personal action.
+e389c97757825f1c0480,easy_ham,False,ok,routine,False,This is a technical mailing list discussion about software keys that does not require urgent personal action.
+a8885e391c7d1d11ee56,easy_ham,False,ok,newsletter,False,This is an automated RSS feed link and news headline.
+e03f99f3a365694a2591,easy_ham,False,ok,routine,False,This is a casual technical discussion about CD laser labeling requiring no action.
+be38b3e21b89040284f0,spam,True,ok,spam,False,This is unsolicited promotional junk advertising discounted printer cartridges.
+1876a3742c9bbea783bb,easy_ham,False,ok,newsletter,False,This is a periodic automated newsletter containing community stories and updates.
+67bdd885176f48afc08b,spam,True,ok,spam,False,This is an unsolicited get-rich-quick financial scheme email.
+26fffd3181ac993c0ec9,spam,True,ok,spam,False,"This is an unsolicited mortgage promotion from an unverified sender, characteristic of junk or phishing emails."
+6b177ad22d172041966b,easy_ham,False,ok,routine,False,This is a technical mailing list discussion requiring no action or reply.
+5953249876dfbf080f26,spam,True,ok,newsletter,False,This is a promotional email offering a credit card with standard unsubscribe links.
+80aa831adf907fc9fa49,spam,True,ok,spam,False,This is unsolicited promotional content for adult movies.
+456eae84aabe5776e47d,hard_ham,False,ok,newsletter,False,This is an automated informational newsletter about a change in publishing schedule from AnchorDesk.
+212b75aa347d88f298a5,easy_ham,False,ok,newsletter,False,This is a mailing list discussion message regarding technical tips.
+f58e232fbcaec4b87c63,spam,True,ok,newsletter,False,This is a marketing email offering career training programs and discounts.
+af67adc6f332d253193b,spam,True,ok,spam,False,This is an unsolicited mortgage loan advertisement containing typical spam characteristics.
+d4d8bbe2e5226c3fffd8,spam,True,ok,spam,False,This is an unsolicited promotional email offering software.
+4433fa1711e66f4a0487,easy_ham,False,ok,spam,False,This is an unsolicited mailing list conversation containing casual banter and a promotional footer.
+871d4e8f6bd0f1ccde56,easy_ham,False,error,,,classify failed: [Errno 11001] getaddrinfo failed
+81b1db56834bc79d7885,spam,True,ok,spam,False,This is unsolicited promotional junk advertising lighting products.
+4235241a45a332f207bc,easy_ham,False,ok,newsletter,False,This is an automated RSS feed post sharing a personal blog entry about UFOs and a rocket test.
+7a4d387a854b32be51cc,spam,True,ok,spam,False,This is an unsolicited marketing email selling discounted software from an unknown sender.
+e471156632d0adb3fe9e,easy_ham,False,ok,routine,False,This is a casual personal anecdote shared by an acquaintance.
+155c38a3d84fcdff5aac,easy_ham,False,ok,routine,False,This is a technical mailing list discussion about code cleanups and bug fixes.
+dc4889076b90725975e7,easy_ham,False,ok,newsletter,False,This is an automated RSS feed update containing blog links and promotional contest info.
+2f9b1499f973c92c4247,easy_ham,False,ok,newsletter,False,This is a mailing list discussion about technical bug tracking and does not require direct personal action.
+c939951acd54484b7403,easy_ham,False,ok,routine,False,This is an automated system notification about an undelivered message due to a formatting error.
+615ca4f545228f27baa5,easy_ham,False,ok,routine,False,This is a casual mailing list conversation requiring no action.
+f1093b92a3ecfd3e3826,spam,True,ok,spam,False,This is an unsolicited financial scam email offering suspicious monthly income.
+26b3aa6579b04bd6baab,spam,True,ok,spam,False,This is an unsolicited financial services and telemarketing offer.
+efea49eea3fc7fe90159,spam,True,ok,spam,False,This is an unsolicited marketing email advertising male enhancement products.
+b6f27cd23e593a75c3c7,spam,True,ok,spam,False,This is an unsolicited promotional email offering legal services.
+7832da1a4ed7387f8273,hard_ham,False,ok,newsletter,False,"This is a weekly digest email containing industry news and links, formatted as a bulk mailing."
+fb19871cb7d4c859bcb5,easy_ham,False,ok,newsletter,False,This is a mailing list discussion thread rather than a direct personal message.
+9bef4e2af8452e2d3c62,hard_ham,False,ok,newsletter,False,This is a promotional newsletter containing advertisements and catalog offers.
+442c61706a5b4737b946,easy_ham,False,ok,routine,False,This is a technical mailing list discussion sharing tips about ALSA and sound configuration.
+6b911829de2d09f48689,spam,True,ok,spam,False,This is unsolicited junk advertising pharmaceutical products.
+bd2b6b70014c7201c473,spam,True,ok,spam,False,This is an unsolicited promotional email selling software.
+de25efed34afb6be7f96,hard_ham,False,ok,newsletter,False,This is a daily news update containing headlines and advertisements from a publication.
+82fd1fa4d4b449dbbef9,spam,True,ok,spam,False,This is unsolicited promotional content for mortgages from an unknown sender.
+c5baed73ff076771c3c0,easy_ham,False,ok,newsletter,False,This is a mailing list discussion thread about email software.
+9974039ecb98ce3a2791,easy_ham,False,ok,newsletter,False,This is a mailing list discussion thread rather than a direct personal message.
+5122ed3bf4162ebea7fc,spam,True,ok,spam,False,This email is unsolicited junk advertising financial freedom and extra income.
+c473dfb311287df5188c,easy_ham,False,ok,newsletter,False,This is a mailing list discussion thread rather than a personal message.
+c77e33d9edd26e1898da,spam,True,ok,newsletter,False,This is a periodic membership exchange digest containing community Q&A and promotional links.
+e4df7ee11732cafff0f3,hard_ham,False,ok,newsletter,False,This is a message from a mailing list discussion about reenactor insurance.
+e7d916ca590e03319f44,spam,True,ok,spam,False,This is an unsolicited marketing email offering mortgage refinancing and debt consolidation.
+0bc931c714da61535e41,hard_ham,False,ok,newsletter,False,This is an automated newsletter update regarding comic strip formatting preferences.
+1134f4f9fa613a42b83b,spam,True,ok,spam,False,This is an unsolicited marketing email offering high-risk mortgage refinancing for bad credit.
+c9e29e27b2cf953381ce,easy_ham,False,error,,,"classify failed: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+9fea8f6c60b24df9acf4,easy_ham,False,ok,newsletter,False,This is an automated RSS feed link and news headline.
+fab74316864eea9d7f37,spam,True,ok,spam,False,This is an unsolicited mortgage refinancing advertisement characteristic of junk mail.
+016e327734c266e53a9c,spam,True,ok,spam,False,This is unsolicited junk mail promoting a suspicious product with deceptive claims.
+49c400e2a2d5af4ca4d1,easy_ham,False,ok,routine,False,This is a casual mailing list discussion about web browsers and form privacy.
+4b2de9527c46d72bbddd,easy_ham,False,ok,newsletter,False,This is an automated RSS feed post sharing a blog entry.
+2ff96c9463bcbd1fa725,spam,True,ok,spam,False,This is an unsolicited commercial email offering debt collection services.
+c361dcd24c7341f67f2e,spam,True,ok,spam,False,This is a classic advance-fee financial scam email.
+caece4e998c3fa954bf4,spam,True,ok,spam,False,This email is an unsolicited promotional message regarding online gambling.
+76d943feb0e1d087a9ad,hard_ham,False,ok,newsletter,False,This is an automated subscription newsletter containing tech articles and software links.
+08ca01482a1cf9af12d1,spam,True,ok,newsletter,False,This is a promotional marketing email for magazine subscriptions.
+0057d92a8f50c5090b65,easy_ham,False,ok,newsletter,False,This is a mailing list discussion about technical topics rather than a direct personal message.
+11815207e0b33e3a968d,spam,True,ok,spam,False,This is an unsolicited work-from-home recruitment advertisement characteristic of phishing or junk mail.
+8a96a91d32b5d6de0c8f,spam,True,ok,spam,False,This is an unsolicited mass-marketed mortgage offer and phishing attempt.
+daef6651b19351eb3dc6,spam,True,ok,spam,False,This is an unsolicited adult content promotional email.
+46f60f039db447529340,spam,True,ok,spam,False,This is unsolicited promotional junk for an online poker website.
+84044ab349d556a9aed7,spam,True,ok,newsletter,False,This is a commercial marketing email promoting IT maintenance services.
+1fde8ad4ade1f3e40834,easy_ham,False,ok,routine,False,This is a casual mailing list conversation requiring no action or important reply.
+50fe86328911c7aa080b,easy_ham,False,ok,routine,False,This is a casual mailing list discussion requiring no action or real reply.
+1976a780e63be9ef4742,easy_ham,False,ok,newsletter,False,This is an informational mailing and newsletter containing links and updates.
+ed3b53c3f2f08ae6c16c,hard_ham,False,ok,newsletter,False,"This is a bulk tech newsletter containing articles, tips, and advertisements."
+b2f656e5ebd43f699a60,spam,True,ok,spam,False,This is unsolicited marketing junk promoting publishing software from an unknown sender.
+799434e942c834a24bdd,spam,True,ok,spam,False,This email is an unsolicited stock promotion and pump-and-dump junk mail.
+992a43e8839065ebd96a,spam,True,ok,spam,False,"The email contains unsolicited content, random strings, and suspicious promotional links."
+706e26a758b3712e252b,easy_ham,False,ok,newsletter,False,This is a message from a mailing list discussion forum.
+3034b0a3efdb1ea4658f,spam,True,ok,spam,False,This is an unsolicited mass marketing email offering lead generation services.
+aa96fa6e50c18f49e618,spam,True,ok,spam,False,This is an unsolicited promotional email offering legal services.
+c819b29e480ff39391f5,easy_ham,False,ok,routine,False,This is a technical discussion mailing list reply about programming languages that does not require an urgent action.
+df918a2784daf7999a16,spam,True,ok,spam,False,This is a classic advance-fee financial scam or phishing email offering a large inheritance.
+d81828c314c2fa01076c,spam,True,ok,spam,False,This is unsolicited promotional junk advertising software at a discount.
+84d0315c325b7e6479e0,spam,True,ok,spam,False,This is a classic get-rich-quick spam email promoting an unsolicited business opportunity.
+7a812409d4a5233992c2,spam,True,ok,spam,False,This is unsolicited promotional content regarding septic systems from an unknown sender.
+6f605223626f781ff18a,easy_ham,False,ok,newsletter,False,This is an automated mailing list notification regarding a bug tracker update.
+73436b1dc1d7227493af,easy_ham,False,ok,routine,False,This is a mailing list discussion about online bookstores that does not require action.
+a343163b08747346bdd1,spam,True,ok,newsletter,False,This is a marketing email advertising term life insurance rates for agents and brokers.
+a9d003c9aba0a32cbec3,easy_ham,False,ok,routine,False,This is a technical bug report and feedback email regarding software usage that can be handled with a standard reply or fix.
+fa43cd3a926def7b34a3,spam,True,ok,spam,False,This email is an unsolicited promotional message regarding mortgage rates.
+08110a7aed88085943c7,spam,True,ok,spam,False,This is an unsolicited promotional email offering long distance services.
+762a61bd4042c998cb99,easy_ham,False,ok,newsletter,False,This is an archived mailing list discussion thread rather than a personal message.
+a359cb86f0300dafa568,easy_ham,False,ok,newsletter,False,This is a message from a mailing list discussing software performance issues.
+01bdf18245b1c4be8e1b,spam,True,ok,spam,False,This is an unsolicited marketing pitch for bulk email advertising services.
+694e8ea985ad3744df28,easy_ham,False,ok,routine,False,This email provides a simple informational link without requiring urgent action or a complex reply.
+aed013c5ea59648dc3af,spam,True,ok,spam,False,This email is unsolicited marketing junk offering commissions for travel bookings.
+c082400fc813c1f58b35,spam,True,ok,spam,False,This is an unsolicited mortgage advertisement from an unknown sender.
+4e174f41ca580a8df0a1,easy_ham,False,ok,newsletter,False,"This is an informational link and news snippet shared by a contact, requiring no action."
+f936e123f5a15cb73e9d,spam,True,ok,spam,False,This is an unsolicited marketing email promoting merchant account services.
+4f034342d4cd63d551b2,spam,True,ok,spam,False,This is an unsolicited promotional marketing email offering discounted software from an unknown sender.
+0e6729df2c8ae51b0db5,easy_ham,False,ok,routine,False,This is a technical mailing list reply offering a minor command syntax correction.
+7a09e3e68af4ff62d1a6,easy_ham,False,ok,newsletter,False,This is an automated mailing list post sharing news links and sponsor messages.
+e9587a520912fe1c5ff0,spam,True,ok,spam,False,This is an unsolicited commercial promotional email for software sales.
+0064d60e59ad2846255c,hard_ham,False,ok,newsletter,False,This is a bulk mailing subscription newsletter containing an opinion article.
+69644aa76d922c4360ad,spam,True,ok,spam,False,This is a classic advance-fee financial scam (Nigerian prince scam).
+8856251bac70d5b559f5,easy_ham,False,ok,newsletter,False,This is an automated RSS feed update containing blog links and content.
+d7fe2fdad2e5a1ef5794,spam,True,ok,spam,False,This is an unsolicited marketing email offering bulk email lists and software for purchase.
+3e6912d09eddbf20bf71,spam,True,ok,spam,False,This is an unsolicited get-rich-quick junk email promoting bulk email schemes.
+d69319f8fd9a8c584cc0,spam,True,ok,spam,False,This is a classic advance-fee financial scam email.
+bfcd506527c8296087d8,spam,True,ok,spam,False,This is an unsolicited marketing email promoting financial investment secrets from an unknown sender.
+0ce7473adb39ccca2bba,spam,True,ok,spam,False,This is a typical unsolicited junk email promoting male enhancement products.
+066db3a1ba6f383dd4b3,hard_ham,False,ok,newsletter,False,This is a community newsletter containing bulk updates and technical articles.
+28d3f09f9286a88611b6,hard_ham,False,ok,newsletter,False,"This is a bulk daily newsletter containing software tips, links, and updates."
+47c60f761a5f51410334,easy_ham,False,ok,newsletter,False,This is a mailing list discussion about a technical Linux and Samba configuration question.
+44d9fbb103d6255e63ae,spam,True,ok,spam,False,This is unsolicited promotional junk mail advertising various online TV products.
+4296c1fc665be9aea3fc,hard_ham,False,ok,newsletter,False,This is a daily news digest and headline update from The Register.
+e119c579f32ed6237b86,spam,True,ok,spam,False,This is an unsolicited marketing email offering mortgage refinancing and debt consolidation.
+81d2711131ae035f7a3a,spam,True,ok,spam,False,This is unsolicited promotional junk advertising Spanish real estate services.
+3fc62483ed2d28689c2c,spam,True,ok,spam,False,This is an unsolicited financial promotional email offering free items and investment opportunities.
+170cb24d5dfb312b9c8c,hard_ham,False,ok,newsletter,False,This is a broadcasted promotional newsletter containing movie schedules and entertainment updates.
+db653555c94c4bd5eaaf,spam,True,ok,spam,False,This email is an unsolicited commercial offer for merchant accounts and credit card processing.
+1e654f503295d5aae8c9,easy_ham,False,ok,newsletter,False,This is an automated RSS feed update containing a news summary.
+69b5a5f1b92c6b3e4936,spam,True,ok,spam,False,This email is unsolicited adult content and clearly phishing or spam.
+b5074c4195f24c8f389c,easy_ham,False,ok,newsletter,False,"This is a forwarded news article and discussion thread, not requiring direct personal attention."
+f0d1d8cd19e16b091ccb,easy_ham,False,ok,routine,False,This is a mailing list discussion about Linux software packages and does not require urgent personal action.
+db97a3a37eb37a197797,spam,True,ok,spam,False,This email is an unsolicited get-rich-quick marketing pitch sent to a mailing list.
+60eb09fd29d4539b9f67,spam,True,ok,spam,False,This email is an unsolicited promotion for fake or illegal identification documents.
+34d648dcd194e54e974c,spam,True,ok,spam,False,This is unsolicited junk mail containing opt-out instructions and typical spam headers.
+c7d4fbdd95c02d447027,hard_ham,False,ok,newsletter,False,This is a weekly promotional newsletter from DivX containing product news and updates.
+bf443e9d91dcd0aada3d,easy_ham,False,ok,routine,False,This is a casual conversational email discussing a tech news article among acquaintances.
+c848a15edce49c5fe806,spam,True,ok,spam,False,This is an unsolicited work-from-home job offer with characteristics of typical junk mail.
+526c8ab95534ad317562,spam,True,ok,spam,False,This is an unsolicited business offering market entry consulting services from an unknown sender.
+7e88c768603f56a09764,spam,True,ok,spam,False,This is unsolicited adult spam content.
+0f489ce87dcd9b31356a,hard_ham,False,ok,newsletter,False,This is a bulk promotional newsletter from CNET containing product ads and links.
+9f9be07d95897c4ac619,spam,True,ok,spam,False,This is an unsolicited mass email promoting mortgage refinancing services from an unknown sender.
+f0226539b4bb7487c949,spam,True,ok,spam,False,This is unsolicited promotional junk offering legal services with typical spam formatting.
+a1b7b82309ca3b1bacda,easy_ham,False,ok,newsletter,False,This is an automated mailing list discussion thread about economic theory and telecom history.
+5cc26e91d9cf38e724c2,spam,True,ok,newsletter,False,This is a promotional advertisement sent to a mailing list.
+07977d45436c16eb7395,easy_ham,False,ok,newsletter,False,This is a mailing list discussion thread rather than a direct personal message.
+dbe383b45b7f496128fe,easy_ham,False,ok,newsletter,False,This is an automated RSS news feed update containing an article link.
+a253f0a341ca2348e6da,spam,True,ok,spam,False,This email is unsolicited promotional junk advertising cheap cell phone accessories.
+ffa1de5f4726586e90e3,spam,True,error,,,classify: Gemini returned an empty response
+fb465dcdfb384bc20b67,spam,True,ok,spam,False,"This is an unsolicited, erratic political/pseudo-legal manifesto regarding a virtual kingdom."
+b3d425a13561897a451e,spam,True,ok,spam,False,This is unsolicited promotional junk advertising domain name registrations.
+3aa2dcb1adb3b3a4e0be,spam,True,error,,,classify: Gemini returned an empty response
+5f10d1a623eec4e13e6c,spam,True,ok,spam,False,This is unsolicited promotional junk offering degrees based on life experience.
+256195c3d0a9271cb87b,spam,True,ok,spam,False,The email is an unsolicited promotional message for a dubious product.
+22b1c4525df22b6922cd,easy_ham,False,ok,newsletter,False,This is a mailing list discussion about software packaging rather than a direct personal communication.
+318094ec7e2a207dd375,spam,True,ok,newsletter,False,This is a promotional marketing email offering advertising discounts and options.
+b8045cf1cceacaadf8da,spam,True,ok,spam,False,This is unsolicited junk mail containing unreadable characters and an unsubscribe link.
+29a2abcaaf8d5296bafd,spam,True,ok,spam,False,This is unsolicited adult dating promotional junk mail.
+ca6daa455725ce07d5c0,spam,True,ok,spam,False,This email is an unsolicited promotional stock pump-and-dump scheme.
+39ffa07a6ee8f2175c7b,spam,True,ok,spam,False,This email is an unsolicited commercial advertisement for bulk email harvesting software.
+fc00b63fd78a51feaedf,easy_ham,False,ok,newsletter,False,This is a mailing list discussion about software usage and preferences.
+7e63173f095bd98c49ad,easy_ham,False,ok,routine,False,This is a routine mailing list inquiry about software archives.
+fe63835dca288f651588,easy_ham,False,ok,newsletter,False,This is an announcement message sent to a public mailing list.
+2c1f2756703a13102859,easy_ham,False,ok,newsletter,False,This is an automated RSS feed post providing a link to a blog entry.
+7c7fa8866f334170723c,hard_ham,False,ok,newsletter,False,This is a promotional tech deals newsletter containing product advertisements and subscription management links.
+2d174dc9849642963eb6,spam,True,ok,newsletter,False,This is an unsolicited promotional advertisement for legal seminars.
+f3cac759674144ab1f65,easy_ham,False,ok,newsletter,False,This is a mailing list discussion message and duplicate post.
+77cf27b84e5281e64598,easy_ham,False,ok,newsletter,False,"This is an automated mailing list discussion post, making it a newsletter-type communication."
+a4cb76baffb862ddd5e1,spam,True,ok,spam,False,This is an unsolicited work-from-home money-making scheme.
+2a449da1e5c28007af10,easy_ham,False,ok,routine,False,This is a technical mailing list discussion about an RPM package error.
+4b60dc34077d174f2e65,spam,True,ok,spam,False,"This is an unsolicited promotional email offering software at a discount, fitting the spam category."
+64bcc450009a5c9b39ef,easy_ham,False,ok,routine,False,This is a helpful technical reply providing a software recommendation for indexing MP3s.
+040451f6d60efd0d3a87,easy_ham,False,ok,routine,False,"This is a casual congratulatory email from a friend about a birth, requiring only a simple personal response."
+487af1536f7ac0013166,spam,True,ok,newsletter,False,This is a marketing email promoting an insurance product and commission rates.
+79fc4bab892e9940b886,hard_ham,False,ok,newsletter,False,This is a periodic media and business newsletter subscription update.
+db350e335c41e6dd5533,hard_ham,False,ok,newsletter,False,This email is a promotional newsletter containing product reviews and tech news from CNET.
+391c7d380e91d3a5d0d6,spam,True,ok,spam,False,This is unsolicited promotional junk offering insurance career opportunities.
+aa60103558ceaf6d2539,easy_ham,False,ok,newsletter,False,This is an automated RSS feed notification containing news links rather than a personal message.
+44943f570b411a67c133,spam,True,ok,spam,False,This is unsolicited promotional junk advertising replica goods.
+e1042643c72ed881b31f,easy_ham,False,ok,routine,False,This is a casual technical discussion about computer hardware forwarded by an acquaintance.
+e9cb84a8b0d39e5bc89d,easy_ham,False,ok,newsletter,False,"This is a discussion thread from a mailing list, which falls under bulk updates and newsletters."
+3de67e1d99ec83288f01,hard_ham,False,ok,newsletter,False,This is a periodic history publication containing articles and promotional advertisements.
+8df3da619151b866fca9,easy_ham,False,ok,newsletter,False,This is a mailing list discussion thread containing technical opinions rather than actionable personal requests.
+b17ab5f6120f20b5e25e,spam,True,ok,newsletter,False,This is a marketing email promoting lead generation services and postcards for insurance agents.
+8ef8cd9b65d5e5e9e1ad,spam,True,ok,spam,False,This is an unsolicited casino cash prize promotion.
+9c6c7af3b8ff48c0eb1d,easy_ham,False,ok,routine,False,"This is an informal, educational discussion about physics and chemistry between acquaintances."
+5aca68d548841dec6e4b,spam,True,ok,newsletter,False,This is a marketing email promoting printer ink with customer testimonials and an opt-out link.
+0ecb62111e5984723619,spam,True,ok,spam,False,This is an unsolicited marketing email using scare tactics to sell privacy software.
+e830fb01784542059015,spam,True,ok,newsletter,False,This is a marketing email promoting insurance products to professionals.
+e6f58f8c1557cc29919e,easy_ham,False,ok,newsletter,False,This is a message from a mailing list discussing Linux distributions.
+3a234c781430b8fa461a,easy_ham,False,ok,newsletter,False,This is a message from a mailing list discussing technical troubleshooting.
+5ab8d35b8b09bc11ec07,spam,True,ok,spam,False,This is an unsolicited junk email offering fake diplomas.
+50413b138fd58cda6cb8,easy_ham,False,ok,important,True,This is a direct technical question regarding a bug fix that requires personal developer input.
+ed60e6110028b372549c,easy_ham,False,ok,newsletter,False,This is a periodic automated daily newsletter containing Perl programming stories.
+237a7f558545641f5061,easy_ham,False,ok,newsletter,False,This is an automated RSS feed post containing blog updates and links.
+1c3f916ae401ec2aa158,easy_ham,False,ok,newsletter,False,This is a mailing list discussion about Linux packaging.
+5e3f085478cb71ac6bcd,spam,True,error,,,classify: Gemini returned an empty response
+0e3a13498ff9b2384eb3,easy_ham,False,ok,newsletter,False,This is a message from a mailing list discussion group rather than a direct personal email.
+3871e5bb08755191bff5,spam,True,ok,spam,False,This is unsolicited bulk marketing for a juicer product.

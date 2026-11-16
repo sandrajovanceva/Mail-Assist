@@ -67,6 +67,7 @@ class EmailMessage(Base):
     message_id_header: Mapped[str] = mapped_column(String(512), default="")
     sender: Mapped[str] = mapped_column(String(512))
     recipient: Mapped[str] = mapped_column(String(512), default="")
+    reply_to: Mapped[str] = mapped_column(String(512), default="")
     subject: Mapped[str] = mapped_column(String(1024), default="")
     snippet: Mapped[str] = mapped_column(Text, default="")
     body_text: Mapped[str] = mapped_column(Text, default="")
@@ -87,6 +88,8 @@ class EmailMessage(Base):
     category: Mapped[str] = mapped_column(String(32), default="")  # important|routine|newsletter|spam
     needs_attention: Mapped[bool] = mapped_column(Boolean, default=False)
     classification_reason: Mapped[str] = mapped_column(Text, default="")
+    classification_attempts: Mapped[int] = mapped_column(Integer, default=0)
+    classification_retry_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
     summary: Mapped[str] = mapped_column(Text, default="")
 
     account: Mapped[EmailAccount] = relationship(back_populates="emails")
@@ -203,6 +206,14 @@ class SyncJob(Base):
     error: Mapped[str] = mapped_column(Text, default="")
     started_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
     finished_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
+
+
+class SyncLease(Base):
+    """One cross-worker sync owner per user; renewed during slow provider/model calls."""
+    __tablename__ = "sync_leases"
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), primary_key=True)
+    job_id: Mapped[int] = mapped_column(ForeignKey("sync_jobs.id"))
+    heartbeat_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
 
 
 class LLMCall(Base):

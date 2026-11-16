@@ -1,0 +1,35 @@
+
+> frontend@0.0.0 test
+> node --test tests/*.test.mjs
+
+✔ sidebar counts use one small aggregate request (1.0606ms)
+✔ Google connection starts with bearer POST and browser cookies, without token in URL (0.4055ms)
+✔ email and draft loading follows all pages (1.3123ms)
+✔ logout aborts outstanding requests (0.6501ms)
+✔ a response body finishing after account switching is rejected (0.3776ms)
+✔ delivers chunks before completion and handles split UTF-8 and JSON lines (10.9448ms)
+✔ reports provider failures and truncated streams instead of completing (1.6233ms)
+✔ opening a chat source preserves conversation and cannot apply another emails revision (124.563ms)
+✔ a consumed chat suggestion cannot overwrite later saved edits after reopening and sending (97.0321ms)
+✔ calendar passes selected checked times to drafting and clears stale results on changes (29.4176ms)
+✔ calendar lookup failure is displayed without offering available times (21.5449ms)
+✔ refreshing the same email preserves unsaved draft text and does not reload drafts (12.5467ms)
+✔ a late draft response is ignored after leaving the email (13.3648ms)
+✔ saved default tone updates the editor until the user explicitly chooses a tone (13.3239ms)
+✔ reopening settings refreshes learning examples without replacing unsaved preferences (24.6308ms)
+✔ month grid starts Monday and covers month boundaries with complete weeks (1.168ms)
+✔ leap February and six-week months include every date (0.1772ms)
+✔ recovers from a transient polling failure and finishes normally (6.3706ms)
+✔ persistent failure stops after four attempts and reports failure (1.1902ms)
+✔ cancelling ignores an in-flight response (0.7337ms)
+✔ cancelling removes a scheduled retry (0.5895ms)
+✔ backend job failure terminates polling without retrying the job (0.5355ms)
+✔ a forever-running job eventually stops checking (0.662ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 811.4293

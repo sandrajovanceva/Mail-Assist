@@ -1,0 +1,88 @@
+{
+  "model": "gemini-3.5-flash-lite",
+  "planned": 1000,
+  "attempted": 1000,
+  "valid": 977,
+  "failed": 23,
+  "complete": true,
+  "tp": 433,
+  "tn": 476,
+  "fp": 17,
+  "fn": 51,
+  "primary_accuracy": 0.909,
+  "valid_accuracy": 0.9303991811668373,
+  "precision": 0.9622222222222222,
+  "valid_recall": 0.8946280991735537,
+  "f1": 0.9271948608137045,
+  "full_recall": 0.866,
+  "accuracy_wilson95": [
+    0.8895740291786208,
+    0.9252955677777118
+  ],
+  "valid_accuracy_wilson95": [
+    0.9126987992278864,
+    0.9447281288306301
+  ],
+  "failure_rate": 0.023,
+  "failure_rate_wilson95": [
+    0.015374164302931469,
+    0.0342766969484851
+  ],
+  "failure_causes": {
+    "HTTP 503 model overloaded": 9,
+    "empty model response": 13,
+    "network/DNS error": 1
+  },
+  "groups": {
+    "spam": {
+      "planned": 500,
+      "attempted": 500,
+      "valid": 484,
+      "correct": 433,
+      "valid_accuracy": 0.8946280991735537,
+      "full_accuracy": 0.866
+    },
+    "easy_ham": {
+      "planned": 400,
+      "attempted": 400,
+      "valid": 395,
+      "correct": 378,
+      "valid_accuracy": 0.9569620253164557,
+      "full_accuracy": 0.945
+    },
+    "hard_ham": {
+      "planned": 100,
+      "attempted": 100,
+      "valid": 98,
+      "correct": 98,
+      "valid_accuracy": 1.0,
+      "full_accuracy": 0.98
+    }
+  },
+  "latency_ms": {
+    "n": 977,
+    "median": 1313,
+    "mean": 2617.887410440123,
+    "p90": 6078,
+    "p99": 10719,
+    "max": 33000
+  },
+  "telemetry": {
+    "successful_api_calls": 977,
+    "input_tokens": 499706,
+    "output_tokens": 38489,
+    "mean_input_tokens": 511.46980552712387,
+    "mean_output_tokens": 39.39508700102354,
+    "list_price_cost_usd": 0.2461343,
+    "list_price_cost_per_1000_emails_usd": 0.251928659160696,
+    "failed_api_attempts": 181,
+    "failed_attempt_causes": {
+      "HTTP 503 model overloaded": 93,
+      "HTTP 429 quota exceeded": 74,
+      "empty model response": 13,
+      "network/DNS error": 1
+    }
+  },
+  "majority_baseline": 0.5,
+  "generated_utc": "2026-11-12T12:10:59.166830+00:00"
+}

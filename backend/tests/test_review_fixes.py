@@ -100,6 +100,77 @@ def test_failed_classification_is_retried_before_drafting(client, auth, db, emai
     assert len(calls) == 1
 
 
+def test_failed_classification_has_cooldown_and_finite_budget(client, auth, db, email, user_token, fake_provider, monkeypatch):
+    from datetime import datetime, timedelta, timezone
+    from app.config import settings
+    email.category = ""
+    email.classification_attempts = 1  # failed initial import
+    email.classification_retry_at = datetime.now(timezone.utc) + timedelta(minutes=15)
+    db.add(AppSettings(user_id=decode_token(user_token), auto_draft_enabled=False))
+    db.commit()
+    calls = []
+
+    def fail(*args, **kwargs):
+        calls.append(1)
+        raise llm.QuotaExceeded("quota")
+
+    monkeypatch.setattr(llm, "classify_email", fail)
+    assert client.post("/emails/sync", headers=auth).status_code == 200
+    assert calls == []
+    for expected in range(2, settings.classification_max_attempts + 1):
+        email.classification_retry_at = datetime.now(timezone.utc) - timedelta(minutes=1)
+        db.commit()
+        assert client.post("/emails/sync", headers=auth).status_code == 200
+        db.refresh(email)
+        assert email.classification_attempts == expected
+        assert email.classification_retry_at > datetime.now(timezone.utc).replace(tzinfo=None)
+    email.classification_retry_at = datetime.now(timezone.utc) - timedelta(days=1)
+    db.commit()
+    for _ in range(5):
+        assert client.post("/emails/sync", headers=auth).status_code == 200
+    assert len(calls) == settings.classification_max_attempts - 1
+
+
+def test_initial_failed_import_records_attempt_and_cooldown(client, auth, db, account, user_token, fake_provider, monkeypatch):
+    from datetime import datetime, timezone
+    from app.services.provider import FetchedEmail
+    fake_provider.inbox = [FetchedEmail(provider_message_id="failed-new", thread_id="t", sender="a@example.com",
+        recipient="b@example.com", subject="Hello", snippet="Hi", body_text="Hi", received_at=datetime.now(timezone.utc))]
+    db.add(AppSettings(user_id=decode_token(user_token), auto_draft_enabled=False))
+    db.commit()
+    calls = []
+
+    def fail(*args, **kwargs):
+        calls.append(1)
+        raise RuntimeError("invalid model output")
+
+    monkeypatch.setattr(llm, "classify_email", fail)
+    for _ in range(3):
+        assert client.post("/emails/sync", headers=auth).status_code == 200
+    row = db.query(EmailMessage).filter_by(provider_message_id="failed-new").one()
+    assert row.classification_attempts == 1
+    assert row.classification_retry_at is not None
+    assert len(calls) == 1
+
+
+def test_existing_database_gets_classification_budget_columns(monkeypatch):
+    from sqlalchemy import create_engine, inspect, text
+    from app import database
+    engine = create_engine("sqlite://")
+    try:
+        with engine.begin() as connection:
+            connection.execute(text("CREATE TABLE email_messages (id INTEGER PRIMARY KEY, category VARCHAR(32))"))
+            connection.execute(text("INSERT INTO email_messages (id, category) VALUES (1, '')"))
+        monkeypatch.setattr(database, "engine", engine)
+        database.ensure_schema()
+        assert "classification_retry_at" in {c["name"] for c in inspect(engine).get_columns("email_messages")}
+        with engine.connect() as connection:
+            assert connection.execute(text("SELECT classification_attempts FROM email_messages WHERE id=1")).scalar() == 0
+        database.ensure_schema()  # repeat restarts are safe
+    finally:
+        engine.dispose()
+
+
 def test_full_sync_captures_cursor_before_snapshot(client, auth, account, fake_provider, monkeypatch):
     order = []
     monkeypatch.setattr(fake_provider, "current_cursor", lambda: order.append("cursor") or "before")

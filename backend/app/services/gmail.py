@@ -172,6 +172,7 @@ class GmailProvider(EmailProvider):
             thread_id=msg.get("threadId", ""),
             message_id_header=_header(headers, "Message-ID"),
             sender=_header(headers, "From"),
+            reply_to=_header(headers, "Reply-To"),
             recipient=_header(headers, "To"),
             subject=_header(headers, "Subject"),
             snippet=msg.get("snippet", ""),
@@ -322,6 +323,12 @@ class GmailProvider(EmailProvider):
         return _header(messages[-1]["payload"].get("headers", []), "From") or None
 
     # ---------- sending ----------
+
+    def reply_to_address(self, message_id: str) -> str:
+        message = self.service.users().messages().get(
+            userId="me", id=message_id, format="metadata", metadataHeaders=["Reply-To"]
+        ).execute()
+        return _header(message.get("payload", {}).get("headers", []), "Reply-To")
 
     def send_reply(
         self,
