@@ -13,6 +13,9 @@ from pathlib import Path
 _TMP = Path(tempfile.mkdtemp(prefix="mailassist-tests-"))
 os.environ["DATABASE_URL"] = f"sqlite:///{_TMP / 'test.db'}"
 os.environ["GEMINI_API_KEY"] = "test-key-not-used"
+os.environ["LOCAL_DEMO_SYNC"] = "false"
+os.environ["LOCAL_DEMO_REPLIES"] = "false"
+os.environ["LOCAL_DEMO_CALENDAR"] = "false"
 
 import pytest  # noqa: E402
 from fastapi.testclient import TestClient  # noqa: E402

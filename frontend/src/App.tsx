@@ -29,7 +29,6 @@ import {
   SettingsIcon,
   SidebarIcon,
   StarIcon,
-  TrashIcon,
 } from "./components/Icons";
 import { InsightsPage } from "./components/InsightsPage";
 import { SettingsPage } from "./components/SettingsPage";
@@ -85,6 +84,8 @@ function App() {
   const [view, setView] = useState<View>("inbox");
   const [account, setAccount] = useState<Account | null>(null);
   const [hasDemo, setHasDemo] = useState(false);
+  const [demoSync, setDemoSync] = useState<boolean | null>(null);
+  const [loadingDemo, setLoadingDemo] = useState(false);
   const [emails, setEmails] = useState<Email[]>([]);
   const [counts, setCounts] = useState<Record<string, number>>({});
   const [selectedId, setSelectedId] = useState<number | null>(null);
@@ -152,6 +153,10 @@ function App() {
   useEffect(() => {
     if (!user) return;
     const owner = session.current;
+    setDemoSync(null);
+    api.demoConfig().then(config => {
+      if (owner === session.current) setDemoSync(config.local_demo_sync);
+    }).catch(e => { if (owner === session.current) onError(e.message); });
     api
       .accounts()
       .then((accounts) => {
@@ -217,9 +222,18 @@ function App() {
           setSyncJob(null);
           if (!silent) onError(`Could not check sync progress. You can try again. ${error instanceof Error ? error.message : String(error)}`);
         };
+        let displayedProgress = "";
         cancelSyncPoll.current = watchSync({
           request: () => api.syncStatus(started.id),
-          update: setSyncJob,
+          update: (status) => {
+            setSyncJob(status);
+            const progress = `${status.new_count}:${status.processed}:${status.stage}`;
+            if (status.new_count > 0 && progress !== displayedProgress) {
+              displayedProgress = progress;
+              setFirstRun(false);
+              refresh();
+            }
+          },
           fail,
           finish: (status) => {
             syncingRef.current = false;
@@ -269,12 +283,13 @@ function App() {
     }
     const connected = params.get("connected");
     if (!connected) return;
+    if (demoSync === null) return;
     window.history.replaceState({}, "", window.location.pathname);
     setFirstRun(true);
     setNotice(`Connected ${connected}`);
     setTimeout(() => setNotice(""), 5000);
     sync();
-  }, [user, sync, onError]);
+  }, [user, sync, onError, demoSync]);
 
   /**
    * Check for new mail on a timer so the inbox stays current without the user
@@ -288,7 +303,7 @@ function App() {
    * night, and resumes (syncing immediately if it has gone stale) on return.
    */
   useEffect(() => {
-    if (!user || !account) return;
+    if (!user || !account || demoSync !== false) return;
 
     const maybeSync = () => {
       if (document.visibilityState !== "visible") return;
@@ -308,26 +323,25 @@ function App() {
       window.clearInterval(ticker);
       document.removeEventListener("visibilitychange", maybeSync);
     };
-  }, [user, account, sync]);
+  }, [user, account, sync, demoSync]);
 
   const loadDemo = async () => {
+    if (loadingDemo) return;
+    const owner = session.current;
+    setLoadingDemo(true);
     try {
-      await api.seedDemo();
+      const result = await api.seedDemo();
+      if (owner !== session.current) return;
       setHasDemo(true);
+      setView("inbox");
+      setFilter({ kind: "all" });
+      setSearch("");
+      setNotice(`Added ${result.created} sample emails. Sample labels and drafts are preset; Gmail sync remains separate.`);
       refresh();
     } catch (e) {
       onError(e instanceof Error ? e.message : String(e));
-    }
-  };
-
-  const clearDemo = async () => {
-    try {
-      await api.clearDemo();
-      setHasDemo(false);
-      setSelectedId(null);
-      refresh();
-    } catch (e) {
-      onError(e instanceof Error ? e.message : String(e));
+    } finally {
+      setLoadingDemo(false);
     }
   };
 
@@ -387,6 +401,8 @@ function App() {
   );
   const selected = emails.find((e) => e.id === selectedId) ?? null;
   const sortedEmails = useMemo(() => [...emails].sort((a, b) => {
+    const mailboxOrder = Number(Boolean(a.is_demo)) - Number(Boolean(b.is_demo));
+    if (mailboxOrder) return mailboxOrder;
     const newest = new Date(b.received_at).getTime() - new Date(a.received_at).getTime() || b.id - a.id;
     if (sort === "oldest") return -newest;
     if (sort === "unread") return Number(a.is_read) - Number(b.is_read) || newest;
@@ -533,17 +549,17 @@ function App() {
           </button>
 
           <div className="spacer" />
+          {!hasDemo && !demoSync && (
+            <button className="nav-item subtle" onClick={loadDemo} disabled={loadingDemo}>
+              <InboxIcon />
+              <span className="nav-text">{loadingDemo ? "Loading samples..." : "Load sample inbox"}</span>
+            </button>
+          )}
           <button className={`nav-item ${view === "calendar" ? "active" : ""}`} onClick={() => setView("calendar")}>
             <CalendarIcon />
             <span className="nav-text">Calendar</span>
           </button>
 
-          {hasDemo && (
-            <button className="nav-item subtle" onClick={clearDemo}>
-              <TrashIcon />
-              <span className="nav-text">Clear demo data</span>
-            </button>
-          )}
           <button
             className={`nav-item ${view === "settings" ? "active" : ""}`}
             onClick={() => setView("settings")}
@@ -605,8 +621,8 @@ function App() {
                         ? "No emails here. Hit “Sync inbox” to pull and classify your mail."
                         : "Connect your Gmail account to get started, or preview the app with sample data."}
                   </p>
-                  {!account && !search && (
-                    <button className="primary" onClick={loadDemo}>
+                  {!account && !search && !demoSync && (
+                    <button className="primary" onClick={loadDemo} disabled={loadingDemo}>
                       Load demo inbox
                     </button>
                   )}

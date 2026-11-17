@@ -34,6 +34,9 @@ class Settings(BaseSettings):
     # Free-tier keys are rate limited (429 RESOURCE_EXHAUSTED). Keep sync
     # concurrency low and retry with backoff rather than failing the whole sync.
     sync_max_emails: int = 20
+    local_demo_sync: bool = False
+    local_demo_replies: bool = False
+    local_demo_calendar: bool = False
     sync_concurrency: int = 4
     classification_max_attempts: int = 3  # logical attempts, including initial import
     classification_retry_minutes: int = 15  # exponential cooldown between attempts

@@ -12,6 +12,7 @@ from pydantic import BaseModel, Field
 from sqlalchemy.orm import Session
 
 from ..database import get_db
+from ..config import settings
 from ..models import AppSettings, EmailAccount, User
 from ..security import get_current_user
 from ..services.gmail import CALENDAR_SCOPE, credentials_from_account, credentials_to_json, granted_scopes
@@ -30,6 +31,8 @@ def status(user: User = Depends(get_current_user), db: Session = Depends(get_db)
     result = {"connected": bool(account and CALENDAR_SCOPE in granted_scopes(account)),
               "email": account.email_address if account else None}
     preferences = db.query(AppSettings).filter_by(user_id=user.id).first()
+    if settings.local_demo_calendar:
+        result.update(connected=True, demo=True)
     if preferences and preferences.calendar_preferences_json:
         result["preferences"] = json.loads(preferences.calendar_preferences_json)
     return result
@@ -91,6 +94,12 @@ def lookup_availability(body: AvailabilityIn, user: User, db: Session):
     available_slots(body, [], now)
     zone = ZoneInfo(body.timezone)
     account = linked_account(db, user)
+    if settings.local_demo_calendar:
+        from ..services.demo import calendar_events
+        events = calendar_events(body.start_date, body.days, zone)
+        return {"slots": available_slots(body, events, now), "timezone": body.timezone,
+                "email": account.email_address if account else "Local demo calendar",
+                "checked_at": now.isoformat(), "demo": True, "busy_events": events}
     if not account or CALENDAR_SCOPE not in granted_scopes(account):
         raise HTTPException(403, "Connect Google Calendar to check availability.")
     try:

@@ -21,6 +21,9 @@ def calendar_context(db, user_id, email, instructions="") -> str:
         zone = ZoneInfo(saved.get("timezone", "Europe/Skopje"))
         query = AvailabilityIn(start_date=datetime.now(zone).date(), **saved)
         result = lookup_availability(query, db.get(User, user_id), db)
+        if result.get("demo"):
+            return ("The calendar contains fictional local demonstration events, not verified Google Calendar availability. "
+                    "Do not use this schedule to confirm a real meeting. Say the proposed time needs confirmation.")
         # Keep a few alternatives per date, rather than filling the prompt with adjacent slots.
         options = []
         dates = {}

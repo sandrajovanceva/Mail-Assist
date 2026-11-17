@@ -360,6 +360,9 @@ def draft_reply(
     user_id: int | None = None,
 ) -> str:
     user_name = app_settings.user_name if app_settings else ""
+    if settings.local_demo_replies:
+        from .demo import prepared_reply
+        return prepared_reply(email, app_settings)
     signature = app_settings.signature if app_settings else ""
     style_profile = app_settings.style_profile if app_settings else ""
 
@@ -401,7 +404,10 @@ def draft_reply(
             "\n\nReply language: Match the language of the sender's latest message, "
             "ignoring quoted earlier messages, signatures, and automatic footers when "
             "identifying that language. Do not choose a language from the sender's name "
-            "or address. For Macedonian, write natural Macedonian using Cyrillic. For "
+            "or address. For Macedonian, write natural Macedonian using Cyrillic. "
+            "For calendar availability use 'дали сум слободна/слободен во тој термин' "
+            "or 'достапност', never 'моќност'. Use natural grammar and do not infer "
+            "that a proposed meeting time is suitable when availability is unverified. For "
             "other languages, use their usual writing system. For mixed-language messages, "
             "use the dominant language of the actual request. If the language cannot be "
             "determined, use the user's learned preferred language if available, otherwise "

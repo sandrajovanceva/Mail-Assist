@@ -95,6 +95,10 @@ class EmailMessage(Base):
     account: Mapped[EmailAccount] = relationship(back_populates="emails")
     drafts: Mapped[list["Draft"]] = relationship(back_populates="email")
 
+    @property
+    def is_demo(self) -> bool:
+        return self.account.provider == "demo"
+
 
 class Draft(Base):
     """An AI-generated reply awaiting approval (or already sent)."""

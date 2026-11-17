@@ -77,6 +77,24 @@ export function EmailDetail({
     return () => { cancelled = true; };
   }, [email.id, onError]);
 
+  // Background sync can finish a draft after this email was opened.
+  // Stop polling once a draft is loaded so saved or unsaved edits stay intact.
+  useEffect(() => {
+    if (draft || busy || !email.needs_reply) return;
+    let cancelled = false;
+    let pending = false;
+    const timer = window.setInterval(() => {
+      if (pending) return;
+      pending = true;
+      api.draftsFor(email.id).then(drafts => {
+        if (cancelled || !drafts.length) return;
+        setDraft(drafts[0]);
+        setDraftText(drafts[0].content);
+      }).catch(() => {}).finally(() => { pending = false; });
+    }, 5000);
+    return () => { cancelled = true; window.clearInterval(timer); };
+  }, [email.id, email.needs_reply, draft, busy]);
+
   const run = async (label: typeof busy, fn: () => Promise<void>) => {
     setBusy(label);
     try {

@@ -11,6 +11,12 @@ const flush = () => new Promise(resolve => setImmediate(resolve));
 // Exercise the actual component's state/effect callbacks without a DOM. This
 // deliberately does not claim to test browser rendering or React scheduling.
 function editor(api, componentName = 'EmailDetail') {
+  const timers = new Map();
+  let timerId = 0;
+  const browser = Object.assign(new EventTarget(), {
+    setInterval(callback) { timers.set(++timerId, callback); return timerId; },
+    clearInterval(id) { timers.delete(id); },
+  });
   const slots = [];
   let cursor = 0;
   let pending = [];
@@ -44,7 +50,7 @@ function editor(api, componentName = 'EmailDetail') {
   const module = { exports: {} };
   vm.runInNewContext(code, {
     exports: module.exports, module,
-    window: new EventTarget(), AbortController,
+    window: browser, AbortController,
     require: name => name === 'react' ? hooks : name === '../api' ? { api }
       : name === './Icons' ? { ArchiveIcon: () => null }
       : name === './DraftPreferences' ? { DraftPreferences: () => null }
@@ -69,6 +75,7 @@ function editor(api, componentName = 'EmailDetail') {
       return tree;
     },
     dispose() { slots.forEach(slot => slot?.cleanup?.()); },
+    tick() { [...timers.values()].forEach(callback => callback()); },
     values: () => slots.filter(slot => slot && 'value' in slot).map(slot => slot.value),
   };
 }
@@ -249,4 +256,27 @@ test('reopening settings refreshes learning examples without replacing unsaved p
   assert.ok(find(tree, n => n.type === 'pre' && n.props.children === 'Short reply'));
   assert.equal(settingsLoads, 1);
   component.dispose();
+});
+
+
+test('a background draft appears without reopening and polling stops before editing', async () => {
+  let calls = 0;
+  const app = editor({ draftsFor: async () => ++calls === 1 ? [] : [draft] });
+  const current = { ...props, email: { ...email, needs_reply: true } };
+  app.render(current);
+  await flush();
+  app.render(current);
+  app.tick();
+  await flush();
+  let tree = app.render(current);
+  assert.ok(app.values().includes('Original reply'));
+  const area = find(tree, node => node.type === 'textarea' && node.props.value === 'Original reply');
+  assert.ok(area);
+  area.props.onChange({ target: { value: 'My unsaved reply' } });
+  app.render(current);
+  app.tick();
+  await flush();
+  assert.equal(calls, 2);
+  assert.ok(app.values().includes('My unsaved reply'));
+  app.dispose();
 });

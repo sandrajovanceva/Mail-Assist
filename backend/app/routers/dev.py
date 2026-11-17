@@ -7,6 +7,7 @@ from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
 from ..database import get_db
+from ..config import settings
 from ..models import (
     AppSettings,
     Draft,
@@ -19,6 +20,11 @@ from ..models import (
 from ..security import get_current_user
 
 router = APIRouter(prefix="/dev", tags=["dev"])
+
+
+@router.get("/config")
+def demo_config(user: User = Depends(get_current_user)):
+    return {"local_demo_sync": settings.local_demo_sync}
 
 DEMO_STYLE_PROFILE = """- Greetings: "Hi [first name]," for colleagues and clients; "Hey!" or "Yo" only with close friends
 - Sign-offs: "Best regards," for formal mail, "Cheers," or just the first name for casual threads
@@ -172,6 +178,51 @@ MOCK_EMAILS = [
 ]
 
 
+# Additional fictional conversations for browsing, filtering and draft editing.
+# Reserved .example addresses ensure these are never plausible real contacts.
+DEMO_SCENARIOS = [
+    ("important", "Mentor", "Approve the revised thesis outline", "Please review chapters 3 and 4 and confirm the revised outline by Thursday."),
+    ("important", "Project lead", "Release approval needed", "The release candidate is ready. Please review the checklist and approve deployment."),
+    ("important", "Finance", "Invoice amount needs confirmation", "The invoice and purchase order differ by EUR 120. Which amount should we use?"),
+    ("important", "Admissions", "Missing attachment in your application", "Please upload your transcript before Friday so we can process your application."),
+    ("important", "Client", "Decision on the homepage design", "We have two layout options. Please choose one and explain your preferred direction."),
+    ("important", "Supervisor", "Feedback on evaluation limitations", "Please clarify the synthetic style experiment and explain which features were not evaluated."),
+    ("routine", "Elena", "Confirm our project check-in", "Would Tuesday at 11:00 work for a short project check-in?"),
+    ("routine", "Marko", "Can you share the presentation?", "Could you send me the latest presentation before our meeting?"),
+    ("routine", "Library", "Book renewal request", "Your requested book can be renewed. Reply to confirm you would like another two weeks."),
+    ("routine", "Design team", "Quick review of the updated icons", "The new icons are attached to the project board. Could you confirm you can access them?"),
+    ("routine", "Workshop host", "Confirm your workshop attendance", "Please reply to confirm your place at the testing workshop."),
+    ("routine", "Colleague", "Notes from our last meeting", "Could you share the notes from our last planning meeting when you have a moment?"),
+    ("newsletter", "Developer weekly", "This week in web development", "This week's digest covers accessibility, browser tools and testing. Manage your subscription in preferences."),
+    ("newsletter", "Campus news", "Campus events this month", "Read about the career fair, open lectures and student clubs. This is an automated campus digest."),
+    ("newsletter", "Research digest", "New papers on email assistants", "A weekly reading list on language models and productivity tools. Unsubscribe in preferences."),
+    ("newsletter", "Product updates", "New features in your workspace", "Explore new dashboard filters and keyboard shortcuts. This announcement does not require a reply."),
+    ("spam", "Prize desk", "Claim your surprise reward", "You have won a fictional prize. Pay an advance processing fee to claim it. This is a demonstration of a scam."),
+    ("spam", "Account alert", "Urgent password verification", "Your account will supposedly close today unless you disclose your password. This is a fictional phishing example."),
+    ("spam", "Investment club", "Guaranteed returns overnight", "Send funds now for guaranteed overnight returns. This is a fictional investment scam example."),
+    ("spam", "Delivery notice", "Unexpected parcel payment", "An unexpected parcel supposedly requires an immediate fee. This is a fictional delivery scam example."),
+]
+
+
+def demo_messages(user: User) -> list[dict]:
+    messages = [dict(message) for message in MOCK_EMAILS]
+    for i, (category, sender, subject, body) in enumerate(DEMO_SCENARIOS):
+        message = {
+            "sender": f"{sender} <contact-{i}@mailassist.example>",
+            "subject": subject, "snippet": body[:160], "body": body,
+            "category": category, "attention": category == "important",
+            "reason": "Preset sample classification for the local demo; not an AI prediction.",
+            "hours_ago": i * 5 + 1, "read": i % 3 == 0,
+        }
+        if category == "routine":
+            message["draft"] = {
+                "content": f"Hello {sender},\n\nThanks for your message. I'll review this and get back to you shortly.\n\nBest regards,\n{user.name or 'Demo user'}",
+                "tone": "professional", "status": "pending",
+            }
+        messages.append(message)
+    return messages
+
+
 @router.post("/seed")
 def seed_demo(user: User = Depends(get_current_user), db: Session = Depends(get_db)):
     account = (
@@ -188,7 +239,7 @@ def seed_demo(user: User = Depends(get_current_user), db: Session = Depends(get_
         db.flush()
 
     created = 0
-    for i, m in enumerate(MOCK_EMAILS):
+    for i, m in enumerate(demo_messages(user)):
         provider_id = f"demo-{i}"
         if (
             db.query(EmailMessage)
@@ -211,6 +262,10 @@ def seed_demo(user: User = Depends(get_current_user), db: Session = Depends(get_
             classification_reason=m["reason"],
             summary=m.get("summary", ""),
             is_read=m.get("read", False),
+            is_bulk=m["category"] in ("newsletter", "spam"),
+            needs_reply=m["category"] in ("important", "routine")
+            and m.get("draft", {}).get("status") != "sent",
+            needs_reply_reason="Preset sample reply decision for the local demo.",
         )
         db.add(email)
         db.flush()
@@ -260,6 +315,10 @@ def seed_demo(user: User = Depends(get_current_user), db: Session = Depends(get_
             db.add(KnowledgeItem(user_id=user.id, demo_seeded=True, **item))
 
     db.commit()
+    if settings.local_demo_replies:
+        from ..services.autodraft import draft_for
+        for email in db.query(EmailMessage).filter_by(account_id=account.id, needs_reply=True).all():
+            draft_for(db, user.id, email, row)
     return {"created": created, "account": account.email_address}
 
 

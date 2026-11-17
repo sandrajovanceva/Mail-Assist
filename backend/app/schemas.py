@@ -39,6 +39,7 @@ class EmailOut(BaseModel):
     model_config = ConfigDict(from_attributes=True)
 
     id: int
+    is_demo: bool = False
     sender: str
     subject: str
     snippet: str

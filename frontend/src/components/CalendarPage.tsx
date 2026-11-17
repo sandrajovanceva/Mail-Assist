@@ -5,7 +5,7 @@ import { CalendarSelect } from "./CalendarSelect";
 import { CalendarDateTime } from "./CalendarDateTime";
 
 export function CalendarPage({ onChoose }: { onChoose?: (instructions: string) => void }) {
-  const [connection, setConnection] = useState<{ connected: boolean; email: string | null } | null>(null);
+  const [connection, setConnection] = useState<{ connected: boolean; demo?: boolean; email: string | null } | null>(null);
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
   const [result, setResult] = useState<Awaited<ReturnType<typeof api.availability>> | null>(null);
@@ -21,7 +21,14 @@ export function CalendarPage({ onChoose }: { onChoose?: (instructions: string) =
   });
   useEffect(() => {
     let cancelled = false;
-    api.calendarStatus().then(value => { if (!cancelled) { setConnection(value); if (value.preferences) setForm(old => ({ ...old, ...value.preferences })); } })
+    api.calendarStatus().then(async value => { if (!cancelled) {
+      setConnection(value);
+      if (value.preferences) setForm(old => ({ ...old, ...value.preferences }));
+      if (value.demo) {
+        const preview = await api.availability({ ...form, ...value.preferences });
+        if (!cancelled) setResult(preview);
+      }
+    } })
       .catch(e => { if (!cancelled) setError(e.message); });
     return () => { cancelled = true; };
   }, []);
@@ -35,11 +42,11 @@ export function CalendarPage({ onChoose }: { onChoose?: (instructions: string) =
   const text = result ? `Available meeting times (${result.timezone}):\n${result.slots.filter(slot => selected.includes(slot.start)).map(label).join("\n")}` : "";
   const visibleSlots = result?.slots.filter(slot => !focusedDate || slot.start.slice(0, 10) === focusedDate) || [];
   return <section className="calendar-page glass">
-    <div className="calendar-heading"><div><span className="calendar-eyebrow">GOOGLE CALENDAR</span>
+    <div className="calendar-heading"><div><span className="calendar-eyebrow">{connection?.demo ? "DEMO CALENDAR" : "GOOGLE CALENDAR"}</span>
       <h2>Find a time</h2></div>
-      <button className="calendar-connect" onClick={() => api.connectGoogle(true).catch(error => setError(error.message))}>{connection?.connected ? "Reconnect" : "Connect Calendar"}</button>
+      {!connection?.demo && <button className="calendar-connect" onClick={() => api.connectGoogle(true).catch(error => setError(error.message))}>{connection?.connected ? "Reconnect" : "Connect Calendar"}</button>}
     </div>
-    {connection && <p className="calendar-connection">{connection.connected ? `Connected · ${connection.email}` : "Connect Calendar to allow read-only availability checks."}</p>}
+    {connection && <p className="calendar-connection">{connection.demo ? "Local demonstration schedule. Your Google Calendar is unchanged." : connection.connected ? `Connected · ${connection.email}` : "Connect Calendar to allow read-only availability checks."}</p>}
     {error && <p className="calendar-error" role="alert">{error}</p>}
     <form className="calendar-form" onSubmit={async event => {
       event.preventDefault(); setBusy(true); setError(""); setResult(null); setSelected([]); setCopied(false); setApplied(false);
@@ -71,11 +78,17 @@ export function CalendarPage({ onChoose }: { onChoose?: (instructions: string) =
         const end = parseDay(form.start_date); end.setDate(end.getDate() + form.days);
         if (!result || day < form.start_date || day >= dateKey(end)) update({ start_date: day });
       }} />
+    {result?.busy_events && <div className="calendar-results">
+      <strong>Scheduled events</strong>
+      {result.busy_events.filter(event => !focusedDate || event.start.slice(0, 10) === focusedDate).map(event => (
+        <p className="calendar-footnote" key={event.start}>{event.title} · {label(event)}</p>
+      ))}
+    </div>}
     {result && <div className="calendar-results">
       <div className="calendar-results-heading"><strong>{focusedDate ? `Available times · ${parseDay(focusedDate).toLocaleDateString(undefined, { month: "long", day: "numeric" })}` : "Available times"}</strong><span>{result.timezone}</span></div>
       {focusedDate && <button className="link" onClick={() => setFocusedDate(null)}>Show all checked dates</button>}
       {!visibleSlots.length && <p className="calendar-footnote">No available times for your chosen working hours and meeting length.</p>}
-      <p className="calendar-footnote">Primary calendar only. Times are not reserved and may change. Checked {new Date(result.checked_at).toLocaleTimeString()}.</p>
+      <p className="calendar-footnote">{result.demo ? "Availability uses the local demo schedule." : "Primary calendar only."} Times are not reserved and may change. Checked {new Date(result.checked_at).toLocaleTimeString()}.</p>
       <div className="calendar-slots">{visibleSlots.map(slot => <button key={slot.start} aria-pressed={selected.includes(slot.start)} onClick={() => { setSelected(old => old.includes(slot.start) ? old.filter(s => s !== slot.start) : [...old, slot.start]); setCopied(false); }}>{label(slot)}</button>)}</div>
       {result.slots.length > 0 && <button className="primary" disabled={!selected.length} onClick={async () => {
         if (onChoose) { onChoose(`Suggest only these calendar-checked times, preserving their timezone. Do not claim a meeting is booked.\n${text}\nAvailability checked at ${result.checked_at}.`); setApplied(true); }
@@ -83,6 +96,6 @@ export function CalendarPage({ onChoose }: { onChoose?: (instructions: string) =
       }}>{onChoose ? "Use selected times in draft" : copied ? "Copied" : "Copy selected times"}</button>}
       {applied && <p className="calendar-footnote" role="status">Times added to your instructions. Generate or regenerate the draft below to include them.</p>}
     </div>}
-    <p className="calendar-footnote">Working preferences are saved after a successful availability check and used for meeting-related drafts. MailAssist checks fresh busy periods; it does not create events or read event titles.</p>
+    <p className="calendar-footnote">{connection?.demo ? "Demo events stay local. Switch off LOCAL_DEMO_CALENDAR to use real Google Calendar availability." : "Working preferences are saved after a successful availability check and used for meeting-related drafts. MailAssist checks fresh busy periods; it does not create events or read event titles."}</p>
   </section>;
 }

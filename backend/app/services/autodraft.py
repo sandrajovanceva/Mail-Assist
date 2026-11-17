@@ -14,6 +14,7 @@ import logging
 from sqlalchemy.orm import Session
 
 from ..models import AppSettings, Draft, EmailMessage, KnowledgeItem
+from ..config import settings
 from . import llm
 from .draft_preferences import snapshot
 from .scheduling import calendar_context
@@ -54,7 +55,7 @@ def draft_for(
         preferences_json=preferences,
         tone=tone,
         status="pending",
-        auto_send_eligible=True,
+        auto_send_eligible=not settings.local_demo_replies,
     )
     db.add(draft)
     db.commit()

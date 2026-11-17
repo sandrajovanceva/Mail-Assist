@@ -7,6 +7,10 @@ from ..models import AppSettings, KnowledgeItem
 def snapshot(tone: str, settings: AppSettings | None,
              knowledge: list[KnowledgeItem], instructions: str = "", calendar: str = "") -> str:
     entries = [{"kind": "tone", "title": "Reply tone", "content": tone}]
+    from ..config import settings as config
+    if config.local_demo_replies:
+        entries.append({"kind": "demo", "title": "Prepared demonstration reply",
+                        "content": "Local template, not an AI-generated response. Review before sending."})
     if settings:
         for field, title in (("user_name", "Your name"), ("signature", "Signature"),
                              ("style_profile", "Writing style profile")):

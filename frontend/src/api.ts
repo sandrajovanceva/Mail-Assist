@@ -18,6 +18,7 @@ export interface Account {
 
 export interface Email {
   id: number;
+  is_demo?: boolean;
   sender: string;
   subject: string;
   snippet: string;
@@ -204,9 +205,9 @@ export const api = {
     });
     window.location.assign(url);
   },
-  calendarStatus: () => request<{ connected: boolean; email: string | null; preferences?: { days: number; timezone: string; work_start: string; work_end: string; duration_minutes: number; weekdays: number[] } }>("/calendar/status"),
+  calendarStatus: () => request<{ connected: boolean; demo?: boolean; email: string | null; preferences?: { days: number; timezone: string; work_start: string; work_end: string; duration_minutes: number; weekdays: number[] } }>("/calendar/status"),
   availability: (body: { start_date: string; days: number; timezone: string; work_start: string; work_end: string; duration_minutes: number; weekdays: number[] }) =>
-    request<{ slots: { start: string; end: string }[]; timezone: string; email: string; checked_at: string }>("/calendar/availability", { method: "POST", body: JSON.stringify(body) }),
+    request<{ slots: { start: string; end: string }[]; timezone: string; email: string; checked_at: string; demo?: boolean; busy_events?: { title: string; start: string; end: string }[] }>("/calendar/availability", { method: "POST", body: JSON.stringify(body) }),
 
   register: (email: string, password: string, name: string) =>
     request<{ token: string; user: User }>("/auth/register", {
@@ -262,6 +263,7 @@ export const api = {
   usage: (days?: number) => request<UsageSummary>(`/usage/summary${queryString({ days })}`),
 
   seedDemo: () => request<{ created: number }>("/dev/seed", { method: "POST" }),
+  demoConfig: () => request<{ local_demo_sync: boolean }>("/dev/config"),
   clearDemo: () => request<{ deleted: number }>("/dev/clear", { method: "POST" }),
 
   settings: () => request<AppSettings>("/settings"),

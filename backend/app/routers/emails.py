@@ -1,4 +1,5 @@
 import logging
+import time
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta, timezone
 
@@ -67,6 +68,18 @@ def _run_sync(job_id: int, user_id: int) -> None:
         db.commit()
         heartbeat.start()
         account = real_account(db, user_id)
+        demo_created = 0
+        if settings.local_demo_sync:
+            from .dev import seed_demo
+            job.stage = "fetching"
+            db.commit()
+            if not db.query(EmailAccount.id).filter_by(user_id=user_id, provider="demo").first():
+                time.sleep(10)
+            sync_control.guard(db, user_id, job_id)
+            result = seed_demo(user=db.get(User, user_id), db=db)
+            demo_created = result["created"]
+            job.total = job.processed = job.new_count = demo_created
+            db.commit()
         provider = get_provider(db, account)
 
         # Retry enrichment failures already stored by previous syncs.
@@ -130,7 +143,7 @@ def _run_sync(job_id: int, user_id: int) -> None:
             and not (f.provider_message_id in seen or seen.add(f.provider_message_id))
         ]
 
-        job.total = len(fresh)
+        job.total = len(fresh) + demo_created
         job.stage = "classifying" if fresh else "done"
         db.commit()
 
@@ -210,14 +223,14 @@ def _run_sync(job_id: int, user_id: int) -> None:
                 log.info("Skipping %s — already stored by another sync", email.provider_message_id)
             job.processed += 1
 
-        job.new_count = len(stored)
+        job.new_count = len(stored) + demo_created
         account.last_history_id = new_cursor
         db.commit()
 
         # Draft replies ahead of time for mail that wants one, so the queue is
         # already populated when the user opens the app. Nothing is sent here.
         if app_settings is None or app_settings.auto_draft_enabled:
-            limit = app_settings.auto_draft_limit if app_settings else 5
+            limit = 200 if settings.local_demo_replies else (app_settings.auto_draft_limit if app_settings else 5)
             # Deliberately not limited to this sync's messages: a draft that was
             # missed because a previous sync crashed, or because the feature was
             # added later, should still get written rather than lost forever.
@@ -370,12 +383,15 @@ def email_counts(user: User = Depends(get_current_user), db: Session = Depends(g
         "reply": EmailMessage.needs_reply.is_(True),
         **{category: EmailMessage.category == category for category in llm.CATEGORIES},
     }
-    row = db.query(func.count(EmailMessage.id), *[
+    query = db.query(func.count(EmailMessage.id), *[
         func.coalesce(func.sum(case((condition, 1), else_=0)), 0)
         for condition in expressions.values()
     ]).join(EmailAccount).filter(
         EmailAccount.user_id == user.id, EmailMessage.is_archived.is_(False)
-    ).one()
+    )
+    if settings.local_demo_sync and not db.query(EmailAccount.id).filter_by(user_id=user.id, provider="demo").first():
+        query = query.filter(EmailAccount.provider == "demo")
+    row = query.one()
     return dict(zip(["all", *expressions], map(int, row)))
 
 
@@ -400,6 +416,8 @@ def list_emails(
     )
     if category:
         query = query.filter(EmailMessage.category == category)
+    if settings.local_demo_sync and not db.query(EmailAccount.id).filter_by(user_id=user.id, provider="demo").first():
+        query = query.filter(EmailAccount.provider == "demo")
     if needs_attention is not None:
         query = query.filter(EmailMessage.needs_attention.is_(needs_attention))
     if needs_reply_only is not None:
